@@ -1,0 +1,65 @@
+
+r
+java:S3740"/Provide the parametrized type for this generic.(øª8Ğó†öƒ2J$2a46967f-4853-480e-ae1e-718ed4e1cdf4
+r
+java:S3740"/Provide the parametrized type for this generic.(õ·‘®8ÿ‡‡öƒ2J$36aabb55-9715-42e4-a704-fe501505751c
+r
+java:S3740"/Provide the parametrized type for this generic.(ãÊ¶ª8¯µ‡öƒ2J$03c84c7e-de7a-4942-8ee5-b717fa3d8c72
+L
+java:S3740"/Provide the parametrized type for this generic.(š£Õ8«Û‡öƒ2
+˜
+java:S1104"UMake TextEmpId a static final constant or non-public and provide accessors if needed.(åÂÎó8È­‚öƒ2J$6b3c5f99-7d97-49bb-a05c-e4eb6d9cb603
+™
+java:S1104	"WMake TextEmpName a static final constant or non-public and provide accessors if needed.(ƒ‡¬8Šö…öƒ2J$e31749d5-1cea-423e-af9b-aa72a4936936
+¤
+java:S1104
+"\Make EmailAddressText a static final constant or non-public and provide accessors if needed.(ô¯Ô¯ùÿÿÿÿ8‹¸†öƒ2J$c50d9871-e30a-4c67-813e-ff20a0bc2b2c
+Ÿ
+java:S1104"WMake AddressText a static final constant or non-public and provide accessors if needed.(ë–£äøÿÿÿÿ8ñÕ†öƒ2J$483922b7-21d6-4112-b1f7-80202c8d1c38
+—
+java:S1104"TMake IdColumn a static final constant or non-public and provide accessors if needed.(øª8Òó†öƒ2J$ab0f68aa-2340-431f-8b54-2996cfd865bc
+™
+java:S1104"VMake NameColumn a static final constant or non-public and provide accessors if needed.(õ·‘®8€ˆ‡öƒ2J$578511f0-5f3b-47dd-a079-64559c20701c
+š
+java:S1104"WMake EmailColumn a static final constant or non-public and provide accessors if needed.(ãÊ¶ª8°µ‡öƒ2J$320b0768-8a56-470b-a8eb-377aa43d90a2
+v
+java:S1104"YMake AddressColumn a static final constant or non-public and provide accessors if needed.(š£Õ8®Û‡öƒ2
+–	java:S116"TRename this field "TextEmpId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÂÎó8Ó­‚öƒ2J$129f49af-b88b-4f65-9db9-b0c1fdbfeda8
+—	java:S116	"VRename this field "TextEmpName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ‡¬8‘ö…öƒ2J$602c208e-e3e8-45ef-82d9-c00cd57cb706
+¢	java:S116
+"[Rename this field "EmailAddressText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¯Ô¯ùÿÿÿÿ8‘¸†öƒ2J$a8428b07-09d7-4408-9bcd-6292cc7d21e3
+	java:S116"VRename this field "AddressText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë–£äøÿÿÿÿ8öÕ†öƒ2J$8e965a37-0982-4931-9a4f-ee1f62988f76
+•	java:S116"SRename this field "IdColumn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øª8Ùó†öƒ2J$58734c94-6e82-4aaa-8041-2b2cbec7cfdd
+—	java:S116"URename this field "NameColumn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ·‘®8‡ˆ‡öƒ2J$8e5fcf5f-1e1c-4240-96ab-debc7e0c9c39
+˜	java:S116"VRename this field "EmailColumn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÊ¶ª8·µ‡öƒ2J$799d1237-2a62-400a-9bb3-1dc9e19d791e
+t	java:S116"XRename this field "AddressColumn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š£Õ8¼Û‡öƒ2
+Ã
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‘ÍA8ñ”ƒöƒ2J$505003fc-36b7-4917-b06e-1c9f661a391c
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ò°Ô8­¯ƒöƒ2J$121c7a7b-4c7d-4947-8833-b599b5336794
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Åíı„ùÿÿÿÿ8„Êƒöƒ2J$78066962-1148-4b8c-9c0e-6d3cb276c5ff
+Ã
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö¿­_8Šíƒöƒ2J$e8fda39a-96fb-4748-8149-289ac05516bf
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¢ãø¦8ò„öƒ2J$38c520c7-7740-40e8-9c6b-9a600accc6f5
+Ä
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…€ºĞ8Ë«„öƒ2J$f50c7a59-f56e-477f-a337-0b2eab8e9267
+Ä
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ËÓ×º8óÇ„öƒ2J$be524116-b60b-4ea5-9afe-484dbb3701bf
+É
+java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒí¾Êşÿÿÿÿ8ëà„öƒ2J$ba98633a-e0aa-4ab3-b155-d841063d01ee
+É
+java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§•¼™ÿÿÿÿÿ8‚…öƒ2J$f9293ff7-ecb9-479d-8e75-9ed9a638a03d
+Â
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£Ãi8ıŸ…öƒ2J$93819c19-e0f9-405d-9659-b2200628d42a
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÍA8ó”ƒöƒ2J$a4ed8e54-2e8c-4ef2-b049-1e28578d9b38
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò°Ô8¯¯ƒöƒ2J$e3576c64-1a8a-42f9-b5d8-e52e2d3d404f
+•	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åíı„ùÿÿÿÿ8…Êƒöƒ2J$ce52b161-b257-4cf4-8383-b19511fa0036
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¿­_8íƒöƒ2J$c0c55a88-3a2e-4e15-bb87-2cb9ca5e80d5
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ãø¦8ô„öƒ2J$9895fe26-668a-4dcb-8ffb-c8f076d2e7a4
+	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…€ºĞ8Î«„öƒ2J$f4c06cce-481d-48a1-b9ec-dc8c7002ba04
+	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÓ×º8õÇ„öƒ2J$ec4ba30e-0067-4f21-955b-6da97a751054
+•	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒí¾Êşÿÿÿÿ8îà„öƒ2J$7886c539-6bbf-437e-8928-691298c722fc
+•	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§•¼™ÿÿÿÿÿ8—‚…öƒ2J$c9d1f4cc-693b-467f-a004-c30d553bb5d0
+	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Ãi8 …öƒ2J$3bba0cb8-e7b2-4f76-8779-5a8fcc9a2325

@@ -1,0 +1,25 @@
+
+¤
+java:S1104"\Make newPasswordField a static final constant or non-public and provide accessors if needed.(áÎ“Ôøÿÿÿÿ8••ûƒ2J$30cdce8d-1c41-4184-9e8c-792ef8dc22df
+¦
+java:S1104"cMake reEnterNewPasswordField a static final constant or non-public and provide accessors if needed.(Å†ØÆ8••ûƒ2J$acecb71e-2dcc-4e85-b593-91580604608b
+—
+java:S1104"TMake OTPField a static final constant or non-public and provide accessors if needed.(”Ï„ê8••ûƒ2J$67476cef-a46a-45e5-85f3-0bf57a655837
+š
+java:S1104"WMake ResetAnchor a static final constant or non-public and provide accessors if needed.(´şü8••ûƒ2J$e2d97ec9-3bbe-4d20-a57e-fabb668cf299
+
+java:S1104"VMake emailField a static final constant or non-public and provide accessors if needed.(şãÓâúÿÿÿÿ8Ğ¨·üƒ2J$57c16a64-de02-4b91-9982-fb12b65439e6
+•	java:S116"SRename this field "OTPField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ï„ê8¯•ûƒ2J$b8a73334-268b-4590-a5eb-d0154eb8b58b
+˜	java:S116"VRename this field "ResetAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şü8¯•ûƒ2J$eed80469-6d68-462a-8996-5cecc67f347c
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8°•ûƒ2J$00b0e6a9-c6bc-434a-957e-35aa8101f3e3
+O
+java:S1172"2Remove this unused method parameter "actionEvent".(Îà8‘šîşƒ2
+`
+java:S2119"Save and re-use this "Random".(¼İÅf8¶•ûƒ2J$b8be114c-bbf2-47f5-a8c2-f9eb1de8df73
+z
+java:S1117 "7Rename "otp" which hides the field declared at line 21.(¬Åƒ8À¼¾üƒ2J$07db6e64-0f19-4e5f-a279-9e075f1cadd8
+l	java:S106!"+Replace this use of System.out by a logger.(›ÑQ8»•ûƒ2J$fc5bb9cd-53a2-4afb-85c9-f243acc6e536
+O
+java:S1172,"2Remove this unused method parameter "actionEvent".(Œâ†¿8—šîşƒ2
+r	java:S106D"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8Ä¼¾üƒ2J$6001ebd3-869c-45b1-a623-120459dade84

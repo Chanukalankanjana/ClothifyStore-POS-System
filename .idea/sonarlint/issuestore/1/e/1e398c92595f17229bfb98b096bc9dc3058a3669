@@ -1,0 +1,35 @@
+
+¡
+java:S1104"YMake PasswordField a static final constant or non-public and provide accessors if needed.(Óöö´øÿÿÿÿ8§«øƒ2J$d221a2b3-8402-46bf-9254-011e64c20deb
+¡
+java:S1104"YMake UserNameField a static final constant or non-public and provide accessors if needed.(ÜÌåÛıÿÿÿÿ8¨«øƒ2J$59606951-902c-4dea-84c1-35c481d9baf3
+š
+java:S1104"XMake WelcomAnchor a static final constant or non-public and provide accessors if needed.(–÷8¨«øƒ2J$f5e9a364-d2fc-4e9a-a19d-3385f45dfef9
+Ÿ	java:S116"XRename this field "PasswordField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óöö´øÿÿÿÿ8¯«øƒ2J$21729347-9a78-423a-b9cd-82c97733bb25
+Ÿ	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÌåÛıÿÿÿÿ8¯«øƒ2J$fbda6c45-7ea6-4b16-9cbe-946cd785c39b
+˜	java:S116"WRename this field "WelcomAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–÷8¯«øƒ2J$537329fa-bc30-4ebf-8ddb-d73f73ef5538
+Ä
+java:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šÇá8¯«øƒ2J$b76e9cfb-ea7d-418f-8c0f-3bbb33c02e4c
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á„ôò8²«øƒ2J$7f39bbba-11c1-46d9-9a59-a653910048ea
+
+java:S1854 ">Remove this useless assignment to local variable "userEntity".(é–Ä£8³«øƒ2J$9f15d180-742a-4f91-a2d1-351401a8acff
+u
+java:S1172"2Remove this unused method parameter "actionEvent".(Á„ôò8³«øƒ2J$1f8fd9a2-2418-485a-9d2f-454f0afc5e1d
+r
+java:S1481 "/Remove this unused "userEntity" local variable.(é–Ä£8´«øƒ2J$3c98202b-40cb-4121-925f-eec4c14f1e6d
+•	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ãò¤ıÿÿÿÿ8´«øƒ2J$7364ecdf-60d5-4095-b7fa-e73e3c820a23
+z
+java:S1172#"2Remove this unused method parameter "actionEvent".(”Ãò¤ıÿÿÿÿ8ñ¸¯ûƒ2J$0ca5424c-ec17-454b-82d4-d1c7cdf72c39
+	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÇá8µ«øƒ2J$4a82af2b-0814-4e41-98a4-c82ecfc08d66
+S
+java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8Ùšîşƒ2
+S
+java:S1128	"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8Ùšîşƒ2
+\
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8Ùšîşƒ2
+J
+java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8Ùšîşƒ2
+K
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8Ùšîşƒ2
+W
+java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8Ùšîşƒ2
