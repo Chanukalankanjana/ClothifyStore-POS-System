@@ -2,7 +2,6 @@
 
 <?import javafx.scene.PointLight?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="adminAnchor" prefHeight="353.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.AdminDashController">
     <children>
@@ -55,10 +53,10 @@
                 <Font size="18.0" />
             </font></Button>
         <TextField fx:id="empNameField" layoutX="296.0" layoutY="162.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" />
-        <TextField fx:id="empEmailField" layoutX="296.0" layoutY="221.0" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
+        <TextField fx:id="empEmailField" layoutX="296.0" layoutY="221.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
         <TextField fx:id="empAddressField" layoutX="296.0" layoutY="278.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
         <Button fx:id="deleteBtn" defaultButton="true" layoutX="560.0" layoutY="279.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" />
-        <TableView fx:id="employeeTable" layoutX="296.0" layoutY="351.0" prefHeight="318.0" prefWidth="556.0">
+        <TableView layoutX="296.0" layoutY="351.0" prefHeight="318.0" prefWidth="556.0">
             <columns>
                 <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
@@ -69,8 +67,6 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <ComboBox fx:id="empIdField" layoutX="296.0" layoutY="104.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
-      <Text fx:id="empIdText" layoutX="305.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id number" wrappingWidth="187.6708984375" />
-      <Text fx:id="empIdLabel" layoutX="305.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Id :-" />
+      <TextField fx:id="empIdField" layoutX="296.0" layoutY="99.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
     </children>
 </AnchorPane>
