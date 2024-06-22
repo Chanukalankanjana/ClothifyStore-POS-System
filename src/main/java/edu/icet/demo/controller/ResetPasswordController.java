@@ -29,7 +29,7 @@ public class ResetPasswordController implements Initializable {
     }
     public void sendOTPbtn(ActionEvent actionEvent) {
         Random random = new Random();
-        int otp = random.nextInt(900000) + 100000;
+        otp = random.nextInt(900000) + 100000;
         System.out.println(otp);
 
         try {

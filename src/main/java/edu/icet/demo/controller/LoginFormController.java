@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -22,12 +23,14 @@ public class LoginFormController implements Initializable {
     public TextField UserNameField;
     public AnchorPane WelcomAnchor;
 
+    private boolean isShow;
+
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     UserBoImpl userBoImpl=new UserBoImpl();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        new Alert(Alert.AlertType.INFORMATION,"If your first time to sign in to this, Please reset your password clicked forgot password button").show();
+        isShow=true;
     }
 
 
@@ -70,4 +73,10 @@ public class LoginFormController implements Initializable {
     }
 
 
+    public void emailKeyReleasedAction(KeyEvent keyEvent) {
+        if (isShow){
+            new Alert(Alert.AlertType.INFORMATION,"If your first time to sign in to this, Please reset your password clicked forgot password button").show();
+            isShow=false;
+        }
+    }
 }

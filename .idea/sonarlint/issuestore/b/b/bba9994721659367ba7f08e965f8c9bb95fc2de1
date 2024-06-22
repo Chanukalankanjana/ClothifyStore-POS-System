@@ -1,38 +1,36 @@
 
-Q
-java:S3740!"/Provide the parametrized type for this generic.(¼¦Úòÿÿÿÿÿ8¾“îşƒ2
-L
-java:S37402"/Provide the parametrized type for this generic.(¿½ˆ–8¾“îşƒ2
-L
-java:S3740@"/Provide the parametrized type for this generic.(ÙÕÓ8¾“îşƒ2
-Q
-java:S3740Z"/Provide the parametrized type for this generic.(ÿ‚ÇØùÿÿÿÿ8¾“îşƒ2
-L
-java:S3740g"/Provide the parametrized type for this generic.(Ø·ä8¾“îşƒ2
-K
-java:S3740q"/Provide the parametrized type for this generic.(ÆÊÆ78¿“îşƒ2
-U
-java:S1874!"3Remove this use of "createQuery"; it is deprecated.(¼¦Úòÿÿÿÿÿ8Ş“îşƒ2
-P
-java:S18742"3Remove this use of "createQuery"; it is deprecated.(¿½ˆ–8ß“îşƒ2
-P
-java:S1874@"3Remove this use of "createQuery"; it is deprecated.(ÙÕÓ8à“îşƒ2
+w
+java:S3740 "/Provide the parametrized type for this generic.(¼¦Úòÿÿÿÿÿ8ìƒ´‚„2J$8520c640-ffa3-41c6-9d45-010bad8ba6ac
+r
+java:S37401"/Provide the parametrized type for this generic.(¿½ˆ–8íƒ´‚„2J$c61793db-b85a-4798-ada1-061206cc0ebb
+r
+java:S3740?"/Provide the parametrized type for this generic.(ÙÕÓ8íƒ´‚„2J$1e106948-e1a9-4b1a-a181-3085eb680249
+w
+java:S3740Y"/Provide the parametrized type for this generic.(ÿ‚ÇØùÿÿÿÿ8íƒ´‚„2J$ff32ca46-bddc-49d8-a047-dc31979858f2
+r
+java:S3740g"/Provide the parametrized type for this generic.(Ø·ä8íƒ´‚„2J$2c06b617-419b-477f-b9bc-74181df82f40
+q
+java:S3740q"/Provide the parametrized type for this generic.(ÆÊÆ78íƒ´‚„2J$f9fe56ee-c248-45b2-b909-af441c84f29d
+{
+java:S1874 "3Remove this use of "createQuery"; it is deprecated.(¼¦Úòÿÿÿÿÿ8„´‚„2J$859f1496-e765-4792-a164-ea0d69eacdae
+v
+java:S18741"3Remove this use of "createQuery"; it is deprecated.(¿½ˆ–8¡„´‚„2J$e11c8394-b662-4673-aec0-8efcf23289bc
+v
+java:S1874?"3Remove this use of "createQuery"; it is deprecated.(ÙÕÓ8¢„´‚„2J$5adabda1-3e73-40ef-a0dd-79941f2bb61c
 ‡
-java:S1854J"?Remove this useless assignment to local variable "transaction".(šç¨Ğÿÿÿÿÿ8Îá·õƒ2J$06c7d4c0-2bb5-4d11-8fea-85e882f868a1
+java:S1854I"?Remove this useless assignment to local variable "transaction".(šç¨Ğÿÿÿÿÿ8¤„´‚„2J$4239c896-8769-45b5-abcd-40d46d07dd45
 x
-java:S1481J"0Remove this unused "transaction" local variable.(šç¨Ğÿÿÿÿÿ8Îá·õƒ2J$792b770f-26fd-44dc-89bd-b80c5656c5e4
-U
-java:S1874L"3Remove this use of "createQuery"; it is deprecated.(±×Ÿşÿÿÿÿ8ä“îşƒ2
+java:S1481I"0Remove this unused "transaction" local variable.(šç¨Ğÿÿÿÿÿ8§„´‚„2J$3c1d55f2-b820-474b-a50a-5b5f6621c9c7
+{
+java:S1874K"3Remove this use of "createQuery"; it is deprecated.(±×Ÿşÿÿÿÿ8§„´‚„2J$075b1990-824c-44f6-9c0f-0b198f796a2f
 o
-java:S1602O",Remove useless curly braces around statement(ß£¬™8Ğá·õƒ2J$96a2be3d-c139-4df0-958b-1fac20f4214a
-S
-java:S1612O"6Replace this lambda with method reference 'list::add'.(ß£¬™8æ“îşƒ2
-U
-java:S1874Z"3Remove this use of "createQuery"; it is deprecated.(ÿ‚ÇØùÿÿÿÿ8è“îşƒ2
-P
-java:S1874g"3Remove this use of "createQuery"; it is deprecated.(Ø·ä8é“îşƒ2
-O
-java:S1874q"3Remove this use of "createQuery"; it is deprecated.(ÆÊÆ78é“îşƒ2
-r	java:S106u"+Replace this use of System.out by a logger.(´‹¹öşÿÿÿÿ8Õá·õƒ2J$75d5fac2-1ff4-4e42-944d-8f9f4c7322b9
-V
-java:S1128"9Remove this unused import 'com.mysql.cj.MysqlConnection'.(µË‹İ8ë“îşƒ2
+java:S1602N",Remove useless curly braces around statement(ß£¬™8¨„´‚„2J$625db867-b448-4226-accb-45eb9d91b649
+y
+java:S1612N"6Replace this lambda with method reference 'list::add'.(ß£¬™8©„´‚„2J$45e3d3fa-0052-44c3-a420-12d6583da8e5
+{
+java:S1874Y"3Remove this use of "createQuery"; it is deprecated.(ÿ‚ÇØùÿÿÿÿ8«„´‚„2J$3d9a3df0-8ea5-4225-922e-eaf56ec80dc4
+v
+java:S1874g"3Remove this use of "createQuery"; it is deprecated.(Ø·ä8­„´‚„2J$aeaef7b6-8ac4-404b-bd55-512fef4816b4
+u
+java:S1874q"3Remove this use of "createQuery"; it is deprecated.(ÆÊÆ78®„´‚„2J$a5713411-fdb9-49c2-8496-6fb4276e1c3b
+r	java:S106u"+Replace this use of System.out by a logger.(´‹¹öşÿÿÿÿ8¯„´‚„2J$9b0da3f7-eba6-44e2-ad0c-0dba60f67521

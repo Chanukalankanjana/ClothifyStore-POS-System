@@ -1,6 +1,5 @@
 package edu.icet.demo.dao.custom.impl;
 
-import com.mysql.cj.MysqlConnection;
 import edu.icet.demo.dao.custom.UserDao;
 import edu.icet.demo.entity.UserEntity;
 import edu.icet.demo.utill.HibernateUtil;
@@ -94,6 +93,7 @@ public class UserDaoImpl implements UserDao {
         return userEntity;
 
     }
+
 
     public String getLatestId() {
 
