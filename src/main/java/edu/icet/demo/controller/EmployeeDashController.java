@@ -5,7 +5,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Rectangle;
 
-public class ManageOrderController {
+public class EmployeeDashController {
     public Rectangle employeeAnchor;
     public TextField orderIdField;
     public TextField employeeNameField;

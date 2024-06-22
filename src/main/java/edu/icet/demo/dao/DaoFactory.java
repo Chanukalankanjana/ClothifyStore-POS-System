@@ -1,5 +1,6 @@
 package edu.icet.demo.dao;
 
+import edu.icet.demo.dao.custom.impl.CustomerDaoImpl;
 import edu.icet.demo.dao.custom.impl.UserDaoImpl;
 import edu.icet.demo.utill.DaoType;
 
@@ -15,7 +16,7 @@ public class DaoFactory {
     public <T extends SuperDao>T getDao(DaoType type){
         switch (type){
             case USER:return (T)new UserDaoImpl();
-            //case CUSTOMER:return (T)new CustomerDaoImpl();
+            case CUSTOMER:return (T)new CustomerDaoImpl();
         }
         return null;
     }

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="353.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.ManageEmployeeController">
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="adminAnchor" prefHeight="353.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.AdminDashController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c00b5" height="683.0" layoutX="-1.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="281.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="281.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="586.0" />
@@ -17,9 +21,8 @@
                 <Font size="32.0" />
             </font>
         </Label>
-        <TextField fx:id="TextEmpId" layoutX="296.0" layoutY="102.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
-        <Button defaultButton="true" layoutX="560.0" layoutY="100.0" mnemonicParsing="false" onAction="#AddActionBtn" prefHeight="38.0" prefWidth="73.0" text="Add " />
-        <Button defaultButton="true" layoutX="560.0" layoutY="221.0" mnemonicParsing="false" onAction="#UpdateActionBtn" prefHeight="38.0" prefWidth="73.0" text="Update" />
+        <Button fx:id="addEmployeeBtn" defaultButton="true" layoutX="560.0" layoutY="100.0" mnemonicParsing="false" onAction="#AddActionBtn" prefHeight="38.0" prefWidth="73.0" text="Add " />
+        <Button fx:id="updateBtn" defaultButton="true" layoutX="560.0" layoutY="221.0" mnemonicParsing="false" onAction="#UpdateActionBtn" prefHeight="38.0" prefWidth="73.0" text="Update" />
         <Button defaultButton="true" layoutX="560.0" layoutY="161.0" mnemonicParsing="false" onAction="#ViewActionBtn" prefHeight="38.0" prefWidth="73.0" text="View" />
         <Label layoutX="57.0" layoutY="29.0" prefHeight="103.0" prefWidth="150.0" text="Welcome Admin" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
@@ -51,11 +54,11 @@
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <TextField fx:id="TextEmpName" layoutX="296.0" layoutY="162.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" />
-        <TextField fx:id="EmailAddressText" layoutX="296.0" layoutY="221.0" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
-        <TextField fx:id="AddressText" layoutX="296.0" layoutY="278.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
-        <Button defaultButton="true" layoutX="560.0" layoutY="279.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" />
-        <TableView layoutX="296.0" layoutY="351.0" prefHeight="318.0" prefWidth="556.0">
+        <TextField fx:id="empNameField" layoutX="296.0" layoutY="162.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" />
+        <TextField fx:id="empEmailField" layoutX="296.0" layoutY="221.0" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
+        <TextField fx:id="empAddressField" layoutX="296.0" layoutY="278.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
+        <Button fx:id="deleteBtn" defaultButton="true" layoutX="560.0" layoutY="279.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" />
+        <TableView fx:id="employeeTable" layoutX="296.0" layoutY="351.0" prefHeight="318.0" prefWidth="556.0">
             <columns>
                 <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
@@ -66,6 +69,8 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
+      <ComboBox fx:id="empIdField" layoutX="296.0" layoutY="104.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
+      <Text fx:id="empIdText" layoutX="305.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id number" wrappingWidth="187.6708984375" />
+      <Text fx:id="empIdLabel" layoutX="305.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Id :-" />
     </children>
 </AnchorPane>
-

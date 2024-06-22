@@ -48,7 +48,7 @@ public class LoginFormController implements Initializable {
             if (userEntity.getRole().equals("Admin") && password.equals(PasswordField.getText())){
                 System.out.println("Logged");
                 try {
-                    SceneSwitchController.getInstance().switchScene(WelcomAnchor,"manageEmployee.fxml");
+                    SceneSwitchController.getInstance().switchScene(WelcomAnchor,"AdminDash.fxml");
                 } catch (IOException e){
                     throw new RuntimeException(e);
                 }
@@ -57,7 +57,7 @@ public class LoginFormController implements Initializable {
                 instance.setId(userEntity.getId());
                 instance.setName(userEntity.getName());
                 instance.setEmail(userEntity.getEmail());
-                SceneSwitchController.getInstance().switchScene(WelcomAnchor,"manageOrder.fxml");
+                SceneSwitchController.getInstance().switchScene(WelcomAnchor,"employeeDash.fxml");
             } else if (userEntity.getId()==null) {
                 System.out.println("Null");
             } else {
