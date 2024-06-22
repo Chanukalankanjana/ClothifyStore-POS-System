@@ -54,8 +54,7 @@ public class ResetPasswordController implements Initializable {
                         newPasswordField.setText("");
                         reEnterNewPasswordField.setText("");
                         OTPField.setText("");
-                        sceneSwitch.switchScene(ResetAnchor, "welcomeForm.fxml");
-
+                        sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
                     }
                 }else {
                     new Alert(Alert.AlertType.ERROR,"Incorrect OTP, Please Check your OTP").show();

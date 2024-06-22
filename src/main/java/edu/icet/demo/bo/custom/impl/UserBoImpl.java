@@ -93,10 +93,10 @@ public class UserBoImpl implements UserBo {
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");
-        properties.put("mail.debug", "true");  // Enable debug logging
+        properties.put("mail.debug", "true");
 
         String myEmail = "clothifystore220@gmail.com";
-        String password = "ivbfahpojroyioud";  // Ensure this is the correct password
+        String password = "ivbfahpojroyioud";
 
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
@@ -118,7 +118,7 @@ public class UserBoImpl implements UserBo {
         } catch (MessagingException e) {
             e.printStackTrace();  // Print the stack trace for debugging
             Logger.getLogger(UserBoImpl.class.getName()).log(Level.SEVERE, null, e);
-            throw e;  // Rethrow the exception to propagate the error
+            throw e;
         }
     }
 
