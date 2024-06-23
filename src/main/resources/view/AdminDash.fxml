@@ -27,28 +27,28 @@
                 <Font size="34.0" />
             </font>
         </Label>
-        <Button layoutX="29.0" layoutY="168.0" mnemonicParsing="false" onAction="#ManageEmpBtn" prefHeight="38.0" prefWidth="221.0" text="Manage Employee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="manageEmpBtn" layoutX="29.0" layoutY="168.0" mnemonicParsing="false" onAction="#manageEmpAction" prefHeight="38.0" prefWidth="221.0" text="Manage Employee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <Button layoutX="29.0" layoutY="243.0" mnemonicParsing="false" onAction="#ViewOrderBtn" prefHeight="38.0" prefWidth="221.0" text="View Orders" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewOrderBtn" layoutX="29.0" layoutY="243.0" mnemonicParsing="false" onAction="#viewOrderAction" prefHeight="38.0" prefWidth="221.0" text="View Orders" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <Button layoutX="29.0" layoutY="319.0" mnemonicParsing="false" onAction="#ViewProductsBtn" prefHeight="38.0" prefWidth="221.0" text="View Products " textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewProductsBtn" layoutX="29.0" layoutY="319.0" mnemonicParsing="false" onAction="#viewProductsAction" prefHeight="38.0" prefWidth="221.0" text="View Products " textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <Button layoutX="29.0" layoutY="398.0" mnemonicParsing="false" onAction="#ViewCustomerBtn" prefHeight="38.0" prefWidth="221.0" text="View Customers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewCustomersBtn" layoutX="29.0" layoutY="398.0" mnemonicParsing="false" onAction="#viewCustomersAction" prefHeight="38.0" prefWidth="221.0" text="View Customers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <Button layoutX="29.0" layoutY="474.0" mnemonicParsing="false" onAction="#ViewSupplierBtn" prefHeight="38.0" prefWidth="221.0" text="View Suppliers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewSuppliersBtn" layoutX="29.0" layoutY="474.0" mnemonicParsing="false" onAction="#viewSuppliersAction" prefHeight="38.0" prefWidth="221.0" text="View Suppliers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font></Button>
         <PointLight color="CHARTREUSE" lightOn="true" />
-        <Button layoutX="99.0" layoutY="555.0" mnemonicParsing="false" onAction="#LogoutBtn" text="Logout">
+        <Button fx:id="logoutBtn" layoutX="99.0" layoutY="555.0" mnemonicParsing="false" onAction="#LogoutAction" text="Logout">
             <font>
                 <Font size="18.0" />
             </font></Button>
