@@ -3,14 +3,17 @@ package edu.icet.demo.controller;
 import edu.icet.demo.bo.custom.impl.UserBoImpl;
 import edu.icet.demo.model.User;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.Random;
@@ -41,14 +44,17 @@ public class AdminDashController implements Initializable {
     UserBoImpl userBoImpl = new UserBoImpl();
     SceneSwitchController sceneSwitchController = SceneSwitchController.getInstance();
 
+    boolean isAction = true,isEmailValid,isMouseClick;
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         IdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         NameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         EmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         AddressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         empIdField.setText(userBoImpl.generateEmployeeId());
-        employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
+        employeeTable.setItems(userBoImpl.getAllUsers());
+
     }
 
     public void AddActionBtn(ActionEvent actionEvent) {
@@ -194,6 +200,30 @@ public class AdminDashController implements Initializable {
     }
 
     public void manageEmpAction(ActionEvent actionEvent) {
+    }
+
+    public void tableMouseClickedAction(MouseEvent mouseEvent) {
+            int index = employeeTable.getSelectionModel().getSelectedIndex();
+
+
+            if(index < 0){
+                return;
+            }
+            String id = IdColumn.getCellData(index).toString();
+
+        if (isAction){
+            isEmailValid = true;
+            User user = userBoImpl.getUserById(id);
+            empIdField.setText(user.getId());
+            empNameField.setText(user.getName());
+            empEmailField.setText(user.getEmail());
+            empAddressField.setText(user.getAddress());
+            byte[] data;
+
+            if (!user.getId().equals("")){
+                    isMouseClick = true;
+            }
+        }
     }
 }
 

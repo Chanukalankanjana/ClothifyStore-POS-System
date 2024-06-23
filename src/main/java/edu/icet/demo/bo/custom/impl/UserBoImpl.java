@@ -32,7 +32,7 @@ public class UserBoImpl implements UserBo {
     }
 
 
-    public ObservableList getAllUsers() {
+    public ObservableList<User> getAllUsers() {
 
         ObservableList<UserEntity> list = userDaoImpl.searchAll();
         ObservableList<User> userList = FXCollections.observableArrayList();
@@ -78,12 +78,12 @@ public class UserBoImpl implements UserBo {
 
         String lastEmployeeId = userDaoImpl.getLatestId();
         if (lastEmployeeId==null){
-            return "E0001";
+            return "U0001";
         }
 
-        int number = Integer.parseInt(lastEmployeeId.split("E")[1]);
+        int number = Integer.parseInt(lastEmployeeId.split("U")[1]);
         number++;
-        return String.format("E%04d", number);
+        return String.format("U%04d", number);
     }
 
     public void sendEmail(String receiveEmail, String text) throws MessagingException {

@@ -56,7 +56,7 @@
         <TextField fx:id="empEmailField" layoutX="296.0" layoutY="221.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
         <TextField fx:id="empAddressField" layoutX="296.0" layoutY="278.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
         <Button fx:id="deleteBtn" defaultButton="true" layoutX="560.0" layoutY="279.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" />
-        <TableView layoutX="296.0" layoutY="351.0" prefHeight="318.0" prefWidth="556.0">
+        <TableView fx:id="employeeTable" layoutX="296.0" layoutY="351.0" onMouseClicked="#tableMouseClickedAction" prefHeight="318.0" prefWidth="556.0">
             <columns>
                 <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
