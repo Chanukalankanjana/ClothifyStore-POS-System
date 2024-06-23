@@ -1,3 +1,49 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(¬¤Õ¦8¡’Ûõƒ2
+w
+java:S3740"/Provide the parametrized type for this generic.(‹ú· ûÿÿÿÿ8ãŸµ¶„2J$a1033bc5-19af-40ab-827c-8dbf52552b11
+w
+java:S3740"/Provide the parametrized type for this generic.(çÚï‰ıÿÿÿÿ8ãŸµ¶„2J$b72ee0ba-224b-4b5a-b48f-bbd8d94c21ec
+w
+java:S3740"/Provide the parametrized type for this generic.(ùëÌõúÿÿÿÿ8ãŸµ¶„2J$0c143696-d3a3-430e-a3c2-7b968be847ef
+r
+java:S3740"/Provide the parametrized type for this generic.(î¤òı8ãŸµ¶„2J$179bb187-4116-4ad8-8889-2797b6a50450
+w
+java:S3740"/Provide the parametrized type for this generic.(•ºø¹şÿÿÿÿ8äŸµ¶„2J$a571ea05-7305-418a-8007-87481cab57a9
+œ
+java:S1104"YMake viewCusAnchor a static final constant or non-public and provide accessors if needed.(©îÂæ8åŸµ¶„2J$09560b50-a34a-4a89-b807-b2cfff9fefd8
+ 
+java:S1104"XMake manageEmpBtn a static final constant or non-public and provide accessors if needed.(å­¬½ûÿÿÿÿ8åŸµ¶„2J$dcae7450-d1e4-4557-aec9-8591f54d68e7
+š
+java:S1104"XMake viewOrderBtn a static final constant or non-public and provide accessors if needed.(¡¦éz8åŸµ¶„2J$2de19fb1-5440-494f-87d5-423413a81c1a
+£
+java:S1104"[Make viewProductsBtn a static final constant or non-public and provide accessors if needed.(û±Ö³øÿÿÿÿ8åŸµ¶„2J$c5f66018-fe99-4691-8fb5-9fb2eff203ac
+¤
+java:S1104"\Make viewCustomersBtn a static final constant or non-public and provide accessors if needed.(äõï¼ıÿÿÿÿ8åŸµ¶„2J$385341c7-183c-415f-a553-bb61fdcfa511
+Ÿ
+java:S1104"\Make viewSuppliersBtn a static final constant or non-public and provide accessors if needed.(ŒĞı™8åŸµ¶„2J$c9084dd6-a20c-4eb0-abf5-fb637fe4bade
+¥
+java:S1104"]Make viewCustomerTable a static final constant or non-public and provide accessors if needed.(‹ú· ûÿÿÿÿ8åŸµ¶„2J$c82776d3-29a2-4b9f-88fa-1bc6b6645256
+Ÿ
+java:S1104"WMake cusIdColumn a static final constant or non-public and provide accessors if needed.(çÚï‰ıÿÿÿÿ8åŸµ¶„2J$353ad9f8-b84b-4ff0-acf1-cd71f6a351cb
+¡
+java:S1104"YMake cusNameColumn a static final constant or non-public and provide accessors if needed.(ùëÌõúÿÿÿÿ8åŸµ¶„2J$16784371-c8ff-4d11-840c-a65260a12cb3
+
+java:S1104"ZMake cusEmailColumn a static final constant or non-public and provide accessors if needed.(î¤òı8åŸµ¶„2J$2d2ecd8c-8464-4d1a-be0d-b60d7b006034
+¤
+java:S1104"\Make cusAddresscoIumn a static final constant or non-public and provide accessors if needed.(•ºø¹şÿÿÿÿ8åŸµ¶„2J$691915fd-1e5a-4892-a905-d3eac4b7c0d2
+
+java:S1104"UMake logoutBtn a static final constant or non-public and provide accessors if needed.(€óœ’ıÿÿÿÿ8©ŞÕ¶„2J$1d53c778-1e89-4017-88fe-63d214b7ebe9
+
+java:S3655G"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8·ÑÚ¶„2J$85735db4-48b5-42ec-b54b-7ce96af2d6aa
+É
+java:S11863"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ¿óíüÿÿÿÿ8‚ µ¶„2J$11337c01-720e-405c-86b4-9b6eda8b3b81
+É
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°²¯Òşÿÿÿÿ8‚ µ¶„2J$a391ae96-3f48-4979-b8c0-90cf4d9fe71d
+É
+java:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Á²î³øÿÿÿÿ8‚ µ¶„2J$1559900e-ebf4-4388-8f9f-e2869659376a
+z
+java:S1172/"2Remove this unused method parameter "actionEvent".(Ê½äÃıÿÿÿÿ8‰ µ¶„2J$97312235-d2e5-467b-b67d-ac8fa71a5be2
+t
+java:S11729"2Remove this unused method parameter "actionEvent".(ÉóÃ8Š µ¶„2J$a3cef75a-1d26-49dd-af8c-ee4399016d9b
+u
+java:S1172A"2Remove this unused method parameter "actionEvent".(ƒªåÜ8šÚ¶„2J$19eb8b44-1526-432e-9e51-e4713f07b444

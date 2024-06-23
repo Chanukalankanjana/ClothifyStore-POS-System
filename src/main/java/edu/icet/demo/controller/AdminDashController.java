@@ -42,7 +42,7 @@ public class AdminDashController implements Initializable {
     public Button manageEmpBtn;
 
     UserBoImpl userBoImpl = new UserBoImpl();
-    SceneSwitchController sceneSwitchController = SceneSwitchController.getInstance();
+    SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     boolean isAction = true,isEmailValid,isMouseClick;
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -184,13 +184,22 @@ public class AdminDashController implements Initializable {
     }
 
 
-    public void LogoutAction(ActionEvent actionEvent) {
+    public void LogoutAction(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(adminAnchor,"loginForm.fxml");
+        }
     }
 
     public void viewSuppliersAction(ActionEvent actionEvent) {
     }
 
-    public void viewCustomersAction(ActionEvent actionEvent) {
+    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewCustomer.fxml");
     }
 
     public void viewProductsAction(ActionEvent actionEvent) {
