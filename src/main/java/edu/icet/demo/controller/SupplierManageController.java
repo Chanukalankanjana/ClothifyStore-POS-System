@@ -45,7 +45,7 @@ public class SupplierManageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         supIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         supNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        supNameColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        supEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         supCompanyColumn.setCellValueFactory(new PropertyValueFactory<>("company"));
 
         supplierIdField.setText(supplierBoImpl.generateSupplierId());
@@ -109,10 +109,10 @@ public class SupplierManageController implements Initializable {
                 supplierIdField.getText(),
                 supplierNameField.getText(),
                 supplierEmailAddressField.getText(),
-                supplierAddressField.getText()
+                companyField.getText()
         );
 
-        if (!supplierIdField.getText().isEmpty() && supplierBoImpl.isValidEmail(supplierEmailAddressField.getText()) && !supplierAddressField.getText().isEmpty()) {
+        if (!supplierIdField.getText().isEmpty() && supplierBoImpl.isValidEmail(supplierEmailAddressField.getText()) && !companyField.getText().isEmpty()) {
             boolean isInsert = supplierBoImpl.insertSupplier(supplier);
 
             if (isInsert) {

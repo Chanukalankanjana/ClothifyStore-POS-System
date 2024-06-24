@@ -66,7 +66,7 @@ public class SupplierBoImpl implements SupplierBo {
             return "S0001";
         }
 
-        int number = Integer.parseInt(lastSupplierId.split("C")[1]);
+        int number = Integer.parseInt(lastSupplierId.split("S")[1]);
         number++;
         return String.format("S%04d", number);
     }

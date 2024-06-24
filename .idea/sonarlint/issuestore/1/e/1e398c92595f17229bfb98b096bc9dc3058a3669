@@ -1,28 +1,28 @@
 
-	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ş¤²„„2J$f61b5deb-76fb-4e87-8526-ba14a1d46854
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ş¤²„„2J$695c4f17-9734-47e5-8b40-36b06b21f21c
 ¡
-java:S1104"YMake PasswordField a static final constant or non-public and provide accessors if needed.(Óöö´øÿÿÿÿ8„¥²„„2J$c4ccda90-abeb-4763-b005-64bd71a326e4
+java:S1104"YMake PasswordField a static final constant or non-public and provide accessors if needed.(Óöö´øÿÿÿÿ8„¥²„„2J$4e6f2a51-522c-4ea5-8839-80d0feeb1e84
 ¡
-java:S1104"YMake UserNameField a static final constant or non-public and provide accessors if needed.(ÜÌåÛıÿÿÿÿ8…¥²„„2J$bf99b394-8ac7-4d6b-8fe8-ec12134e5f8f
+java:S1104"YMake UserNameField a static final constant or non-public and provide accessors if needed.(ÜÌåÛıÿÿÿÿ8…¥²„„2J$142afa58-d2cd-43ea-b566-463a91786fe9
 š
-java:S1104"XMake WelcomAnchor a static final constant or non-public and provide accessors if needed.(–÷8…¥²„„2J$aa9791e0-cf28-4dc5-be28-360d9fe991c0
-Ÿ	java:S116"XRename this field "PasswordField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óöö´øÿÿÿÿ8æ¥²„„2J$b13f343e-34c3-4c47-9986-a2a47a03210e
-Ÿ	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÌåÛıÿÿÿÿ8æ¥²„„2J$1bd2fd29-cff1-41e2-82ee-c11b69c0c8a3
-˜	java:S116"WRename this field "WelcomAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–÷8æ¥²„„2J$5f527be2-bbfd-4799-8294-e91c490277d1
+java:S1104"XMake WelcomAnchor a static final constant or non-public and provide accessors if needed.(–÷8…¥²„„2J$efa5a33f-f6f6-4884-b626-c3387dde7bd0
+Ÿ	java:S116"XRename this field "PasswordField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óöö´øÿÿÿÿ8æ¥²„„2J$08149f2f-2654-4c60-ab14-9ad1ddb683ac
+Ÿ	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÌåÛıÿÿÿÿ8æ¥²„„2J$208c355b-adce-4daa-980b-417d07183d0f
+˜	java:S116"WRename this field "WelcomAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–÷8æ¥²„„2J$947c2903-4d3b-4aa3-b9a9-0be2477635d2
 Ä
-java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šÇá8è¥²„„2J$d184cfe2-12cd-4e6d-a6c8-713ad781b7c0
-•	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÒ‡ìùÿÿÿÿ8ñ¥²„„2J$e90ed6e6-8866-4a6e-8f5b-be300b8819bf
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šÇá8è¥²„„2J$c10bc7ca-4a36-4056-bc93-6949a4f6c42e
+•	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÒ‡ìùÿÿÿÿ8ñ¥²„„2J$24369d45-74d2-4b06-9940-f356e65a3e06
 z
-java:S1172%"2Remove this unused method parameter "actionEvent".(ĞÒ‡ìùÿÿÿÿ8ò¥²„„2J$b0a2c8fb-aefc-4d06-b261-57ca2cdfa067
-l	java:S1061"+Replace this use of System.out by a logger.(Ü™áp8÷¥²„„2J$46cab499-4959-481b-a2fe-601daad60d7c
-m	java:S106>"+Replace this use of System.out by a logger.(Ğâ¥ù8ş¥²„„2J$007706ef-fc20-45a0-a0d4-59859a45ebb5
-•	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ãò¤ıÿÿÿÿ8ÿ¥²„„2J$42472f6a-021d-4d7e-a08a-ec206cd96c68
+java:S1172%"2Remove this unused method parameter "actionEvent".(ĞÒ‡ìùÿÿÿÿ8ò¥²„„2J$2b85cdf9-8610-402f-af80-d0ef84436930
+l	java:S1061"+Replace this use of System.out by a logger.(Ü™áp8÷¥²„„2J$e141dd59-2763-464d-882b-6ccd3b439803
+m	java:S106>"+Replace this use of System.out by a logger.(Ğâ¥ù8ş¥²„„2J$1c08041f-87bb-4817-a56e-17d845715821
+•	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ãò¤ıÿÿÿÿ8ÿ¥²„„2J$695adfe2-7b29-4edb-b215-2997f135fe75
 z
-java:S1172D"2Remove this unused method parameter "actionEvent".(”Ãò¤ıÿÿÿÿ8ÿ¥²„„2J$9dfcf74d-499b-4d5b-8df6-d50c2f51834c
-	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÇá8€¦²„„2J$892d00f8-de43-446f-ba16-4e3ac14cf9f5
+java:S1172D"2Remove this unused method parameter "actionEvent".(”Ãò¤ıÿÿÿÿ8ÿ¥²„„2J$47fe295e-f4cc-43ad-b8dc-ffa4eb8712ac
+	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÇá8€¦²„„2J$26f7028f-7ab6-4783-98c2-8618be5d0633
 p
-java:S1172L"/Remove this unused method parameter "keyEvent".( ë;8¦²„„2J$9d3c4f94-fbb8-4b3b-9a16-1c586fd04041
+java:S1172L"/Remove this unused method parameter "keyEvent".( ë;8¦²„„2J$263f79b6-e010-4750-ba39-67b53e2210fb
 ‚
-java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8„¦²„„2J$7a99da68-4f5b-4fc5-89c4-c2a9469eae4b
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8„¦²„„2J$8552ef65-f8fd-4538-82d8-88ecb5ec0af5
 p
-java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8„¦²„„2J$7813d7d7-7c0a-4afd-b117-7970024bfb1a
+java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8„¦²„„2J$330cc0b7-eb62-436b-bb36-a0715febe97d
