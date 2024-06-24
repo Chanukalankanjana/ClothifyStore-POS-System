@@ -195,7 +195,8 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void viewSuppliersAction(ActionEvent actionEvent) {
+    public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewSuppliers.fxml");
     }
 
     public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
@@ -208,7 +209,8 @@ public class AdminDashController implements Initializable {
     public void viewOrderAction(ActionEvent actionEvent) {
     }
 
-    public void manageEmpAction(ActionEvent actionEvent) {
+    public void manageEmpAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"adminDash.fxml");
     }
 
     public void tableMouseClickedAction(MouseEvent mouseEvent) {

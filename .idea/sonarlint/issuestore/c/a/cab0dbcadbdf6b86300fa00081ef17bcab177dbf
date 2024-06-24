@@ -1,23 +1,23 @@
 
 ¤
-java:S1104"\Make newPasswordField a static final constant or non-public and provide accessors if needed.(áÎ“Ôøÿÿÿÿ8••ûƒ2J$bdfaa82e-8255-4865-ae2b-c61c17bd55f5
+java:S1104"\Make newPasswordField a static final constant or non-public and provide accessors if needed.(áÎ“Ôøÿÿÿÿ8••ûƒ2J$c1656066-c0cf-4395-8478-ab713bba968f
 ¦
-java:S1104"cMake reEnterNewPasswordField a static final constant or non-public and provide accessors if needed.(Å†ØÆ8••ûƒ2J$dd03e4c2-f4c9-4efc-9a8e-953910477385
+java:S1104"cMake reEnterNewPasswordField a static final constant or non-public and provide accessors if needed.(Å†ØÆ8••ûƒ2J$d55c05cd-5ef4-4497-a342-5b0e26f9cc92
 —
-java:S1104"TMake OTPField a static final constant or non-public and provide accessors if needed.(”Ï„ê8••ûƒ2J$417cec5a-d943-4d13-8781-6a0541a1fc9e
+java:S1104"TMake OTPField a static final constant or non-public and provide accessors if needed.(”Ï„ê8••ûƒ2J$81f32310-9f90-4aca-97b7-129aaf659eda
 š
-java:S1104"WMake ResetAnchor a static final constant or non-public and provide accessors if needed.(´şü8••ûƒ2J$c0233729-7c27-49c7-b00b-dd60f1eeb354
+java:S1104"WMake ResetAnchor a static final constant or non-public and provide accessors if needed.(´şü8••ûƒ2J$43f716f3-0e9b-4b21-ba79-7d8954a9ec7d
 
-java:S1104"VMake emailField a static final constant or non-public and provide accessors if needed.(şãÓâúÿÿÿÿ8Ğ¨·üƒ2J$2ad19051-2382-46ae-9835-1a6ead021bb6
-•	java:S116"SRename this field "OTPField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ï„ê8¯•ûƒ2J$085226d6-e56b-4fd7-afda-755aa9573b8b
-˜	java:S116"VRename this field "ResetAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şü8¯•ûƒ2J$76c638b8-2491-4f68-99c8-ad134bdf4577
+java:S1104"VMake emailField a static final constant or non-public and provide accessors if needed.(şãÓâúÿÿÿÿ8Ğ¨·üƒ2J$657e6962-b28e-48ff-aa35-7fbd7266d366
+•	java:S116"SRename this field "OTPField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ï„ê8¯•ûƒ2J$4c449109-ec0e-4f53-a9dc-e5f525da6ba1
+˜	java:S116"VRename this field "ResetAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şü8¯•ûƒ2J$2571a7ed-4866-457f-8573-b88269ad8347
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8°•ûƒ2J$d57ac61d-0220-4d9d-992d-427e2e89a76a
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8°•ûƒ2J$afbb8f31-b116-4f61-9006-869d1c1a4aef
 u
-java:S1172"2Remove this unused method parameter "actionEvent".(Îà8‘šîşƒ2J$a183816b-4e66-48e5-ac91-b286803e325b
+java:S1172"2Remove this unused method parameter "actionEvent".(Îà8‘šîşƒ2J$c2d85128-9abe-4f58-b947-82f1175d86b6
 `
-java:S2119"Save and re-use this "Random".(¼İÅf8¶•ûƒ2J$79bc744b-ca51-4096-b73e-bc71d60f9016
-l	java:S106!"+Replace this use of System.out by a logger.(›ÑQ8»•ûƒ2J$6fcb5047-7472-4ca7-8775-9367a78af5ff
+java:S2119 "Save and re-use this "Random".(¼İÅf8¶•ûƒ2J$83a1d13d-98d4-4232-916e-d882293a2f00
+l	java:S106""+Replace this use of System.out by a logger.(›ÑQ8»•ûƒ2J$c786d535-d824-4459-b19f-6ea6788d754e
 u
-java:S1172,"2Remove this unused method parameter "actionEvent".(Œâ†¿8—šîşƒ2J$3df7d68a-4987-471d-b818-99584aa99388
-r	java:S106C"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8Ä¼¾üƒ2J$1b87386f-d278-4d58-b5e6-2bff394639e2
+java:S1172-"2Remove this unused method parameter "actionEvent".(Œâ†¿8—šîşƒ2J$70e244f9-daa7-46a3-afed-5a07d3734b8d
+r	java:S106D"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8Ä¼¾üƒ2J$d1c3f242-2e78-465b-950c-a6641b89dba8

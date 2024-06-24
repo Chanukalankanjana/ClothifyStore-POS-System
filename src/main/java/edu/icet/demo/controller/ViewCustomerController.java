@@ -58,7 +58,8 @@ public class ViewCustomerController implements Initializable {
         sceneSwitch.switchScene(viewCusAnchor,"viewCustomer.fxml");
     }
 
-    public void viewSuppliersOnAction(ActionEvent actionEvent) {
+    public void viewSuppliersOnAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCusAnchor,"viewSuppliers.fxml");
     }
 
 

@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -28,7 +29,6 @@ public class SupplierManageController implements Initializable {
     public TableColumn supIdColumn;
     public TableColumn supNameColumn;
     public TableColumn supEmailColumn;
-    public TableColumn supAddressColumn;
     public Button addSupBtn;
     public Button searchSupBtn;
     public Button updateSupBtn;
@@ -57,16 +57,26 @@ public class SupplierManageController implements Initializable {
     public void manageProductsAction(ActionEvent actionEvent) {
     }
 
-    public void manageCustomersAction(ActionEvent actionEvent) {
+    public void manageCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(supplierAnchor,"employeeDash.fxml");
     }
 
-    public void manageSuppliersAction(ActionEvent actionEvent) {
+    public void manageSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(supplierAnchor,"supplierManageForm.fxml");
     }
 
     public void reportGenAction(ActionEvent actionEvent) {
     }
 
-    public void logoutAction(ActionEvent actionEvent) {
+    public void logoutAction(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(supplierAnchor,"loginForm.fxml");
+        }
     }
 
     public void releaseEmailkey(KeyEvent keyEvent) {

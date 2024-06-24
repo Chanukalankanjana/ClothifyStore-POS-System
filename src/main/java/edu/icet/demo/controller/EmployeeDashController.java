@@ -22,7 +22,6 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class EmployeeDashController implements Initializable {
-    public Rectangle employeeAnchor;
     public AnchorPane customerAnchor;
     public TextField customerIdField;
     public TextField customerNameField;
@@ -168,10 +167,12 @@ public class EmployeeDashController implements Initializable {
     public void manageProductsAction(ActionEvent actionEvent) {
     }
 
-    public void manageCustomersAction(ActionEvent actionEvent) {
+    public void manageCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(customerAnchor,"employeeDash.fxml");
     }
 
-    public void manageSuppliersAction(ActionEvent actionEvent) {
+    public void manageSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(customerAnchor,"supplierManageForm.fxml");
     }
 
     public void reportGenAction(ActionEvent actionEvent) {

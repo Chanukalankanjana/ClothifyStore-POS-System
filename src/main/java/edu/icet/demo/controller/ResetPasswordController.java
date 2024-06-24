@@ -27,6 +27,7 @@ public class ResetPasswordController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
     public void sendOTPbtn(ActionEvent actionEvent) {
         Random random = new Random();
         otp = random.nextInt(900000) + 100000;
@@ -68,5 +69,4 @@ public class ResetPasswordController implements Initializable {
             new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
         }
     }
-
 }
