@@ -70,4 +70,9 @@ public class SupplierBoImpl implements SupplierBo {
         number++;
         return String.format("S%04d", number);
     }
+
+    public ObservableList<String> getAllSupplierIds() {
+
+        return supplierDaoImpl.getAllIds();
+    }
 }

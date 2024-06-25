@@ -1,6 +1,7 @@
 package edu.icet.demo.utill;
 
 import edu.icet.demo.entity.CustomerEntity;
+import edu.icet.demo.entity.ProductEntity;
 import edu.icet.demo.entity.SupplierEntity;
 import edu.icet.demo.entity.UserEntity;
 import edu.icet.demo.model.Customer;
@@ -22,6 +23,7 @@ public class HibernateUtil {
                 .addAnnotatedClass(UserEntity.class)
                 .addAnnotatedClass(CustomerEntity.class)
                 .addAnnotatedClass(SupplierEntity.class)
+                .addAnnotatedClass(ProductEntity.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
