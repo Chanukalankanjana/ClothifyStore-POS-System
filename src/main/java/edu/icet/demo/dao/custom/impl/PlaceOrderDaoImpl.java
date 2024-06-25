@@ -1,4 +1,6 @@
 package edu.icet.demo.dao.custom.impl;
 
-public class PlaceOrderDaoImpl {
+import edu.icet.demo.dao.custom.PlaceOrderDao;
+
+public class PlaceOrderDaoImpl implements PlaceOrderDao {
 }
