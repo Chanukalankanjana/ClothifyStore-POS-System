@@ -188,3 +188,7 @@ p
 @src/main/java/edu/icet/demo/controller/PlaceOrderController.java,b\7\b760c4bfd9f051e9264dd95ea79564d54af2dd27
 [
 +src/main/resources/view/placeOrderForm.fxml,3\7\377bc8ce47d9c6cfb5840620ac25a72d7bf7b4e6
+c
+3src/main/java/edu/icet/demo/entity/OrderEntity.java,b\b\bbbdd47bfe66a8778534dd566e653b9338b03ac6
+\
+,src/main/java/edu/icet/demo/model/Order.java,3\b\3b057ffab5bce28cf8ab170ae8ed07a93c2a4b5d
