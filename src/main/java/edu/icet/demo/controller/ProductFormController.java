@@ -9,8 +9,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +45,7 @@ public class ProductFormController implements Initializable {
 
 
     String category,supplierId,size;
-    boolean isAction,isMouseClick,isPriceValid,isSupplierSelect,isCategorySelect,isSizeSelect;
+    boolean isAction = true,isMouseClick,isPriceValid,isSupplierSelect,isCategorySelect,isSizeSelect;
 
     private ObservableList<String> categoryLoad(){
         ObservableList<String> list = FXCollections.observableArrayList();
@@ -66,8 +68,38 @@ public class ProductFormController implements Initializable {
 
         return list;
     }
+
+    private void clearFields() {
+        itemNameField.setText("");
+        qtyField.setText("");
+        itemPriceField.setText("");
+        sizeCombo.getSelectionModel().clearSelection();
+        categoryCombo.getSelectionModel().clearSelection();
+        supIdCombo.getSelectionModel().clearSelection();
+    }
+
+    private void initializeComboBoxes() {
+        categoryCombo.setItems(categoryLoad());
+        sizeCombo.setItems(sizeLoad());
+        supIdCombo.setItems(FXCollections.observableArrayList(supplierId));
+    }
+
+    private void resetComboBoxes() {
+        categoryCombo.getSelectionModel().clearSelection();
+        sizeCombo.getSelectionModel().clearSelection();
+        supIdCombo.getSelectionModel().clearSelection();
+    }
+
+    private void refreshProductTable() {
+        itemTable.setItems(FXCollections.observableArrayList(productBoImpl.getAllProducts()));
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        resetComboBoxes();
+        initializeComboBoxes();
+        itemIdField.setText(productBoImpl.generateProductId());
+        refreshProductTable();
+
         supIdCombo.setItems(new SupplierBoImpl().getAllSupplierIds());
 
         isSupplierSelect = true;
@@ -78,13 +110,13 @@ public class ProductFormController implements Initializable {
         itemIdField.setText(productBoImpl.generateProductId());
         updateBtn.setVisible(true);
         deleteBtn.setVisible(true);
-        categoryCombo.setItems(categoryLoad());
+
         categoryCombo.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
             category = (String) newValue;
             isCategorySelect=true;
             System.out.println(category);
         });
-        sizeCombo.setItems(sizeLoad());
+
         sizeCombo.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
             size = (String) newValue;
             isSizeSelect=true;
@@ -121,7 +153,15 @@ public class ProductFormController implements Initializable {
     public void reportGenAction(ActionEvent actionEvent) {
     }
 
-    public void logoutAction(ActionEvent actionEvent) {
+    public void logoutAction(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Sign Out");
+        alert.setContentText("Are you sure want to Sign Out..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            SceneSwitchController.getInstance().switchScene(productsAnchor, "loginForm.fxml");
+        }
     }
 
     public void addAction(ActionEvent actionEvent) throws Exception {
@@ -183,26 +223,32 @@ public class ProductFormController implements Initializable {
     }
 
     public void deleteAction(ActionEvent actionEvent) {
-        if (isMouseClick){
-
+        if (isMouseClick) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Deleting");
-            alert.setContentText("Are you sure want to delete this Product");
+            alert.setContentText("Are you sure you want to delete this Product?");
+
             Optional<ButtonType> result = alert.showAndWait();
 
-            if (result.get()==ButtonType.OK){
+            if (result.isPresent() && result.get() == ButtonType.OK) {
                 boolean isDelete = productBoImpl.deleteProductById(itemIdField.getText());
 
-                if (isDelete){
+                if (isDelete) {
                     Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                     alert1.setTitle("Product Deleted");
                     alert1.setContentText("Product Deleted Successfully");
                     alert1.showAndWait();
-                    itemIdField.setText("");
-                    itemNameField.setText("");
-                    qtyField.setText("");
-                    itemPriceField.setText("");
-                    itemTable.setItems(productBoImpl.getAllProducts());
+
+                    clearFields();
+                    refreshProductTable();
+                    resetComboBoxes();
+                    itemIdField.setText(productBoImpl.generateProductId());
+
+                } else {
+                    Alert alert1 = new Alert(Alert.AlertType.ERROR);
+                    alert1.setTitle("Deletion Failed");
+                    alert1.setContentText("Failed to delete the product.");
+                    alert1.showAndWait();
                 }
             }
         }
@@ -218,4 +264,30 @@ public class ProductFormController implements Initializable {
     }
 
 
+    public void rowMouseClicked(MouseEvent mouseEvent) {
+        int index = itemTable.getSelectionModel().getSelectedIndex();
+
+
+        if(index < 0){
+            return;
+        }
+        String id = itemIdColumn.getCellData(index).toString();
+
+        if (isAction){
+            isPriceValid = true;
+            Product product = productBoImpl.getProductById(id);
+            itemIdField.setText(product.getId());
+            itemNameField.setText(product.getName());
+            itemPriceField.setText(Double.toString(product.getPrice()));
+            qtyField.setText(Integer.toString(product.getQty()));
+            categoryCombo.getSelectionModel().select(product.getCategory());
+            sizeCombo.getSelectionModel().select(product.getSize());
+            supIdCombo.getSelectionModel().select(product.getSupId());
+            byte[] data;
+
+            if (!product.getId().equals("")){
+                isMouseClick = true;
+            }
+        }
+    }
 }

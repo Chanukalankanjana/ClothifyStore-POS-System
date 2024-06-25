@@ -148,8 +148,6 @@ _
 /src/main/java/edu/icet/demo/model/Supplier.java,3\d\3dd2222945208a5673c6a85d15cc3d72a63726c4
 f
 6src/main/java/edu/icet/demo/entity/SupplierEntity.java,f\2\f28b0a247a2e83cb5573aa6a07734fd2de7105be
-j
-:src/main/java/edu/icet/demo/controller/SupplierManage.java,2\4\2462747f25d344ffd59b14cf1cb075edfcac7b34
 t
 Dsrc/main/java/edu/icet/demo/controller/SupplierManageController.java,0\2\020c2a8267efc7aae917ad0656c04176e28c30b5
 n
