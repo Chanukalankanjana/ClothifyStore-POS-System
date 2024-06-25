@@ -192,3 +192,7 @@ c
 3src/main/java/edu/icet/demo/entity/OrderEntity.java,b\b\bbbdd47bfe66a8778534dd566e653b9338b03ac6
 \
 ,src/main/java/edu/icet/demo/model/Order.java,3\b\3b057ffab5bce28cf8ab170ae8ed07a93c2a4b5d
+j
+:src/main/java/edu/icet/demo/entity/OrderHasItemEntity.java,b\2\b21d4da28ea7ed8963dae1896fd5ff5d907f3393
+c
+3src/main/java/edu/icet/demo/model/OrderHasItem.java,d\b\db68f6527b96510b093ba746423accf923be16f2
