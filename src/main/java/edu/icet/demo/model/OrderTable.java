@@ -5,14 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderHasItem {
-    private Integer id;
-    private String orderId;
-    private String itemId;
-    private int qty;
-    private double amount;
+public class OrderTable {
+    private String itemCode;
+    private String desc;
+    private Integer qty;
+    private Double unitPrice;
+    private Double total;
 }
