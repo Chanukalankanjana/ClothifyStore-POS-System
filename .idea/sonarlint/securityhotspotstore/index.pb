@@ -172,12 +172,8 @@ e
 5src/main/java/edu/icet/demo/entity/ProductEntity.java,d\3\d3580ae17ac549980845fe04596dcf7ea1f1bcaa
 ^
 .src/main/java/edu/icet/demo/model/Product.java,a\4\a4e59e1fe77c4584af8f0ce2cb350aeff813040a
-l
-<src/main/java/edu/icet/demo/bo/custom/impl/OrderBooImpl.java,5\1\51a39ea06b3225fbd7083e6a2359bbfb2a263cb7
 p
 @src/main/java/edu/icet/demo/bo/custom/impl/PlaceOrderBoImpl.java,9\4\944b66f97ffff5a072b443b7f2664e016959b43c
-b
-2src/main/java/edu/icet/demo/bo/custom/OrderBo.java,9\7\976f103015560a78b5d2e1a208affbc7de75a722
 g
 7src/main/java/edu/icet/demo/bo/custom/PlaceOrderBo.java,d\e\defa1a715004c1373bea60f58073fcd6ed638e96
 r
@@ -192,7 +188,5 @@ c
 3src/main/java/edu/icet/demo/entity/OrderEntity.java,b\b\bbbdd47bfe66a8778534dd566e653b9338b03ac6
 \
 ,src/main/java/edu/icet/demo/model/Order.java,3\b\3b057ffab5bce28cf8ab170ae8ed07a93c2a4b5d
-j
-:src/main/java/edu/icet/demo/entity/OrderHasItemEntity.java,b\2\b21d4da28ea7ed8963dae1896fd5ff5d907f3393
-c
-3src/main/java/edu/icet/demo/model/OrderHasItem.java,d\b\db68f6527b96510b093ba746423accf923be16f2
+a
+1src/main/java/edu/icet/demo/model/OrderTable.java,7\1\7119f564edba2a63a67f6a1ac45eabe44d405fc4

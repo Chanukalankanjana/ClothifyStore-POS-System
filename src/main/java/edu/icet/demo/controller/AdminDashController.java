@@ -236,5 +236,9 @@ public class AdminDashController implements Initializable {
             }
         }
     }
+
+    public void closeAction(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }
 

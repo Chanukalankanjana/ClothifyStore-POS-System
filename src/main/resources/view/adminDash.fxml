@@ -10,18 +10,18 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adminAnchor" prefHeight="353.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.AdminDashController">
+<AnchorPane fx:id="adminAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.AdminDashController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c00b5" height="683.0" layoutX="-1.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="281.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="281.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="586.0" />
-        <Label layoutX="443.0" layoutY="9.0" text="Manage Employee" textFill="WHITE" wrapText="true">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="281.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="950.0" />
+        <Label layoutX="668.0" layoutY="8.0" text="Manage Employee" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="32.0" />
             </font>
         </Label>
-        <Button fx:id="addEmployeeBtn" defaultButton="true" layoutX="560.0" layoutY="100.0" mnemonicParsing="false" onAction="#AddActionBtn" prefHeight="38.0" prefWidth="73.0" text="Add " />
-        <Button fx:id="updateBtn" defaultButton="true" layoutX="560.0" layoutY="221.0" mnemonicParsing="false" onAction="#UpdateActionBtn" prefHeight="38.0" prefWidth="73.0" text="Update" />
-        <Button defaultButton="true" layoutX="560.0" layoutY="161.0" mnemonicParsing="false" onAction="#ViewActionBtn" prefHeight="38.0" prefWidth="73.0" text="View" />
+        <Button fx:id="addEmployeeBtn" defaultButton="true" layoutX="552.0" layoutY="202.0" mnemonicParsing="false" onAction="#AddActionBtn" prefHeight="38.0" prefWidth="73.0" text="Add " textFill="#169400" />
+        <Button fx:id="updateBtn" defaultButton="true" layoutX="552.0" layoutY="399.0" mnemonicParsing="false" onAction="#UpdateActionBtn" prefHeight="38.0" prefWidth="73.0" text="Update" textFill="#9b00c6" />
+        <Button defaultButton="true" layoutX="552.0" layoutY="298.0" mnemonicParsing="false" onAction="#ViewActionBtn" prefHeight="38.0" prefWidth="73.0" text="View" textFill="#0c40b9" />
         <Label layoutX="57.0" layoutY="29.0" prefHeight="103.0" prefWidth="150.0" text="Welcome Admin" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="34.0" />
@@ -52,11 +52,11 @@
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <TextField fx:id="empNameField" layoutX="296.0" layoutY="162.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" />
-        <TextField fx:id="empEmailField" layoutX="296.0" layoutY="221.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
-        <TextField fx:id="empAddressField" layoutX="296.0" layoutY="278.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
-        <Button fx:id="deleteBtn" defaultButton="true" layoutX="560.0" layoutY="279.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" />
-        <TableView fx:id="employeeTable" layoutX="296.0" layoutY="351.0" onMouseClicked="#tableMouseClickedAction" prefHeight="318.0" prefWidth="556.0">
+        <TextField fx:id="empNameField" layoutX="304.0" layoutY="244.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" />
+        <TextField fx:id="empEmailField" layoutX="304.0" layoutY="339.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
+        <TextField fx:id="empAddressField" layoutX="304.0" layoutY="437.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
+        <Button fx:id="deleteBtn" defaultButton="true" layoutX="552.0" layoutY="494.0" mnemonicParsing="false" onAction="#DeleteActionBtn" prefHeight="38.0" prefWidth="73.0" text="Delete" textFill="#da0606" />
+        <TableView fx:id="employeeTable" layoutX="668.0" layoutY="106.0" onMouseClicked="#tableMouseClickedAction" prefHeight="542.0" prefWidth="544.0">
             <columns>
                 <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
@@ -67,6 +67,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <TextField fx:id="empIdField" layoutX="296.0" layoutY="99.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
+      <TextField fx:id="empIdField" layoutX="304.0" layoutY="149.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" />
+      <Button fx:id="closeBtn" defaultButton="true" layoutX="1186.0" layoutY="16.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000" />
     </children>
 </AnchorPane>

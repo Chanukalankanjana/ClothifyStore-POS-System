@@ -10,16 +10,16 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="customerAnchor" prefHeight="353.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.EmployeeDashController">
+<AnchorPane fx:id="customerAnchor" prefHeight="684.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.EmployeeDashController">
     <children>
-        <Rectangle fx:id="employeeAnchor" arcHeight="5.0" arcWidth="5.0" fill="#5c00b5" height="683.0" layoutX="-1.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="281.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="281.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="586.0" />
-        <Label layoutX="472.0" layoutY="9.0" text="Add Customer" textFill="WHITE" wrapText="true">
+        <Rectangle fx:id="employeeAnchor" arcHeight="5.0" arcWidth="5.0" fill="#5c00b5" height="677.0" layoutX="4.0" layoutY="4.0" stroke="WHITE" strokeType="INSIDE" width="281.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="291.0" layoutY="4.0" stroke="WHITE" strokeType="INSIDE" width="936.0" />
+        <Label layoutX="676.0" layoutY="12.0" text="Add Customer" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="32.0" />
             </font>
         </Label>
-        <TextField fx:id="customerIdField" layoutX="296.0" layoutY="92.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Id" />
+        <TextField fx:id="customerIdField" layoutX="296.0" layoutY="224.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Id" />
         <Label layoutX="57.0" layoutY="29.0" prefHeight="103.0" prefWidth="150.0" text="Welcome Employee" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="34.0" />
@@ -50,10 +50,10 @@
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <TextField fx:id="customerNameField" layoutX="296.0" layoutY="150.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Name" />
-        <TextField fx:id="cusEmailAddressField" layoutX="296.0" layoutY="207.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
-        <TextField fx:id="cusAddressField" layoutX="296.0" layoutY="262.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
-        <TableView fx:id="customerTable" layoutX="296.0" layoutY="351.0" onMouseClicked="#tableMouseClickedAction" prefHeight="318.0" prefWidth="556.0">
+        <TextField fx:id="customerNameField" layoutX="296.0" layoutY="320.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Name" />
+        <TextField fx:id="cusEmailAddressField" layoutX="296.0" layoutY="418.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
+        <TextField fx:id="cusAddressField" layoutX="296.0" layoutY="515.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
+        <TableView fx:id="customerTable" layoutX="658.0" layoutY="96.0" onMouseClicked="#tableMouseClickedAction" prefHeight="556.0" prefWidth="556.0">
             <columns>
                 <TableColumn fx:id="cusIdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="cusNameColumn" prefWidth="75.0" text="Name" />
@@ -64,9 +64,10 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <Button fx:id="addCusBtn" defaultButton="true" layoutX="548.0" layoutY="119.0" mnemonicParsing="false" onAction="#addActionBtn" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#eb0072" />
-      <Button fx:id="searchCusBtn" defaultButton="true" layoutX="632.0" layoutY="172.0" mnemonicParsing="false" onAction="#searchActionBtn" prefHeight="31.0" prefWidth="88.0" text="Search" textFill="#1100f8" />
-      <Button fx:id="updateCusBtn" defaultButton="true" layoutX="548.0" layoutY="228.0" mnemonicParsing="false" onAction="#updateActionBtn" prefHeight="31.0" prefWidth="88.0" text="Update" textFill="#008602" />
-      <Button fx:id="deleteCusBtn" defaultButton="true" layoutX="632.0" layoutY="285.0" mnemonicParsing="false" onAction="#deleteActionBtn" prefHeight="31.0" prefWidth="88.0" text="Delete" />
+      <Button fx:id="addCusBtn" defaultButton="true" layoutX="544.0" layoutY="267.0" mnemonicParsing="false" onAction="#addActionBtn" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#eb0072" />
+      <Button fx:id="searchCusBtn" defaultButton="true" layoutX="544.0" layoutY="367.0" mnemonicParsing="false" onAction="#searchActionBtn" prefHeight="31.0" prefWidth="88.0" text="Search" textFill="#1100f8" />
+      <Button fx:id="updateCusBtn" defaultButton="true" layoutX="544.0" layoutY="459.0" mnemonicParsing="false" onAction="#updateActionBtn" prefHeight="31.0" prefWidth="88.0" text="Update" textFill="#008602" />
+      <Button fx:id="deleteCusBtn" defaultButton="true" layoutX="544.0" layoutY="553.0" mnemonicParsing="false" onAction="#deleteActionBtn" prefHeight="31.0" prefWidth="88.0" text="Delete" />
+      <Button fx:id="closeBtn" defaultButton="true" layoutX="1181.0" layoutY="20.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000" />
     </children>
 </AnchorPane>

@@ -27,6 +27,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class PlaceOrderController implements Initializable {
@@ -231,7 +232,14 @@ public class PlaceOrderController implements Initializable {
     }
 
 
-    public void closerAction(MouseEvent mouseEvent) {
-        System.exit(0);
+    public void closeAction(MouseEvent mouseEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure want to exit..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK){
+            System.exit(0);
+        }
     }
 }

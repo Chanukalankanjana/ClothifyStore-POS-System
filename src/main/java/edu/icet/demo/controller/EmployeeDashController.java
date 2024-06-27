@@ -36,6 +36,7 @@ public class EmployeeDashController implements Initializable {
     public Button searchCusBtn;
     public Button updateCusBtn;
     public Button deleteCusBtn;
+    public Rectangle employeeAnchor;
 
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
 
@@ -219,6 +220,17 @@ public class EmployeeDashController implements Initializable {
             if (!customer.getId().equals("")){
                 isMouseClick = true;
             }
+        }
+    }
+
+    public void closeAction(MouseEvent mouseEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure you want exit...?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK){
+            System.exit(0);
         }
     }
 }
