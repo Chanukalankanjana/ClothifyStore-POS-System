@@ -1,4 +1,6 @@
 package edu.icet.demo.dao.custom.impl;
 
-public class OrderItemDaoImpl {
+import edu.icet.demo.dao.custom.OrderItemDao;
+
+public class OrderItemDaoImpl implements OrderItemDao {
 }
