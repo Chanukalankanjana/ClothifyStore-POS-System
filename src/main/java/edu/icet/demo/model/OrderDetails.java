@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderHasItem {
+public class OrderDetails {
     private Integer id;
     private String orderId;
     private String itemId;

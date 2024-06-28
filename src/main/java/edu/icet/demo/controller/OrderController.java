@@ -1,7 +1,7 @@
 package edu.icet.demo.controller;
 
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
-import edu.icet.demo.bo.custom.impl.PlaceOrderBoImpl;
+import edu.icet.demo.bo.custom.impl.OrderBoImpl;
 import edu.icet.demo.bo.custom.impl.ProductBoImpl;
 import edu.icet.demo.model.Customer;
 import edu.icet.demo.model.Order;
@@ -30,7 +30,7 @@ import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class PlaceOrderController implements Initializable {
+public class OrderController implements Initializable {
     public AnchorPane orderAnchor;
     public Button mangeOrderBtn;
     public Button manageProductsBtn;
@@ -60,7 +60,7 @@ public class PlaceOrderController implements Initializable {
     public TableColumn totalColumn;
     public TextField netValueField;
 
-    PlaceOrderBoImpl placeOrderBoImpl = new PlaceOrderBoImpl();
+    OrderBoImpl placeOrderBoImpl = new OrderBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();

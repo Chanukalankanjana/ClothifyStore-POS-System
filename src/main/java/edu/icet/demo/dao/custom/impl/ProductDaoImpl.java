@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.icet.demo.dao.custom.ProductDao;
 import edu.icet.demo.entity.CustomerEntity;
 import edu.icet.demo.entity.ProductEntity;
+import edu.icet.demo.model.OrderDetails;
 import edu.icet.demo.utill.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -135,4 +136,33 @@ public class ProductDaoImpl implements ProductDao {
         return productEntities;
 
     }
+
+    public void updateQty(String itemId, int qty) {
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        Query query = session.createQuery("UPDATE product SET qty=qty-:qty WHERE id=:id");
+        query.setParameter("qty",qty);
+        query.setParameter("id",itemId);
+
+        int i = query.executeUpdate();
+        session.getTransaction().commit();
+        session.close();
+
+    }
+
+    public boolean increseQty(ObservableList<OrderDetails> itemIdList) {
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        Query query = session.createQuery("UPDATE product SET qty=qty+:qty WHERE id=:id");
+
+        itemIdList.forEach(orderDetails -> {
+            query.setParameter("qty",orderDetails.getQty());
+            query.setParameter("id",orderDetails.getItemId());
+            query.executeUpdate();
+        });
+        session.getTransaction().commit();
+        session.close();
+        return true;
+    }
+
 }

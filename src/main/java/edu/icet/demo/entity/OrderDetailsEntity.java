@@ -1,5 +1,6 @@
 package edu.icet.demo.entity;
 
+import edu.icet.demo.model.OrderDetails;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -11,10 +12,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "order_has_item")
-@Entity(name = "order_has_item")
+@Table(name = "order_details")
+@Entity(name = "order_details")
 public class OrderDetailsEntity {
-    private Integer id;
+    private Integer cartNum;
     private String orderId;
     private String itemId;
     private int qty;

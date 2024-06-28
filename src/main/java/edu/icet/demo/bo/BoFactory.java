@@ -12,7 +12,7 @@ public class BoFactory {
             case USER:return (T) new UserBoImpl();
             case CUSTOMER:return (T) new CustomerBoImpl();
             case SUPPLIER:return (T) new SupplierBoImpl();
-            case ORDER:return (T) new PlaceOrderBoImpl();
+            case ORDER:return (T) new OrderBoImpl();
             case PLACE:return  (T) new OrderDetailsBoImpl();
         }
         return null;

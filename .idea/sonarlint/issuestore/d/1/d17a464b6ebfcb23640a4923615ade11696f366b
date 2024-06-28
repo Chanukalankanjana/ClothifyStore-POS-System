@@ -1,6 +1,6 @@
 
 v
-java:S1121	".Extract the assignment out of this expression.(Â¥¡ìûÿÿÿÿ8³Ã¡Å…2J$b7c94689-16a8-4bde-b0a4-902aeb09d6ca
+java:S1121	".Extract the assignment out of this expression.(Â¥¡ìûÿÿÿÿ8³Ã¡Å…2J$7b39a34e-e7c8-4300-aeff-164e749571ee
 á
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(§İüáşÿÿÿÿ8½Ã¡Å…2J$a016f018-da37-4675-9665-c7893cffc915
-›	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8ÒÏ¡×…2J$9a4f9575-e0a0-48f7-bfb6-64ed112ab442
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(§İüáşÿÿÿÿ8½Ã¡Å…2J$d926a09b-e47a-4810-bdef-c9b6dd11fad1
+›	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8ÒÏ¡×…2J$02b61c07-90cc-40fe-80e0-ccd99b959f24

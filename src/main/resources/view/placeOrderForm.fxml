@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="orderAnchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.PlaceOrderController">
+<AnchorPane fx:id="orderAnchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.OrderController">
    <children>
       <AnchorPane layoutX="14.0" layoutY="51.0" prefHeight="661.0" prefWidth="1226.0">
          <children>
