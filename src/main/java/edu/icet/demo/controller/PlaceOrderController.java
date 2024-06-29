@@ -1,12 +1,12 @@
 package edu.icet.demo.controller;
 
+import edu.icet.demo.bo.BoFactory;
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
 import edu.icet.demo.bo.custom.impl.OrderBoImpl;
+import edu.icet.demo.bo.custom.impl.OrderDetailsBoImpl;
 import edu.icet.demo.bo.custom.impl.ProductBoImpl;
-import edu.icet.demo.model.Customer;
-import edu.icet.demo.model.Order;
-import edu.icet.demo.model.OrderTable;
-import edu.icet.demo.model.Product;
+import edu.icet.demo.model.*;
+import edu.icet.demo.utill.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -26,11 +26,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.util.Date;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
-public class OrderController implements Initializable {
+public class PlaceOrderController implements Initializable {
     public AnchorPane orderAnchor;
     public Button mangeOrderBtn;
     public Button manageProductsBtn;
@@ -59,12 +57,25 @@ public class OrderController implements Initializable {
     public TableColumn unityPriceColumn;
     public TableColumn totalColumn;
     public TextField netValueField;
+    public TableColumn cartNumColumn;
 
-    OrderBoImpl orderBoImpl = new OrderBoImpl();
-    ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
+    ProductBoImpl productBoImpl = new ProductBoImpl();
+    OrderBoImpl orderBoImpl = new OrderBoImpl();
+    OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
+    ObservableList<OrderDetails> orderTableList = FXCollections.observableArrayList();
+
+    ObservableList<Product> itemsList = FXCollections.observableArrayList();
+    boolean isCustomerSelect,isProductSelect,isQtyValid,isRowSelect;
+    int cnum =1;
+    String productId,customerId,selectdColPID,orderid;
+    boolean isAlreadyAdd =false;
+    int index;
+    int cartNum = 1;
+    Product product;
+    int oid,seletedRowQty;
     private void loadItemCode() {
 
         ObservableList<Product> allSupplier = productBoImpl.getAllProducts();
@@ -141,7 +152,7 @@ public class OrderController implements Initializable {
             setItemDataFroLbl((String) newValue);
         });
 
-        orderIdField.setText(orderBoImpl.generateOrderId());
+        orderIdField.setText(orderDetailsBoImpl.generateOrderId());
 
 
         itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
@@ -149,6 +160,7 @@ public class OrderController implements Initializable {
         qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
         unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
+        cartNumColumn.setCellValueFactory(new PropertyValueFactory<>("cartNum"));
     }
     public void manageOrdersAction(ActionEvent actionEvent) {
     }
@@ -202,6 +214,21 @@ public class OrderController implements Initializable {
         Order order = new Order(
                 id,Cusid,orderDate,amount
         );
+
+        boolean isSaved = orderBoImpl.saveOrder(order);
+
+        ObservableList<OrderDetails> orderDetailsObservableList = FXCollections.observableArrayList();
+        List<OrderTable> list = new ArrayList<OrderTable>();
+
+        orderTableList.forEach(orderDetails -> {
+            Product product1 = orderDetailsBoImpl.getProductById(orderDetails.getItemId());
+            OrderTable orderTable1 = new OrderTable(cartNum++,product1.getId(),product1.getName(),orderDetails.getQty(),orderDetails.getAmount());
+
+            list.add(orderTable1);
+
+            orderDetailsObservableList.add(new OrderDetails(oid++, orderIdField.getText(),orderDetails.getItemId(),orderDetails.getQty(),orderDetails.getAmount()));
+        });
+
 
         boolean isInsert = orderDetails
         if (isInsert) {

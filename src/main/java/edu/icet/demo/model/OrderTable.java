@@ -15,4 +15,5 @@ public class OrderTable {
     private Integer qty;
     private Double unitPrice;
     private Double total;
+    private Integer cartNum;
 }

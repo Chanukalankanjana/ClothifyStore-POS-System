@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetails {
-    private Integer id;
+    private Integer cartNum;//cart Num
     private String orderId;
     private String itemId;
     private int qty;
