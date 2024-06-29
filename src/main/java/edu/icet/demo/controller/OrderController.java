@@ -60,7 +60,7 @@ public class OrderController implements Initializable {
     public TableColumn totalColumn;
     public TextField netValueField;
 
-    OrderBoImpl placeOrderBoImpl = new OrderBoImpl();
+    OrderBoImpl orderBoImpl = new OrderBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
@@ -141,7 +141,7 @@ public class OrderController implements Initializable {
             setItemDataFroLbl((String) newValue);
         });
 
-        orderIdField.setText(placeOrderBoImpl.generateOrderId());
+        orderIdField.setText(orderBoImpl.generateOrderId());
 
 
         itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
@@ -203,7 +203,7 @@ public class OrderController implements Initializable {
                 id,Cusid,orderDate,amount
         );
 
-        boolean isInsert = placeOrderBoImpl.insertOrder(order);
+        boolean isInsert = orderDetails
         if (isInsert) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Order Placed");

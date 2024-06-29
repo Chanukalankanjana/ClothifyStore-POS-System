@@ -4,6 +4,7 @@ import edu.icet.demo.bo.BoFactory;
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
 import edu.icet.demo.bo.custom.impl.OrderDetailsBoImpl;
 import edu.icet.demo.bo.custom.impl.OrderBoImpl;
+import edu.icet.demo.model.OrderDetails;
 import edu.icet.demo.utill.BoType;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -32,7 +33,7 @@ public class ViewOrdersController implements Initializable {
     public TextField unitPriceField;
     public TextField totalValueField;
     public TextField availableQtyField;
-    public TableView cartTable;
+    public TableView <OrderDetails> cartTable;
 
     OrderBoImpl placeOrderBo = BoFactory.getInstance().getBo(BoType.PLACE);
     OrderDetailsBoImpl orderDetailsBo = BoFactory.getInstance().getBo(BoType.ORDER);
@@ -46,7 +47,9 @@ public class ViewOrdersController implements Initializable {
         qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
 
-//        cartTable.setItems();
+        cartTable.setItems(orderDetailsBo.getAllOrderedProducts());
+
+        isQty
 
 
 

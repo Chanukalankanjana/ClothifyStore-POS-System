@@ -18,6 +18,7 @@ import java.util.List;
 public class OrderDetailsDaoImpl implements OrderDetailsDao {
     ProductDaoImpl productDao = DaoFactory.getInstance().getDao(DaoType.ITEM);
 
+
     @Override
     public OrderDetailsEntity search(Integer integer) {
         return null;
@@ -150,24 +151,24 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
         return i>0;
     }
 
-    public ObservableList<ProductSummary> findMaxQty(ObservableList<String> idList) {
-
-        Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        Query query = session.createQuery("SELECT MAX(qty) FROM order_details WHERE itemId=:iId");
-
-        ObservableList<ProductSummary> observableList = FXCollections.observableArrayList();
-
-        idList.forEach(id -> {
-            query.setParameter("iId",id);
-            Integer result = (Integer) query.uniqueResult();
-            if (result != null){
-                ProductSummary productSummary = new ProductSummary(result,id);
-                observableList.add(productSummary);
-            }
-
-        });
-
-        return observableList;
-    }
+//    public ObservableList<ProductSummary> findMaxQty(ObservableList<String> idList) {
+//
+//        Session session = HibernateUtil.getSession();
+//        session.getTransaction().begin();
+//        Query query = session.createQuery("SELECT MAX(qty) FROM order_details WHERE itemId=:iId");
+//
+//        ObservableList<ProductSummary> observableList = FXCollections.observableArrayList();
+//
+//        idList.forEach(id -> {
+//            query.setParameter("iId",id);
+//            Integer result = (Integer) query.uniqueResult();
+//            if (result != null){
+//                ProductSummary productSummary = new ProductSummary(result,id);
+//                observableList.add(productSummary);
+//            }
+//
+//        });
+//
+//        return observableList;
+//    }
 }
