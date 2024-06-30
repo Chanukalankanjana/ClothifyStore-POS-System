@@ -91,7 +91,6 @@
                         <TableColumn fx:id="qtyColumn" prefWidth="75.0" text="QTY" />
                         <TableColumn fx:id="unityPriceColumn" prefWidth="75.0" text="Unit Price" />
                         <TableColumn fx:id="totalColumn" prefWidth="75.0" text="Total" />
-                  <TableColumn fx:id="cartNumColumn" prefWidth="75.0" text="Cart Number" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

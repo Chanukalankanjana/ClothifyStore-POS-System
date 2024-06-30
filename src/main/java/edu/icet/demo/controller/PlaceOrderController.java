@@ -55,36 +55,12 @@ public class PlaceOrderController implements Initializable {
     public TableColumn unityPriceColumn;
     public TableColumn totalColumn;
     public TextField netValueField;
-    public TableColumn cartNumColumn;
 
     OrderBoImpl orderBoImpl = new OrderBoImpl();
     OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        loadDateAndTime();
-        loadCustomerIDs();
-        loadItemCodes();
-
-        cusIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            setCustomerDataFroLbl((String) newValue);
-        });
-        itemIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            setItemDataFroLbl((String) newValue);
-        });
-
-        orderIdField.setText(orderDetailsBoImpl.generateOrderId());
-
-
-        itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("desc"));
-        qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
-        unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
-        totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
-    }
 
     private void setItemDataFroLbl(String ItemCode) {
 
@@ -150,7 +126,29 @@ public class PlaceOrderController implements Initializable {
 
     ObservableList<CartTable> orderList = FXCollections.observableArrayList();
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        loadDateAndTime();
+        loadCustomerIDs();
+        loadItemCodes();
+
+        cusIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            setCustomerDataFroLbl((String) newValue);
+        });
+        itemIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            setItemDataFroLbl((String) newValue);
+        });
+
+        orderIdField.setText(orderDetailsBoImpl.generateOrderId());
+
+
+        itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("desc"));
+        qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
+    }
 
     public void manageOrdersAction(ActionEvent actionEvent) {}
 

@@ -15,9 +15,9 @@ import lombok.Setter;
 @Table(name = "order_details")
 @Entity(name = "order_details")
 public class OrderDetailsEntity {
-    private Integer id;
     private String orderId;
-    private String itemId;
+    private String itemName;
     private int qty;
     private double amount;
+    private String itemId;
 }

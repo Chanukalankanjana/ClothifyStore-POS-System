@@ -8,6 +8,8 @@ import edu.icet.demo.entity.OrderEntity;
 import edu.icet.demo.model.Order;
 import edu.icet.demo.utill.DaoType;
 
+import java.util.List;
+
 public class OrderBoImpl implements OrderBo {
     OrderDaoImpl orderDaoImpl = DaoFactory.getInstance().getDao(DaoType.ORDER);
     public boolean saveOrder(Order order) {
@@ -24,6 +26,13 @@ public class OrderBoImpl implements OrderBo {
 
     public boolean deleteOrderById(String id) {
         return orderDaoImpl.delete(id);
+    }
+    public List<Long> getOrderCount(){
+        return orderDaoImpl.getOrderCount();
+    }
+
+    public List<String> getEmpId(){
+        return orderDaoImpl.getEmpId();
     }
 
 }

@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.util.List;
+
 public class OrderDaoImpl implements OrderDao {
     @Override
     public OrderEntity search(String s) {
@@ -86,5 +88,19 @@ public class OrderDaoImpl implements OrderDao {
         session.getTransaction().commit();
         session.close();
         return i>0;
+    }
+
+    public List<Long> getOrderCount(){
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        List<Long> list = session.createQuery("SELECT COUNT(*) FROM order_table GROUP BY empId").list();
+        return list;
+    }
+
+    public List<String> getEmpId(){
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        List<String> list = session.createQuery("SELECT empId FROM order_table GROUP BY empId").list();
+        return list;
     }
 }

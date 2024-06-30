@@ -20,10 +20,6 @@ public class OrderDetailsBoImpl implements OrderDetailsBo {
     ProductDaoImpl productDao = DaoFactory.getInstance().getDao(DaoType.ITEM);
     OrderDaoImpl orderDao = DaoFactory.getInstance().getDao(DaoType.ORDER);
 
-    public ObservableList<String> getProductIds(){
-        return productDao.searchAllIds();
-    }
-
     public Product getItemById(String newValue){
         ProductEntity productEntity = productDao.search(newValue);
         return new ObjectMapper().convertValue(productEntity, Product.class);

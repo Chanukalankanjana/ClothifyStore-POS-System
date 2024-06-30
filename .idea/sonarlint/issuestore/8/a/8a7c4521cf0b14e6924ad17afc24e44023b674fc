@@ -1,0 +1,72 @@
+
+w
+java:S3740"/Provide the parametrized type for this generic.(êèİÿÿÿÿÿ8èÊ¯Ô†2J$425ea461-5d25-4f51-a070-e4c872e7b766
+r
+java:S3740"/Provide the parametrized type for this generic.(ïœÀ“8êÊ¯Ô†2J$22a20b59-8113-4adf-b760-e5681181d1f7
+r
+java:S3740"/Provide the parametrized type for this generic.(Ù›Â–8êÊ¯Ô†2J$a3034ffb-93f1-440d-8e04-bc059874d9fd
+r
+java:S3740"/Provide the parametrized type for this generic.(×µĞç8êÊ¯Ô†2J$dcc44b40-64d1-4b04-978e-0f39879a3ff6
+w
+java:S3740"/Provide the parametrized type for this generic.(Üí™¾ùÿÿÿÿ8êÊ¯Ô†2J$89eed73f-943e-49ec-9f0a-75668a0824e7
+r
+java:S3740$"/Provide the parametrized type for this generic.(Ã¶µ8êÊ¯Ô†2J$d70b8bc1-724f-438f-aa07-b011e678d57e
+r
+java:S3740%"/Provide the parametrized type for this generic.(Ï‰÷¶8êÊ¯Ô†2J$a4b68138-993b-4435-93f1-04bc4c32852b
+£
+java:S1104"[Make viewOrderAnchor a static final constant or non-public and provide accessors if needed.(ŸŒ‹±üÿÿÿÿ8ëÊ¯Ô†2J$2b8106f0-4e39-4881-b13a-84e6fd50a9f5
+¡
+java:S1104"YMake cartNumColumn a static final constant or non-public and provide accessors if needed.(êèİÿÿÿÿÿ8ëÊ¯Ô†2J$cb97f159-2c60-4665-ba37-eb7d5f2260a2
+œ
+java:S1104"YMake orderIdColumn a static final constant or non-public and provide accessors if needed.(ïœÀ“8ëÊ¯Ô†2J$86d2bf96-f921-4980-8299-86a14ef170b7
+›
+java:S1104"XMake itemIdColumn a static final constant or non-public and provide accessors if needed.(Ù›Â–8ëÊ¯Ô†2J$251fbeb6-53f5-4cb9-a874-240eb30dea93
+˜
+java:S1104"UMake qtyColumn a static final constant or non-public and provide accessors if needed.(×µĞç8ëÊ¯Ô†2J$9dc367bf-44f3-4d71-ba80-d46780ca7856
+ 
+java:S1104"XMake amountColumn a static final constant or non-public and provide accessors if needed.(Üí™¾ùÿÿÿÿ8ëÊ¯Ô†2J$45ab04ae-b636-4d35-b6dc-0e7b9cc8ad9d
+
+java:S1104"[Make customerIdField a static final constant or non-public and provide accessors if needed.(ÊÑü—8ëÊ¯Ô†2J$d10786db-4270-43b3-89d4-bd1fee49c78e
+¥
+java:S1104"]Make customerNameField a static final constant or non-public and provide accessors if needed.(¥ğ¯·ÿÿÿÿÿ8ëÊ¯Ô†2J$f68d8cd8-e22b-4153-916d-3ddb98678933
+¥
+java:S1104"]Make emailAddressField a static final constant or non-public and provide accessors if needed.(§“•Ÿÿÿÿÿÿ8ëÊ¯Ô†2J$948b872a-cd96-415a-bda0-0bff866a1606
+œ
+java:S1104 "YMake categoryField a static final constant or non-public and provide accessors if needed.(‘ªîË8ëÊ¯Ô†2J$b5da269e-ee77-4a72-961b-468bea028da1
+œ
+java:S1104!"ZMake unitPriceField a static final constant or non-public and provide accessors if needed.(¿÷¢o8ëÊ¯Ô†2J$b04d6a38-4689-4239-bece-2f852964b09f
+
+java:S1104""[Make totalValueField a static final constant or non-public and provide accessors if needed.(Í½’µ8ëÊ¯Ô†2J$0d7c531b-c7ec-4adf-b7ea-fefedb0f96a3
+ 
+java:S1104#"]Make availableQtyField a static final constant or non-public and provide accessors if needed.(ß¸öÁ8ëÊ¯Ô†2J$93740f0a-e0de-4409-bdde-8c5da23315d0
+˜
+java:S1104$"UMake cartTable a static final constant or non-public and provide accessors if needed.(Ã¶µ8ëÊ¯Ô†2J$e336104f-7483-452b-bc9e-ac73ab87d280
+
+java:S1104%"ZMake itemNameColumn a static final constant or non-public and provide accessors if needed.(Ï‰÷¶8ëÊ¯Ô†2J$95208770-0742-4f39-a152-449ff3b66a62
+£
+java:S1104&"[Make cusAddressField a static final constant or non-public and provide accessors if needed.(¦šÈöùÿÿÿÿ8ëÊ¯Ô†2J$233713c0-0d7d-44ea-9085-4559544b4e5a
+
+java:S1104'"ZMake orderDateField a static final constant or non-public and provide accessors if needed.(ô³©8ëÊ¯Ô†2J$354b159c-f0e8-439a-a5b4-684d3f4c76cb
+
+java:S1104("ZMake brandNameField a static final constant or non-public and provide accessors if needed.(ÂÿÙŠ8ëÊ¯Ô†2J$0d5ca25b-8776-4c69-83d9-a360035055a5
+˜
+java:S1104)"VMake supIdField a static final constant or non-public and provide accessors if needed.(ôÀ÷P8ëÊ¯Ô†2J$70329158-a0e8-4c1f-b979-086f31f33c51
+É
+java:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªÚ†ÿÿÿÿÿ8úÊ¯Ô†2J$f1d952a8-c7fd-43aa-a043-c09233906144
+É
+java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨‘¥ëùÿÿÿÿ8ûÊ¯Ô†2J$fe516fa4-7908-4c46-add1-cff2a426de92
+Ä
+java:S1186C"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‡Ôñ¾8ûÊ¯Ô†2J$8755f5c9-5c9a-4c8d-975f-23e1f30f1374
+É
+java:S1186F"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á­„ôûÿÿÿÿ8ûÊ¯Ô†2J$a0806694-cb25-4d11-b94c-83e77e04060c
+Ä
+java:S1186I"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÂşÃ8ûÊ¯Ô†2J$3e30b0cc-5194-4dc0-bd38-6ca4df3604ec
+É
+java:S1186L"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê’“úÿÿÿÿ8ûÊ¯Ô†2J$c7a7b41a-65ed-49f4-b422-4cec0ff8bc8e
+t
+java:S1172O"1Remove this unused method parameter "mouseEvent".(·ó£8€Ë¯Ô†2J$e3c23429-5ad6-4ab5-aa55-c98005559160
+t
+java:S1172Z"1Remove this unused method parameter "mouseEvent".(‰Ú¥Ş8Ë¯Ô†2J$7a6b4186-184d-473b-9b17-f9184c832397
+p	java:S108s")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8„Ë¯Ô†2J$06e849f5-dc81-4c90-847f-ddf25fe71952
+s
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¡¾±Ô†2J$6f98d45a-4795-4c16-bdce-b7dde33b3e06
