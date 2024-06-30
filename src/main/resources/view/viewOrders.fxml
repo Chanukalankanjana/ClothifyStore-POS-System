@@ -128,5 +128,10 @@
          </font>
       </Label>
       <TextField fx:id="cusAddressField" layoutX="1015.0" layoutY="358.0" />
+      <Label layoutX="875.0" layoutY="359.0" prefHeight="28.0" prefWidth="134.0" text="Address                :" textFill="#008d23">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

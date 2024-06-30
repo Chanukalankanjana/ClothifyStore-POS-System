@@ -21,7 +21,6 @@ import java.util.ResourceBundle;
 
 public class ViewOrdersController implements Initializable {
     public AnchorPane viewOrderAnchor;
-    public TableColumn cartNumColumn;
     public TableColumn orderIdColumn;
     public TableColumn itemIdColumn;
     public TableColumn qtyColumn;
@@ -45,7 +44,13 @@ public class ViewOrdersController implements Initializable {
     CustomerBoImpl customerBoImpl = BoFactory.getInstance().getBo(BoType.CUSTOMER);
     SupplierBoImpl supplierBoImpl = BoFactory.getInstance().getBo(BoType.SUPPLIER);
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
+
+    private boolean isRowSelect;
+    int index, selectedRowQty;
     String id;
+    String selectedItemIdCol;
+    double selectedTotalValue;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -55,7 +60,13 @@ public class ViewOrdersController implements Initializable {
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         itemIdColumn.setCellValueFactory(new PropertyValueFactory<>("itemId"));
 
+        String id = EmployeeData.getInstance().getId();
+        System.out.println(id);
+        cartTable.setItems(orderDetailsBoImpl.getAllOrderedProductsByEmpId(id));
+
         cartTable.setItems(orderDetailsBoImpl.getAllOrderedProducts());
+
+        isRowSelect = false;
     }
 
     public void manageEmployeeAction(ActionEvent actionEvent) {
@@ -91,9 +102,13 @@ public class ViewOrdersController implements Initializable {
         int index = cartTable.getSelectionModel().getSelectedIndex();
 
         try {
+            isRowSelect = true;
+            selectedItemIdCol = itemNameColumn.getCellData(index).toString();
             String orderId = orderIdColumn.getCellData(index).toString();
             String itemId = itemIdColumn.getCellData(index).toString();
             Product product = orderDetailsBoImpl.getItemById(itemId);
+            selectedRowQty = (int) qtyColumn.getCellData(index);
+            selectedTotalValue = (double) amountColumn.getCellData(index);
 
             id = orderId;
 
@@ -108,6 +123,7 @@ public class ViewOrdersController implements Initializable {
 
             orderDateField.setText(String.valueOf(order.getDate()));
             totalValueField.setText("Rs. "+Double.toString(order.getAmount())+"0");
+
             supIdField.setText(supplier.getId());
             brandNameField.setText(supplier.getCompany());
             categoryField.setText(product.getCategory());

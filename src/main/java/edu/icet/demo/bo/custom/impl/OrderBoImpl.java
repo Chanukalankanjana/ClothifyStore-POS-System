@@ -16,23 +16,12 @@ public class OrderBoImpl implements OrderBo {
         return new OrderDaoImpl().insert(new ObjectMapper().convertValue(order, OrderEntity.class));
     }
 
-    public String getLatestOrderId() {
-        return orderDaoImpl.getLatestOrderId();
-    }
-
     public Order getOrderById(String orderId) {
         return new ObjectMapper().convertValue(orderDaoImpl.search(orderId),Order.class);
     }
 
     public boolean deleteOrderById(String id) {
         return orderDaoImpl.delete(id);
-    }
-    public List<Long> getOrderCount(){
-        return orderDaoImpl.getOrderCount();
-    }
-
-    public List<String> getEmpId(){
-        return orderDaoImpl.getEmpId();
     }
 
 }

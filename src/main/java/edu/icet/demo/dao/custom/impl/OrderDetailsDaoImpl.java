@@ -123,20 +123,6 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
 
     }
 
-    public boolean updateQtyAndAmount(int id, int qty, double newAmount) {
-        Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        Query query = session.createQuery("UPDATE order_details SET qty=qty+:qty, amount=amount+:amount WHERE id=:id");
-        query.setParameter("id",id);
-        query.setParameter("qty",qty);
-        query.setParameter("amount",newAmount);
-
-        int i = query.executeUpdate();
-        session.getTransaction().commit();
-        session.close();
-        return  i>0;
-    }
-
     public boolean removeItem(String oId, String iId) {
 
         Session session = HibernateUtil.getSession();
@@ -149,6 +135,28 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
         session.close();
 
         return i>0;
+    }
+
+    public ObservableList<OrderDetails> getProductIdsByOrderIds(List<String> orderIdList) {
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        Query query = session.createQuery("FROM order_has_items WHERE orderId=:id");
+        ObservableList<OrderDetailsEntity> list = FXCollections.observableArrayList();
+        orderIdList.forEach(id -> {
+            query.setParameter("id",id);
+            List<OrderDetailsEntity> list1 = query.list();
+            list.addAll(list1);
+
+        });
+        session.close();
+
+        ObservableList<OrderDetails> observableList=FXCollections.observableArrayList();
+
+        list.forEach(s -> {
+            observableList.add(new ObjectMapper().convertValue(s, OrderDetails.class));
+        });
+        return observableList;
+
     }
 
 }

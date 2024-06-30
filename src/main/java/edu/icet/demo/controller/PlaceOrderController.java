@@ -55,6 +55,7 @@ public class PlaceOrderController implements Initializable {
     public TableColumn unityPriceColumn;
     public TableColumn totalColumn;
     public TextField netValueField;
+    public Button closeBtn;
 
     OrderBoImpl orderBoImpl = new OrderBoImpl();
     OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
@@ -62,6 +63,7 @@ public class PlaceOrderController implements Initializable {
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
+    ObservableList<Product> productList = FXCollections.observableArrayList();
     private void setItemDataFroLbl(String ItemCode) {
 
         Product product = productBoImpl.getProductById(ItemCode);
@@ -133,6 +135,12 @@ public class PlaceOrderController implements Initializable {
         loadCustomerIDs();
         loadItemCodes();
 
+        itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("desc"));
+        qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
+
         cusIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setCustomerDataFroLbl((String) newValue);
         });
@@ -141,13 +149,8 @@ public class PlaceOrderController implements Initializable {
         });
 
         orderIdField.setText(orderDetailsBoImpl.generateOrderId());
+        productList = orderDetailsBoImpl.getAllProducts();
 
-
-        itemCodeColumn.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("desc"));
-        qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
-        unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
-        totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
     }
 
     public void manageOrdersAction(ActionEvent actionEvent) {}
@@ -212,7 +215,10 @@ public class PlaceOrderController implements Initializable {
             alert.setTitle("Order Placed");
             alert.setContentText("Order Placed Successfully..!");
             alert.showAndWait();
+
+            productList = orderDetailsBoImpl.getAllProducts();
             clearFields();
+            orderIdField.setText(orderDetailsBoImpl.generateOrderId());
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Somthing Wrong..!!!").show();
@@ -229,6 +235,7 @@ public class PlaceOrderController implements Initializable {
         sizeField.setText("");
         qtyField.setText("");
         netValueField.setText("");
+        orderIdField.setText("");
         orderTable.setItems(null);
     }
 
@@ -243,6 +250,9 @@ public class PlaceOrderController implements Initializable {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             System.exit(0);
         }
+    }
+
+    public void updateActionBtn(ActionEvent actionEvent) {
     }
 }
 

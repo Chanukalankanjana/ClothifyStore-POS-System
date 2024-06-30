@@ -66,41 +66,13 @@ public class OrderDaoImpl implements OrderDao {
         return id;
     }
 
-    public boolean updateAmountById(String id, double newAmount) {
+    public List<String> getOrderIdsByEmpId(String id){
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        Query query = session.createQuery("UPDATE order_table SET amount=amount+:amount WHERE id=:id");
+        Query query = session.createQuery("SELECT id FROM order_table WHERE empId=:id");
         query.setParameter("id",id);
-        query.setParameter("amount",newAmount);
-        int i = query.executeUpdate();
-        session.getTransaction().commit();
+        List<String > list = query.list();
         session.close();
-        return i>0;
-    }
-
-    public boolean deacreseAmount(String id, double amount) {
-        Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        Query query = session.createQuery("UPDATE order_table SET amount=amount-:amount WHERE id=:id");
-        query.setParameter("id",id);
-        query.setParameter("amount",amount);
-        int i = query.executeUpdate();
-        session.getTransaction().commit();
-        session.close();
-        return i>0;
-    }
-
-    public List<Long> getOrderCount(){
-        Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        List<Long> list = session.createQuery("SELECT COUNT(*) FROM order_table GROUP BY empId").list();
-        return list;
-    }
-
-    public List<String> getEmpId(){
-        Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        List<String> list = session.createQuery("SELECT empId FROM order_table GROUP BY empId").list();
         return list;
     }
 }

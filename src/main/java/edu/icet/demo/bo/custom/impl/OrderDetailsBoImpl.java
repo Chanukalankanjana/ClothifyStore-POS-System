@@ -15,6 +15,8 @@ import edu.icet.demo.utill.DaoType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class OrderDetailsBoImpl implements OrderDetailsBo {
     OrderDetailsDaoImpl orderDetailsDao = DaoFactory.getInstance().getDao(DaoType.PLACE);
     ProductDaoImpl productDao = DaoFactory.getInstance().getDao(DaoType.ITEM);
@@ -54,9 +56,22 @@ public class OrderDetailsBoImpl implements OrderDetailsBo {
         return true;
     }
 
-
     public ObservableList<OrderDetails> getAllOrderedProducts() {
         return orderDetailsDao.getAll();
+    }
+
+    public boolean deleteById(String id) {
+        return orderDetailsDao.deleteByOrderId(id);
+    }
+
+    public ObservableList<OrderDetails> getProductIdsByOrderId(String id) {
+
+        return orderDetailsDao.getProductIdsByOrderId(id);
+    }
+
+    public ObservableList<OrderDetails> getAllOrderedProductsByEmpId(String id) {
+        List<String> orderIdList = orderDao.getOrderIdsByEmpId(id);
+        return orderDetailsDao.getProductIdsByOrderIds(orderIdList);
     }
 
 }
