@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "order_details")
 @Entity(name = "order_details")
 public class OrderDetailsEntity {
-    private Integer cartNum;
+    private Integer id;
     private String orderId;
     private String itemId;
     private int qty;

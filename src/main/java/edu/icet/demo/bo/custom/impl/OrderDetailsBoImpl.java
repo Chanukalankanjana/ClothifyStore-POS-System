@@ -7,6 +7,7 @@ import edu.icet.demo.dao.DaoFactory;
 import edu.icet.demo.dao.custom.impl.OrderDaoImpl;
 import edu.icet.demo.dao.custom.impl.OrderDetailsDaoImpl;
 import edu.icet.demo.dao.custom.impl.ProductDaoImpl;
+import edu.icet.demo.entity.OrderDetailsEntity;
 import edu.icet.demo.entity.ProductEntity;
 import edu.icet.demo.model.OrderDetails;
 import edu.icet.demo.model.Product;
@@ -23,10 +24,9 @@ public class OrderDetailsBoImpl implements OrderDetailsBo {
         return productDao.searchAllIds();
     }
 
-    public Product getProductById(String newValue){
+    public Product getItemById(String newValue){
         ProductEntity productEntity = productDao.search(newValue);
-        Product product = new ObjectMapper().convertValue(productEntity, Product.class);
-        return product;
+        return new ObjectMapper().convertValue(productEntity, Product.class);
     }
 
     public ObservableList<Product> getAllProducts() {
@@ -51,56 +51,16 @@ public class OrderDetailsBoImpl implements OrderDetailsBo {
     }
 
     public boolean saveOrderDetails(ObservableList<OrderDetails> orderDetailsObservableList) {
-        return orderDetailsDao.saveAll(orderDetailsObservableList);
-    }
-
-    public int getLatestCartId() {
-        return orderDetailsDao.getLatestId() + 1;
-    }
-
-    public ObservableList<OrderDetails> getAllOrderedProducts() {
-        return orderDetailsDao.getAll();
-    }
-
-    public boolean deleteById(String id) {
-        return orderDetailsDao.deleteByOrderId(id);
-    }
-
-    public ObservableList<OrderDetails> getProductIdsByOrderId(String id) {
-
-        return orderDetailsDao.getProductIdsByOrderId(id);
-    }
-
-
-    public boolean increseQty(ObservableList<OrderDetails> itemIdList) {
-        return productDao.increseQty(itemIdList);
-    }
-
-    public boolean updateNewQty(String id, int qty) {
-        productDao.updateQty(id, qty);
+        orderDetailsObservableList.forEach(orderDetails -> {
+            OrderDetailsEntity orderDetailsEntity = new ObjectMapper().convertValue(orderDetails, OrderDetailsEntity.class);
+            orderDetailsDao.saveAll((ObservableList<OrderDetails>) orderDetailsEntity);
+        });
         return true;
     }
 
-    public boolean updateOrderAmount(String id, double newAmount) {
-        return orderDao.updateAmountById(id, newAmount);
-    }
 
-    public boolean updateCartById(int id, int i, double newAmount) {
-        return orderDetailsDao.updateQtyAndAmount(id, i, newAmount);
-    }
-
-
-    public boolean increaseQtyOfProduct(String id, int qty) {
-
-        return productDao.updateQtyOfProduct(id, qty);
-    }
-
-    public boolean decreaseAmountByOrderId(String id, double amount) {
-        return orderDao.deacreseAmount(id, amount);
-    }
-
-    public boolean removeFromCart(String oId, String pId) {
-        return orderDetailsDao.removeItem(oId, pId);
+    public ObservableList<OrderDetails> getAllOrderedProducts() {
+        return orderDetailsDao.getAll();
     }
 
 }

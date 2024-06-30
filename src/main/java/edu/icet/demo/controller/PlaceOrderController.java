@@ -1,12 +1,10 @@
 package edu.icet.demo.controller;
 
-import edu.icet.demo.bo.BoFactory;
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
 import edu.icet.demo.bo.custom.impl.OrderBoImpl;
 import edu.icet.demo.bo.custom.impl.OrderDetailsBoImpl;
 import edu.icet.demo.bo.custom.impl.ProductBoImpl;
 import edu.icet.demo.model.*;
-import edu.icet.demo.utill.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -59,91 +57,17 @@ public class PlaceOrderController implements Initializable {
     public TextField netValueField;
     public TableColumn cartNumColumn;
 
-    CustomerBoImpl customerBoImpl = new CustomerBoImpl();
-    ProductBoImpl productBoImpl = new ProductBoImpl();
     OrderBoImpl orderBoImpl = new OrderBoImpl();
     OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
+    ProductBoImpl productBoImpl = new ProductBoImpl();
+    CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
-
-    ObservableList<OrderDetails> orderTableList = FXCollections.observableArrayList();
-
-    ObservableList<Product> itemsList = FXCollections.observableArrayList();
-    boolean isCustomerSelect,isProductSelect,isQtyValid,isRowSelect;
-    int cnum =1;
-    String productId,customerId,selectdColPID,orderid;
-    boolean isAlreadyAdd =false;
-    int index;
-    int cartNum = 1;
-    Product product;
-    int oid,seletedRowQty;
-    private void loadItemCode() {
-
-        ObservableList<Product> allSupplier = productBoImpl.getAllProducts();
-        ObservableList itemId = FXCollections.observableArrayList();
-
-        allSupplier.forEach(supplier -> {
-            itemId.add(supplier.getId());
-
-        });
-        itemIdCombo.setItems(itemId);
-    }
-
-    private void loadCustomerId() {
-
-        ObservableList<Customer> allSupplier = customerBoImpl.getAllCustomers();
-        ObservableList customerId = FXCollections.observableArrayList();
-
-        allSupplier.forEach(supplier -> {
-            customerId.add(supplier.getId());
-
-        });
-        cusIdCombo.setItems(customerId);
-
-    }
-
-    private void loadDateAndTime() {
-
-        Date date = new Date();
-        SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
-        dateField.setText(f.format(date));
-
-
-        //Time
-        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
-            LocalTime time = LocalTime.now();
-            timeField.setText(
-                    time.getHour() + " : " + time.getMinute() + " : " + time.getSecond()
-            );
-        }),
-                new KeyFrame(Duration.seconds(1))
-        );
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
-    }
-
-    private void setItemDataFroLbl(String ItemCode) {
-
-        Product product = productBoImpl.getProductById(ItemCode);
-        itemNameField.setText(product.getName());
-        categoryField.setText(product.getCategory());
-        priceField.setText(String.valueOf(product.getPrice()));
-        sizeField.setText(product.getSize());
-
-    }
-
-    private void setCustomerDataFroLbl(String newValue) {
-
-        Customer customer = customerBoImpl.getCustomerById(newValue);
-        cusNameField.setText(customer.getName());
-        cusEmailField.setText(customer.getEmail());
-        cusAddressField.setText(customer.getAddress());
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         loadDateAndTime();
-        loadCustomerId();
-        loadItemCode();
+        loadCustomerIDs();
+        loadItemCodes();
 
         cusIdCombo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setCustomerDataFroLbl((String) newValue);
@@ -160,45 +84,104 @@ public class PlaceOrderController implements Initializable {
         qtyColumn.setCellValueFactory(new PropertyValueFactory<>("qty"));
         unityPriceColumn.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
-        cartNumColumn.setCellValueFactory(new PropertyValueFactory<>("cartNum"));
-    }
-    public void manageOrdersAction(ActionEvent actionEvent) {
     }
 
-    public void manageProductsAction(ActionEvent actionEvent) {
+    private void setItemDataFroLbl(String ItemCode) {
+
+        Product product = productBoImpl.getProductById(ItemCode);
+        itemNameField.setText(product.getName());
+        priceField.setText(String.valueOf(product.getPrice()));
+        sizeField.setText(product.getSize());
+
     }
 
-    public void manageCustomersAction(ActionEvent actionEvent) {
+    private void setCustomerDataFroLbl(String newValue) {
+
+        Customer customer = customerBoImpl.getCustomerById(newValue);
+        cusNameField.setText(customer.getName());
+        cusEmailField.setText(customer.getEmail());
+        cusAddressField.setText(customer.getAddress());
     }
 
-    public void manageSuppliersAction(ActionEvent actionEvent) {
+    private void loadItemCodes() {
+
+        ObservableList<Product> allSupplier = productBoImpl.getAllProducts();
+        ObservableList ids = FXCollections.observableArrayList();
+
+        allSupplier.forEach(supplier -> {
+            ids.add(supplier.getId());
+
+        });
+        itemIdCombo.setItems(ids);
     }
 
-    public void reportGenAction(ActionEvent actionEvent) {
+    private void loadCustomerIDs() {
+
+        ObservableList<Customer> allSupplier = customerBoImpl.getAllCustomers();
+        ObservableList ids = FXCollections.observableArrayList();
+
+        allSupplier.forEach(supplier -> {
+            ids.add(supplier.getId());
+
+        });
+        cusIdCombo.setItems(ids);
+
     }
 
-    public void logoutAction(ActionEvent actionEvent) {
+    private void loadDateAndTime() {
+
+        Date date = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        dateField.setText(f.format(date));
+
+
+        //Time
+        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalTime time = LocalTime.now();
+            timeField.setText(
+                    time.getHour() + " : " + time.getMinute() + " : " + time.getSecond()
+            );
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
 
-    ObservableList<OrderTable> orderList = FXCollections.observableArrayList();
+    ObservableList<CartTable> orderList = FXCollections.observableArrayList();
+
+
+
+    public void manageOrdersAction(ActionEvent actionEvent) {}
+
+    public void manageProductsAction(ActionEvent actionEvent) {}
+
+    public void manageCustomersAction(ActionEvent actionEvent) {}
+
+    public void manageSuppliersAction(ActionEvent actionEvent) {}
+
+    public void reportGenAction(ActionEvent actionEvent) {}
+
+    public void logoutAction(ActionEvent actionEvent) {}
+
     public void addActionBtn(ActionEvent actionEvent) {
         String itemCode = (String) itemIdCombo.getValue();
-        String iteName = itemNameField.getText();
-        Integer qty = Integer.parseInt(qtyField.getText());
+        String desc = itemNameField.getText();
+        Integer qtyFroCus = Integer.parseInt(qtyField.getText());
         Double unitPrice = Double.valueOf(priceField.getText());
-        Double total = qty * unitPrice;
-        OrderTable orderTable1 = new OrderTable(itemCode, iteName, qty, unitPrice, total);
-        System.out.println(orderTable1);
+        Double total = qtyFroCus * unitPrice;
+        CartTable cartTable = new CartTable(itemCode, desc, qtyFroCus, unitPrice, total);
+        System.out.println(cartTable);
 
-        orderList.add(orderTable1);
+        orderList.add(cartTable);
         orderTable.setItems(orderList);
         calcNetTotal();
     }
 
     double total = 0;
     private void calcNetTotal() {
-
-        for (OrderTable orderObj : orderList) {
+        total = 0;
+        for (CartTable orderObj : orderList) {
             total += orderObj.getTotal();
         }
         netValueField.setText(String.valueOf(total) + "/=");
@@ -206,37 +189,33 @@ public class PlaceOrderController implements Initializable {
 
     public void placeOrderAction(ActionEvent actionEvent) throws ParseException, IOException {
         String id = orderIdField.getText();
-        String Cusid =cusIdCombo.getValue().toString();
-        DateFormat format = new SimpleDateFormat("DD-MM-YYYY");
+        String cusId =cusIdCombo.getValue().toString();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date orderDate = format.parse(dateField.getText());
         double amount = total;
 
-        Order order = new Order(
-                id,Cusid,orderDate,amount
-        );
+        ObservableList<OrderDetails> orderDetailsObservableList =FXCollections.observableArrayList();
 
-        boolean isSaved = orderBoImpl.saveOrder(order);
+        for (CartTable cartTable : orderList) {
+            String oId = orderIdField.getText();
+            String itemCode = cartTable.getItemCode();
+            Integer qty = cartTable.getQty();
+            Double unitPrice = cartTable.getUnitPrice();
+            orderDetailsObservableList.add(new OrderDetails(null, oId, itemCode, qty, unitPrice));
+        }
 
-        ObservableList<OrderDetails> orderDetailsObservableList = FXCollections.observableArrayList();
-        List<OrderTable> list = new ArrayList<OrderTable>();
+        orderDetailsBoImpl.saveOrderDetails(orderDetailsObservableList);
 
-        orderTableList.forEach(orderDetails -> {
-            Product product1 = orderDetailsBoImpl.getProductById(orderDetails.getItemId());
-            OrderTable orderTable1 = new OrderTable(cartNum++,product1.getId(),product1.getName(),orderDetails.getQty(),orderDetails.getAmount());
+        Order order = new Order(id,cusId,orderDate,amount );
 
-            list.add(orderTable1);
-
-            orderDetailsObservableList.add(new OrderDetails(oid++, orderIdField.getText(),orderDetails.getItemId(),orderDetails.getQty(),orderDetails.getAmount()));
-        });
-
-
-        boolean isInsert = orderDetails
+        boolean isInsert = orderBoImpl.saveOrder(order);
         if (isInsert) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Order Placed");
             alert.setContentText("Order Placed Successfully..!");
             alert.showAndWait();
             clearFields();
+
         } else {
             new Alert(Alert.AlertType.ERROR, "Somthing Wrong..!!!").show();
         }
@@ -255,9 +234,7 @@ public class PlaceOrderController implements Initializable {
         orderTable.setItems(null);
     }
 
-    public void clearActionBtn(ActionEvent actionEvent) {
-    }
-
+    public void clearActionBtn(ActionEvent actionEvent) {}
 
     public void closeAction(MouseEvent mouseEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -265,8 +242,10 @@ public class PlaceOrderController implements Initializable {
         alert.setContentText("Are you sure want to exit..?");
         Optional<ButtonType> result = alert.showAndWait();
 
-        if (result.get() == ButtonType.OK){
+        if (result.isPresent() && result.get() == ButtonType.OK) {
             System.exit(0);
         }
     }
 }
+
+

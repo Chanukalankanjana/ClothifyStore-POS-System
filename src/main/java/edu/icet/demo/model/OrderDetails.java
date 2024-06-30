@@ -10,9 +10,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetails {
-    private Integer cartNum;//cart Num
+    private Integer id;//cart Num
     private String orderId;
     private String itemId;
     private int qty;
     private double amount;
+
+    public OrderDetails(Object o, String oId, String itemCode, Integer qty) {
+    }
 }

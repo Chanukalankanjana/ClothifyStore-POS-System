@@ -9,11 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderTable {
+public class CartTable {
     private String itemCode;
     private String desc;
     private Integer qty;
     private Double unitPrice;
     private Double total;
-    private Integer cartNum;
 }

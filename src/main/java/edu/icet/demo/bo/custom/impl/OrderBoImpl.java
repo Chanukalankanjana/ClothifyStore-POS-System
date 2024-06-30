@@ -25,4 +25,5 @@ public class OrderBoImpl implements OrderBo {
     public boolean deleteOrderById(String id) {
         return orderDaoImpl.delete(id);
     }
+
 }
