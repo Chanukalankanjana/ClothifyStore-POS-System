@@ -41,19 +41,15 @@ public class OrderDetailsBoImpl implements OrderDetailsBo {
         String id = new OrderDaoImpl().getLatestOrderId();
 
         if (id==null){
-            return "X0001";
+            return "O0001";
         }
-        int number = Integer.parseInt(id.split("X")[1]);
+        int number = Integer.parseInt(id.split("O")[1]);
         number++;
-        return String.format("X%04d", number);
+        return String.format("O%04d", number);
     }
 
     public boolean saveOrderDetails(ObservableList<OrderDetails> orderDetailsObservableList) {
-        orderDetailsObservableList.forEach(orderDetails -> {
-            OrderDetailsEntity orderDetailsEntity = new ObjectMapper().convertValue(orderDetails, OrderDetailsEntity.class);
-            orderDetailsDao.saveAll((ObservableList<OrderDetails>) orderDetailsEntity);
-        });
-        return true;
+        return orderDetailsDao.saveAll(orderDetailsObservableList);
     }
 
     public ObservableList<OrderDetails> getAllOrderedProducts() {

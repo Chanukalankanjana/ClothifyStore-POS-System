@@ -127,7 +127,7 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
 
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        Query query = session.createQuery("DELETE FROM order_has_items WHERE orderId=:oId AND itemId=:iId");
+        Query query = session.createQuery("DELETE FROM order_details WHERE orderId=:oId AND itemId=:iId");
         query.setParameter("oId",oId);
         query.setParameter("iId",iId);
         int i = query.executeUpdate();
@@ -140,7 +140,7 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
     public ObservableList<OrderDetails> getProductIdsByOrderIds(List<String> orderIdList) {
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        Query query = session.createQuery("FROM order_has_items WHERE orderId=:id");
+        Query query = session.createQuery("FROM order_details WHERE orderId=:id");
         ObservableList<OrderDetailsEntity> list = FXCollections.observableArrayList();
         orderIdList.forEach(id -> {
             query.setParameter("id",id);

@@ -1,4 +1,6 @@
 package edu.icet.demo.bo.custom;
 
-public interface OrderBo {
+import edu.icet.demo.bo.SuperBo;
+
+public interface OrderBo extends SuperBo {
 }

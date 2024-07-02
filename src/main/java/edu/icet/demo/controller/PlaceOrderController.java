@@ -57,6 +57,8 @@ public class PlaceOrderController implements Initializable {
     public TextField netValueField;
     public Button closeBtn;
 
+    private String empId;
+
     OrderBoImpl orderBoImpl = new OrderBoImpl();
     OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
@@ -79,6 +81,7 @@ public class PlaceOrderController implements Initializable {
         cusNameField.setText(customer.getName());
         cusEmailField.setText(customer.getEmail());
         cusAddressField.setText(customer.getAddress());
+        empId = customer.getId();
     }
 
     private void loadItemCodes() {
@@ -201,13 +204,14 @@ public class PlaceOrderController implements Initializable {
             String oId = orderIdField.getText();
             String itemCode = cartTable.getItemCode();
             Integer qty = cartTable.getQty();
-            Double unitPrice = cartTable.getUnitPrice();
-            orderDetailsObservableList.add(new OrderDetails(null, oId, itemCode, qty, unitPrice));
+            String itemName = cartTable.getDesc();
+            Double tamount = cartTable.getTotal();
+            orderDetailsObservableList.add(new OrderDetails(null,oId,itemName,qty,tamount,itemCode));
         }
 
         orderDetailsBoImpl.saveOrderDetails(orderDetailsObservableList);
 
-        Order order = new Order(id,cusId,orderDate,amount );
+        Order order = new Order(id,cusId,orderDate,amount,empId);
 
         boolean isInsert = orderBoImpl.saveOrder(order);
         if (isInsert) {
