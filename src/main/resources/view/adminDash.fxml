@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="adminAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.AdminDashController">
     <children>
-      <ImageView fitHeight="733.0" fitWidth="1246.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="733.0" fitWidth="1246.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/Bg%20Image.jpg" />
          </image>
@@ -26,63 +26,81 @@
 <!--            </image>-->
 <!--        </ImageView>-->
 
-        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#eecccc" height="682.0" layoutX="6.0" layoutY="9.0" opacity="0.14" stroke="#0006ff" strokeType="INSIDE" strokeWidth="3.0" width="283.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="295.0" layoutY="9.0" opacity="0.23" stroke="#2200ff" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="932.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#eecccc" height="682.0" layoutX="6.0" layoutY="9.0" opacity="0.23" stroke="#38a3b8" strokeType="INSIDE" strokeWidth="3.0" width="283.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="295.0" layoutY="10.0" opacity="0.23" stroke="#38a3b8" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="942.0" />
 
-        <Label layoutX="668.0" layoutY="21.0" prefHeight="40.0" prefWidth="221.0" text="Manage Employee" textFill="#d0b400" wrapText="true">
+        <Label layoutX="651.0" layoutY="19.0" prefHeight="40.0" prefWidth="221.0" text="Manage Employee" textFill="#d0b400" wrapText="true">
             <font>
-                <Font name="Rockwell Condensed" size="32.0" />
+                <Font name="Rockwell Condensed" size="38.0" />
             </font>
         </Label>
 
-        <Button fx:id="addEmployeeBtn" defaultButton="true" layoutX="552.0" layoutY="216.0" mnemonicParsing="false" onAction="#AddActionBtn" opacity="0.88" prefHeight="38.0" prefWidth="73.0" style="-fx-background-color: #28a745; -fx-text-fill: white;" text="Add" />
-        <Button fx:id="updateBtn" defaultButton="true" layoutX="552.0" layoutY="309.0" mnemonicParsing="false" onAction="#UpdateActionBtn" opacity="0.88" prefHeight="38.0" prefWidth="73.0" style="-fx-background-color: #ffc107; -fx-text-fill: white;" text="Update" />
+        <Button fx:id="addEmployeeBtn" cancelButton="true" defaultButton="true" layoutX="552.0" layoutY="259.0" mnemonicParsing="false" onAction="#AddActionBtn" opacity="0.95" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Add">
+         <font>
+            <Font name="Rockwell Condensed" size="22.0" />
+         </font></Button>
+        <Button fx:id="updateBtn" defaultButton="true" layoutX="552.0" layoutY="364.0" mnemonicParsing="false" onAction="#UpdateActionBtn" opacity="0.95" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Update">
+         <font>
+            <Font name="Rockwell Condensed" size="22.0" />
+         </font></Button>
 
-        <Label layoutX="73.0" layoutY="28.0" prefHeight="103.0" prefWidth="150.0" text="Welcome Admin" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <Label layoutX="73.0" layoutY="19.0" prefHeight="138.0" prefWidth="149.0" text="Welcome Admin" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
-                <Font name="Rockwell Condensed Bold" size="34.0" />
+                <Font name="Rockwell Condensed" size="48.0" />
             </font>
         </Label>
 
-        <Button fx:id="manageEmpBtn" layoutX="29.0" layoutY="168.0" mnemonicParsing="false" onAction="#manageEmpAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #6f42c1; -fx-text-fill: white;" text="Manage Employee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="manageEmpBtn" layoutX="29.0" layoutY="168.0" mnemonicParsing="false" onAction="#manageEmpAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Manage Employee" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
-                <Font name="Arial" size="18.0" />
+                <Font name="Rockwell Condensed Bold" size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="viewOrderBtn" layoutX="29.0" layoutY="243.0" mnemonicParsing="false" onAction="#viewOrderAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #17a2b8; -fx-text-fill: white;" text="View Orders" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewOrderBtn" layoutX="29.0" layoutY="243.0" mnemonicParsing="false" onAction="#viewOrderAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="View Orders" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
-                <Font name="Arial" size="18.0" />
+                <Font name="Rockwell Condensed Bold" size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="viewProductsBtn" layoutX="29.0" layoutY="319.0" mnemonicParsing="false" onAction="#viewProductsAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #dc3545; -fx-text-fill: white;" text="View Products" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewProductsBtn" layoutX="29.0" layoutY="319.0" mnemonicParsing="false" onAction="#viewProductsAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="View Products" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
-                <Font name="Arial" size="18.0" />
+                <Font name="Rockwell Condensed Bold" size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="viewCustomersBtn" layoutX="29.0" layoutY="398.0" mnemonicParsing="false" onAction="#viewCustomersAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #fd7e14; -fx-text-fill: white;" text="View Customers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewCustomersBtn" layoutX="29.0" layoutY="398.0" mnemonicParsing="false" onAction="#viewCustomersAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="View Customers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
-                <Font name="Arial" size="18.0" />
+                <Font name="Rockwell Condensed Bold" size="20.0" />
             </font>
         </Button>
 
-        <Button fx:id="viewSuppliersBtn" layoutX="29.0" layoutY="474.0" mnemonicParsing="false" onAction="#viewSuppliersAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: #20c997; -fx-text-fill: white;" text="View Suppliers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+        <Button fx:id="viewSuppliersBtn" layoutX="29.0" layoutY="474.0" mnemonicParsing="false" onAction="#viewSuppliersAction" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="View Suppliers" textOverrun="CENTER_ELLIPSIS" wrapText="true">
             <font>
-                <Font name="Arial" size="18.0" />
+                <Font name="Rockwell Condensed Bold" size="20.0" />
             </font>
         </Button>
 
         <PointLight color="CHARTREUSE" lightOn="true" />
 
-        <TextField fx:id="empNameField" layoutX="304.0" layoutY="262.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;" />
-        <TextField fx:id="empEmailField" layoutX="304.0" layoutY="358.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;" />
-        <TextField fx:id="empAddressField" layoutX="304.0" layoutY="455.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;" />
+        <TextField fx:id="empNameField" layoutX="304.0" layoutY="309.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Name" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;">
+         <font>
+            <Font name="Rockwell Condensed" size="18.0" />
+         </font></TextField>
+        <TextField fx:id="empEmailField" layoutX="304.0" layoutY="417.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;">
+         <font>
+            <Font name="Rockwell Condensed" size="18.0" />
+         </font></TextField>
+        <TextField fx:id="empAddressField" layoutX="304.0" layoutY="523.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;">
+         <font>
+            <Font name="Rockwell Condensed" size="18.0" />
+         </font></TextField>
 
-        <Button fx:id="deleteBtn" defaultButton="true" layoutX="552.0" layoutY="406.0" mnemonicParsing="false" onAction="#DeleteActionBtn" opacity="0.88" prefHeight="38.0" prefWidth="73.0" style="-fx-background-color: #da0606; -fx-text-fill: white;" text="Delete" />
+        <Button fx:id="deleteBtn" defaultButton="true" layoutX="552.0" layoutY="472.0" mnemonicParsing="false" onAction="#DeleteActionBtn" opacity="0.95" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Delete">
+         <font>
+            <Font name="Rockwell Condensed" size="22.0" />
+         </font></Button>
 
-        <TableView fx:id="employeeTable" layoutX="668.0" layoutY="106.0" onMouseClicked="#tableMouseClickedAction" opacity="0.8" prefHeight="542.0" prefWidth="544.0" style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6;">
+        <TableView fx:id="employeeTable" layoutX="668.0" layoutY="143.0" onMouseClicked="#tableMouseClickedAction" opacity="0.8" prefHeight="479.0" prefWidth="544.0" style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6;">
             <columns>
                 <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
@@ -94,14 +112,15 @@
             </columnResizePolicy>
         </TableView>
 
-        <TextField fx:id="empIdField" layoutX="304.0" layoutY="168.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;" />
-
-        <Button fx:id="closeBtn" defaultButton="true" layoutX="1186.0" layoutY="16.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-text-fill: #f80000; -fx-font-size: 18px;" text="X" />
+        <TextField fx:id="empIdField" layoutX="304.0" layoutY="206.0" prefHeight="38.0" prefWidth="230.0" promptText="Employee Id" style="-fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-text-fill: #000000;">
+         <font>
+            <Font name="Rockwell Condensed" size="18.0" />
+         </font></TextField>
         <ImageView fitHeight="77.0" fitWidth="93.0" layoutX="101.0" layoutY="561.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/logout.png" />
             </image>
         </ImageView>
-      <Button layoutX="1177.0" layoutY="26.0" mnemonicParsing="false" onAction="#closeBtnAction" prefHeight="13.0" prefWidth="33.0" text="X" textFill="RED" />
+      <Button layoutX="1187.0" layoutY="27.0" mnemonicParsing="false" onAction="#closeBtnAction" prefHeight="13.0" prefWidth="33.0" text="X" textFill="RED" />
     </children>
 </AnchorPane>
