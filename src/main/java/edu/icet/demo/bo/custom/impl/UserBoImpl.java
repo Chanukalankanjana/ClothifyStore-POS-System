@@ -105,7 +105,7 @@ public class UserBoImpl implements UserBo {
             }
         });
 
-        String text1 = "Dear Employee,\n\n" +
+        String text1 = "Dear User,\n\n" +
                 "To reset your password, please use the following One-Time Password (OTP):\n\n" +
                 text + "\n\n" +
                 "This code is valid for the next 10 minutes. Please do not share this OTP with anyone.\n\n" +

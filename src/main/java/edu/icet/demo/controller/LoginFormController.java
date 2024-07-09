@@ -6,20 +6,34 @@ import edu.icet.demo.entity.UserEntity;
 import edu.icet.demo.utill.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 
+import javax.print.attribute.standard.MediaName;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LoginFormController implements Initializable {
-    public PasswordField PasswordField;
     public TextField UserNameField;
     public AnchorPane WelcomAnchor;
+    public ImageView imgeBtn;
+    public ToggleButton togglePasswordBtn;
+    public javafx.scene.control.PasswordField passwordField;
+    public ImageView showIcon;
+    public ImageView hideIcon;
+    public TextField passwordTextField;
+    private MediaPlayer mediaPlayer;
 
     private boolean isShow;
 
@@ -43,14 +57,14 @@ public class LoginFormController implements Initializable {
 
         String password = userBoImpl.passwordDecrypt(userEntity.getPassword());
 
-            if (userEntity.getRole().equals("Admin") && password.equals(PasswordField.getText())){
+            if (userEntity.getRole().equals("Admin") && password.equals(passwordField.getText())){
                 System.out.println("Logged");
                 try {
                     SceneSwitchController.getInstance().switchScene(WelcomAnchor,"adminDash.fxml");
                 } catch (IOException e){
                     throw new RuntimeException(e);
                 }
-            } else if (userEntity.getRole().equals("Employee") && password.equals(PasswordField.getText())) {
+            } else if (userEntity.getRole().equals("Employee") && password.equals(passwordField.getText())) {
                 EmployeeData instance = EmployeeData.getInstance();
                 instance.setId(userEntity.getId());
                 instance.setName(userEntity.getName());
@@ -67,14 +81,55 @@ public class LoginFormController implements Initializable {
         sceneSwitch.switchScene(WelcomAnchor,"resetPassword.fxml");
     }
 
-    public void NeedHelpBtn(ActionEvent actionEvent) {
-    }
-
-
     public void emailKeyReleasedAction(KeyEvent keyEvent) {
         if (isShow){
             new Alert(Alert.AlertType.INFORMATION,"If your first time to sign in to this, Please reset your password clicked forgot password button").show();
             isShow=false;
+        }
+    }
+
+    public void handleNeedHelpBtn(ActionEvent actionEvent) {
+        URL resource = getClass().getResource("/assets/need_help.mp4");
+        String videoPath = resource.toExternalForm();
+        Media media = new Media(videoPath);
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        MediaView mediaView = new MediaView(mediaPlayer);
+
+        Stage videoStage = new Stage();
+        StackPane root = new StackPane();
+        root.getChildren().add(mediaView);
+        videoStage.setScene(new Scene(root, 782, 440));
+        videoStage.show();
+
+        mediaPlayer.play();
+
+        videoStage.setOnCloseRequest(event -> {
+            if (mediaPlayer != null) {
+                mediaPlayer.stop();
+            }
+        });
+
+    }
+
+    public void closeBtnOnAction(ActionEvent actionEvent) {
+        System.exit(0);
+    }
+
+    public void togglePasswordVisibility(ActionEvent actionEvent) {
+        if (togglePasswordBtn.isSelected()) {
+            // Show password as plain text
+            passwordTextField.setText(passwordField.getText());
+            passwordTextField.setVisible(true);
+            passwordField.setVisible(false);
+            showIcon.setVisible(false);
+            hideIcon.setVisible(true);
+        } else {
+            // Show password as masked
+            passwordField.setText(passwordTextField.getText());
+            passwordField.setVisible(true);
+            passwordTextField.setVisible(false);
+            showIcon.setVisible(true);
+            hideIcon.setVisible(false);
         }
     }
 }

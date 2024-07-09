@@ -6,14 +6,21 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="customerAnchor" prefHeight="684.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.EmployeeDashController">
+<AnchorPane fx:id="customerAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.EmployeeDashController">
     <children>
-        <Rectangle fx:id="employeeAnchor" arcHeight="5.0" arcWidth="5.0" fill="#5c00b5" height="677.0" layoutX="4.0" layoutY="4.0" stroke="WHITE" strokeType="INSIDE" width="281.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="291.0" layoutY="4.0" stroke="WHITE" strokeType="INSIDE" width="936.0" />
+      <ImageView fitHeight="695.0" fitWidth="1247.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Bg%20Image.jpg" />
+         </image>
+      </ImageView>
+        <Rectangle fx:id="employeeAnchor" arcHeight="5.0" arcWidth="5.0" height="677.0" layoutX="4.0" layoutY="7.0" opacity="0.24" stroke="WHITE" strokeType="INSIDE" width="281.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="291.0" layoutY="8.0" opacity="0.5" stroke="WHITE" strokeType="INSIDE" width="936.0" />
         <Label layoutX="676.0" layoutY="12.0" text="Add Customer" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="32.0" />
@@ -53,7 +60,7 @@
         <TextField fx:id="customerNameField" layoutX="296.0" layoutY="320.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Name" />
         <TextField fx:id="cusEmailAddressField" layoutX="296.0" layoutY="418.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
         <TextField fx:id="cusAddressField" layoutX="296.0" layoutY="515.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
-        <TableView fx:id="customerTable" layoutX="658.0" layoutY="96.0" onMouseClicked="#tableMouseClickedAction" prefHeight="556.0" prefWidth="556.0">
+        <TableView fx:id="customerTable" layoutX="658.0" layoutY="96.0" onMouseClicked="#tableMouseClickedAction" opacity="0.64" prefHeight="556.0" prefWidth="556.0">
             <columns>
                 <TableColumn fx:id="cusIdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="cusNameColumn" prefWidth="75.0" text="Name" />

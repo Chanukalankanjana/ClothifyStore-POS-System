@@ -69,4 +69,8 @@ public class ResetPasswordController implements Initializable {
             new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
         }
     }
+
+    public void closeOnAction(ActionEvent actionEvent) {
+        System.exit(0);
+    }
 }

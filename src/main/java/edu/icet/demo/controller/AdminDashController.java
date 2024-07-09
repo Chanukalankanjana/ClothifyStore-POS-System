@@ -122,6 +122,7 @@ public class AdminDashController implements Initializable {
                 alert.showAndWait();
                 clearFields();
                 employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
+                empIdField.setText(userBoImpl.generateEmployeeId());
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Update Failed");
@@ -184,16 +185,6 @@ public class AdminDashController implements Initializable {
     }
 
 
-    public void LogoutAction(ActionEvent actionEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setContentText("Are you sure want to logout..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            sceneSwitch.switchScene(adminAnchor,"loginForm.fxml");
-        }
-    }
 
     public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
         sceneSwitch.switchScene(adminAnchor,"viewSuppliers.fxml");
@@ -239,6 +230,28 @@ public class AdminDashController implements Initializable {
 
     public void closeAction(MouseEvent mouseEvent) {
         System.exit(0);
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(adminAnchor, "loginForm.fxml");
+        }
+    }
+
+    public void closeBtnAction(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure want to exit..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
+        }
     }
 }
 
