@@ -59,15 +59,15 @@ public class ProductBoImpl implements ProductBo {
         return productDaoImpl.searchAllIds();
     }
 
-//    public ObservableList<Product> getProductBySupId(String text) {
-//        ObservableList<ProductEntity> productEntityList = productDaoImpl.getProductBysID(text);
-//
-//        ObservableList<Product> products = FXCollections.observableArrayList();
-//        productEntityList.forEach(productEntity -> {
-//            products.add(new ObjectMapper().convertValue(productEntity, Product.class));
-//        });
-//        return products;
-//    }
+    public ObservableList<Product> getProductBySupId(String text) {
+        ObservableList<ProductEntity> productEntityList = productDaoImpl.getProductBysID(text);
+
+        ObservableList<Product> products = FXCollections.observableArrayList();
+        productEntityList.forEach(productEntity -> {
+            products.add(new ObjectMapper().convertValue(productEntity, Product.class));
+        });
+        return products;
+    }
 
     public String generateProductId() {
 

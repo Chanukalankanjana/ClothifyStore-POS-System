@@ -2,11 +2,14 @@ package edu.icet.demo.controller;
 
 import edu.icet.demo.bo.BoFactory;
 import edu.icet.demo.bo.custom.impl.CustomerBoImpl;
+import edu.icet.demo.model.Customer;
 import edu.icet.demo.utill.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -15,62 +18,100 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ViewCustomerController implements Initializable {
-    public AnchorPane viewCusAnchor;
-    public Button manageEmpBtn;
-    public Button viewOrderBtn;
-    public Button viewProductsBtn;
-    public Button viewCustomersBtn;
-    public Button viewSuppliersBtn;
-    public TableView viewCustomerTable;
     public TableColumn cusIdColumn;
     public TableColumn cusNameColumn;
     public TableColumn cusEmailColumn;
-    public TableColumn cusAddresscoIumn;
-    public Button logoutBtn;
+    public AnchorPane viewCustomerAnchor;
+    public TextField customerIdField;
+    public TextField customerNameField;
+    public TextField cusEmailAddressField;
+    public TextField cusAddressField;
+    public TableView customerTable;
+    public TableColumn cusAddressColumn;
 
 
     CustomerBoImpl customerBoImpl= BoFactory.getInstance().getBo(BoType.CUSTOMER);
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
+
+    boolean isAction = true,isMouseClick;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cusIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         cusNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         cusEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-        cusAddresscoIumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        cusAddressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
-        viewCustomerTable.setItems(customerBoImpl.getAllCustomers());
-
-
+        customerTable.setItems(customerBoImpl.getAllCustomers());
 
     }
-    public void manageEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(viewCusAnchor,"adminDash.fxml");
+
+    public void manageEmployeeAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCustomerAnchor,"adminDash.fxml");
     }
 
-    public void viewOrdersOnAction(ActionEvent actionEvent) {
+    public void viewOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCustomerAnchor,"viewOrders.fxml");
     }
 
-    public void viewProductsOnAction(ActionEvent actionEvent) {
+    public void viewProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCustomerAnchor,"viewOrders.fxml");
     }
 
-    public void viewCustomersOnAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(viewCusAnchor,"viewCustomer.fxml");
-    }
-
-    public void viewSuppliersOnAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(viewCusAnchor,"viewSuppliers.fxml");
+    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCustomerAnchor,"viewCustomer.fxml");
     }
 
 
-    public void logoutOnAction(ActionEvent actionEvent) throws IOException {
+    public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewCustomerAnchor,"viewSuppliers.fxml");
+    }
+//
+//    public void tableMouseClickedAction(MouseEvent mouseEvent) {
+//        int index = customerTable.getSelectionModel().getSelectedIndex();
+//
+//
+//        if(index < 0){
+//            return;
+//        }
+//        String id = cusIdColumn.getCellData(index).toString();
+//
+//        if (isAction){
+//            Customer customer = customerBoImpl.getCustomerById(id);
+//            customerIdField.setText(customer.getId());
+//            customerNameField.setText(customer.getName());
+//            cusEmailAddressField.setText(customer.getEmail());
+//            cusAddressField.setText(customer.getAddress());
+//            byte[] data;
+//
+//            if (!customer.getId().equals("")){
+//                isMouseClick = true;
+//            }
+//        }
+//    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Logout");
+            alert.setContentText("Are you sure want to logout..?");
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.get() == ButtonType.OK) {
+                sceneSwitch.switchScene(viewCustomerAnchor,"loginForm.fxml");
+            }
+    }
+//
+//    public void releaseEmailkey(KeyEvent keyEvent) {
+//    }
+
+    public void closeAction(MouseEvent mouseEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setContentText("Are you sure want to logout..?");
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure you want exit...?");
         Optional<ButtonType> result = alert.showAndWait();
 
-        if (result.get() == ButtonType.OK) {
-            sceneSwitch.switchScene(viewCusAnchor,"loginForm.fxml");
+        if (result.get() == ButtonType.OK){
+            System.exit(0);
         }
     }
 }

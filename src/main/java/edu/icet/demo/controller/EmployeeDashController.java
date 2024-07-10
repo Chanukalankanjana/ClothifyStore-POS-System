@@ -33,7 +33,6 @@ public class EmployeeDashController implements Initializable {
     public TableColumn cusEmailColumn;
     public TableColumn cusAddressColumn;
     public Button addCusBtn;
-    public Button searchCusBtn;
     public Button updateCusBtn;
     public Button deleteCusBtn;
     public Rectangle employeeAnchor;
@@ -162,7 +161,8 @@ public class EmployeeDashController implements Initializable {
         cusAddressField.clear();
     }
 
-    public void manageOrdersAction(ActionEvent actionEvent) {
+    public void manageOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(customerAnchor,"placeOrderForm.fxml");
     }
 
     public void manageProductsAction(ActionEvent actionEvent) {
@@ -232,5 +232,11 @@ public class EmployeeDashController implements Initializable {
         if (result.get() == ButtonType.OK){
             System.exit(0);
         }
+    }
+
+    public void manageEmployeeAction(ActionEvent actionEvent) {
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) {
     }
 }

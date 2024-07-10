@@ -38,6 +38,7 @@ public class ViewOrdersController implements Initializable {
     public TextField orderDateField;
     public TextField brandNameField;
     public TextField supIdField;
+    public Button closeBtn;
 
     OrderDetailsBoImpl orderDetailsBoImpl = BoFactory.getInstance().getBo(BoType.PLACE);
     OrderBoImpl orderBoImpl = BoFactory.getInstance().getBo(BoType.ORDER);

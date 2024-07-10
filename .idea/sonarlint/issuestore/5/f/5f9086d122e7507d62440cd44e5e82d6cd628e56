@@ -1,49 +1,57 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(‹ú· ûÿÿÿÿ8ãŸµ¶„2J$b44f0ade-2814-4587-861c-fe7c61a3ae51
+java:S3740"/Provide the parametrized type for this generic.(çÚï‰ıÿÿÿÿ8½ÕÇ½‰2J$ede230dc-7bd1-4616-9b6f-2fefafdff9b5
 w
-java:S3740"/Provide the parametrized type for this generic.(çÚï‰ıÿÿÿÿ8ãŸµ¶„2J$fadfc0b8-91ec-4a9d-8cad-82f7f842cf88
-w
-java:S3740"/Provide the parametrized type for this generic.(ùëÌõúÿÿÿÿ8ãŸµ¶„2J$ba8dadb9-0649-4ab2-b699-50110c285052
+java:S3740"/Provide the parametrized type for this generic.(ùëÌõúÿÿÿÿ8½ÕÇ½‰2J$279ee1c8-c62f-419b-8088-c07a19fd1671
 r
-java:S3740"/Provide the parametrized type for this generic.(î¤òı8ãŸµ¶„2J$fc5473c2-72ca-43bd-9b9d-bbe5a4120639
+java:S3740"/Provide the parametrized type for this generic.(î¤òı8½ÕÇ½‰2J$4591d3d7-b089-4dbc-ba2f-f528560dd2b5
+r
+java:S3740"/Provide the parametrized type for this generic.(âˆÅ˜8½ÕÇ½‰2J$3e00a658-841b-4a54-be8f-52bec875dc15
 w
-java:S3740"/Provide the parametrized type for this generic.(•ºø¹şÿÿÿÿ8äŸµ¶„2J$6f8c45c5-e95f-4c1d-8276-d32af5c728cc
-œ
-java:S1104"YMake viewCusAnchor a static final constant or non-public and provide accessors if needed.(©îÂæ8åŸµ¶„2J$f2fdd379-d07d-48cc-b135-81b39b728e20
- 
-java:S1104"XMake manageEmpBtn a static final constant or non-public and provide accessors if needed.(å­¬½ûÿÿÿÿ8åŸµ¶„2J$344f31b9-50cd-4718-81e7-f124f1cb8429
-š
-java:S1104"XMake viewOrderBtn a static final constant or non-public and provide accessors if needed.(¡¦éz8åŸµ¶„2J$63516b4c-b464-4edb-bb14-e609af00b90f
-£
-java:S1104"[Make viewProductsBtn a static final constant or non-public and provide accessors if needed.(û±Ö³øÿÿÿÿ8åŸµ¶„2J$82510631-6e10-4650-9ad1-6f299710f199
-¤
-java:S1104"\Make viewCustomersBtn a static final constant or non-public and provide accessors if needed.(äõï¼ıÿÿÿÿ8åŸµ¶„2J$056274ff-cdc3-4491-a1d0-2f45a1da7722
+java:S3740"/Provide the parametrized type for this generic.(ò¢Êıÿÿÿÿ8½ÕÇ½‰2J$7acc8801-79e3-45e5-9f84-53a15b8603c2
 Ÿ
-java:S1104"\Make viewSuppliersBtn a static final constant or non-public and provide accessors if needed.(ŒĞı™8åŸµ¶„2J$5c302778-6782-4d52-a7a3-567791334948
-¥
-java:S1104"]Make viewCustomerTable a static final constant or non-public and provide accessors if needed.(‹ú· ûÿÿÿÿ8åŸµ¶„2J$870b7d1a-290d-41d7-8b18-0c5ffcc363dd
-Ÿ
-java:S1104"WMake cusIdColumn a static final constant or non-public and provide accessors if needed.(çÚï‰ıÿÿÿÿ8åŸµ¶„2J$db4f0972-8d12-460c-b918-43f25d97204d
+java:S1104"WMake cusIdColumn a static final constant or non-public and provide accessors if needed.(çÚï‰ıÿÿÿÿ8¾ÕÇ½‰2J$f15e82fc-61f3-419d-85c0-2b322bff0c53
 ¡
-java:S1104"YMake cusNameColumn a static final constant or non-public and provide accessors if needed.(ùëÌõúÿÿÿÿ8åŸµ¶„2J$4cad9b4c-36c7-4869-aeab-05a99c073430
+java:S1104"YMake cusNameColumn a static final constant or non-public and provide accessors if needed.(ùëÌõúÿÿÿÿ8¾ÕÇ½‰2J$d5de84bd-efd8-4c1a-846f-78e859710781
 
-java:S1104"ZMake cusEmailColumn a static final constant or non-public and provide accessors if needed.(î¤òı8åŸµ¶„2J$50e029ca-cf9a-4086-ac9f-808b527beaf6
+java:S1104"ZMake cusEmailColumn a static final constant or non-public and provide accessors if needed.(î¤òı8¾ÕÇ½‰2J$8b248893-8a5b-43d9-920b-8353c4dcf67a
+¦
+java:S1104"^Make viewCustomerAnchor a static final constant or non-public and provide accessors if needed.(ÖËš‘ıÿÿÿÿ8¾ÕÇ½‰2J$d1c54fb5-4131-4827-96b8-e877aaa1bb1e
+
+java:S1104"[Make customerIdField a static final constant or non-public and provide accessors if needed.(ÊÑü—8¾ÕÇ½‰2J$28780eb0-4482-4c5b-8cb0-1e5c9bd68d59
+¥
+java:S1104"]Make customerNameField a static final constant or non-public and provide accessors if needed.(¥ğ¯·ÿÿÿÿÿ8¾ÕÇ½‰2J$7826f035-08d2-43e7-a45f-b5835c3aefe3
+£
+java:S1104"`Make cusEmailAddressField a static final constant or non-public and provide accessors if needed.(õÜ·Í8¾ÕÇ½‰2J$f34de126-e968-40f3-a427-0bfdc34c4a18
+£
+java:S1104"[Make cusAddressField a static final constant or non-public and provide accessors if needed.(¦šÈöùÿÿÿÿ8¾ÕÇ½‰2J$f1304022-3bec-49d1-a0d9-6bbaab2bdff9
+œ
+java:S1104"YMake customerTable a static final constant or non-public and provide accessors if needed.(âˆÅ˜8¾ÕÇ½‰2J$078b2fae-cbfd-4eb6-b72c-9068110b5315
 ¤
-java:S1104"\Make cusAddresscoIumn a static final constant or non-public and provide accessors if needed.(•ºø¹şÿÿÿÿ8åŸµ¶„2J$9ec1d8ac-1fe8-4e2f-b278-96ce3ee9c3a9
-
-java:S1104"UMake logoutBtn a static final constant or non-public and provide accessors if needed.(€óœ’ıÿÿÿÿ8©ŞÕ¶„2J$f6918bf4-a2c9-4b8c-ba00-ce8f136d57f0
+java:S1104"\Make cusAddressColumn a static final constant or non-public and provide accessors if needed.(ò¢Êıÿÿÿÿ8¾ÕÇ½‰2J$f190eea1-d9c2-45a5-a62d-b0a3c8a9c2a7
 
-java:S3655H"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8·ÑÚ¶„2J$aef71646-16ea-46f8-81c9-39fde9527208
-É
-java:S11863"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ¿óíüÿÿÿÿ8‚ µ¶„2J$5d1e76c4-a683-4748-8701-ab87b6a75eb1
-É
-java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°²¯Òşÿÿÿÿ8‚ µ¶„2J$c3e8536c-dc05-4277-9e94-1ebb81fad37c
+java:S3655q"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8ÏÕÇ½‰2J$75896ab5-e01e-4a50-8742-beb469659878
+
+java:S3655c"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8ÏÕÇ½‰2J$aed1a0ab-98f4-4b2a-ad7d-d90189567387
+r
+java:S1659$"*Declare "isMouseClick" on a separate line.(×ÔÈúüÿÿÿÿ8ÑÕÇ½‰2J$d944e98e-f20e-4701-a8c5-6fefb98e2656
+u
+java:S11721"2Remove this unused method parameter "actionEvent".(Œ»Äø8ÔÕÇ½‰2J$041dbb4b-a47b-4bcd-8a4a-b1ad6e0f1462
 z
-java:S1172/"2Remove this unused method parameter "actionEvent".(Ê½äÃıÿÿÿÿ8‰ µ¶„2J$b41feee7-089e-4892-9eb6-caa7e3419cc2
+java:S11725"2Remove this unused method parameter "actionEvent".(‡Æ†ùÿÿÿÿ8ÔÕÇ½‰2J$b70ea570-0150-48bc-a980-40b2c768ec76
+z
+java:S11729"2Remove this unused method parameter "actionEvent".(ÒÌ§¤úÿÿÿÿ8ÕÕÇ½‰2J$23c5f10c-1c60-43d7-8937-fac3c1576491
+z
+java:S1172="2Remove this unused method parameter "actionEvent".(¤ë‡§ùÿÿÿÿ8ÕÕÇ½‰2J$2ee0a1b5-7ceb-4c23-937d-351a60d9dc02
+u
+java:S1172B"2Remove this unused method parameter "actionEvent".(’×¨²8ÕÕÇ½‰2J$e9fda14c-fcf1-4648-a2cd-c7d48da74f5f
 t
-java:S11729"2Remove this unused method parameter "actionEvent".(ÉóÃ8Š µ¶„2J$6a95bf66-6ffc-47e8-8f7b-1f2f177a7c5e
-u
-java:S1172="2Remove this unused method parameter "actionEvent".(õíÔÁ8šÚ¶„2J$6ec7990b-bbf2-43cc-b792-6dbf147e581c
-u
-java:S1172B"2Remove this unused method parameter "actionEvent".(ƒªåÜ8Öç’Ò„2J$c6a87dc1-30e3-428a-b5c5-0db7b48f70e0
+java:S1172]"1Remove this unused method parameter "mouseEvent".(Ö‘­8ØÕÇ½‰2J$27ddcd15-baa0-4497-83ee-6734ffef2695
+~	java:S125F"<This block of commented-out lines of code should be removed.(ÂÔê8€ŞŠã‰2J$ac81d502-df83-45de-a2f9-7af0e0c9508d
+y
+java:S1172k"1Remove this unused method parameter "mouseEvent".(®Å°ôıÿÿÿÿ8ÙÕÇ½‰2J$c9d0744d-3c75-447b-80b6-a17de5caf5a3
+~	java:S125h"<This block of commented-out lines of code should be removed.(Ã¥±š8Ì‚Šã‰2J$4c38e63d-e13e-4adb-b154-146485d630e3
+|
+java:S1128"9Remove this unused import 'edu.icet.demo.model.Customer'.(¨¨Ñ¯8†ŞŠã‰2J$433d772b-4286-4d74-bd2c-5415d4da15d3
+€
+java:S1128"8Remove this unused import 'javafx.scene.input.KeyEvent'.(¦¶ Æøÿÿÿÿ8Ï‚Šã‰2J$06faf861-0263-4695-a198-98ca11a8cb96

@@ -135,21 +135,21 @@ public class ProductDaoImpl implements ProductDao {
         return true;
     }
 
-//    public ObservableList<ProductEntity> getProductBysID(String id) {
-//        Session session = HibernateUtil.getSession();
-//        session.getTransaction().begin();
-//        Query query = session.createQuery("FROM product WHERE supId=:id");
-//        query.setParameter("id",id);
-//        List<ProductEntity> list = query.list();
-//
-//        ObservableList<ProductEntity> productEntities = FXCollections.observableArrayList();
-//
-//        list.forEach(productEntity -> {
-//            productEntities.add(productEntity);
-//        });
-//        return productEntities;
-//
-//    }
+    public ObservableList<ProductEntity> getProductBysID(String id) {
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        Query query = session.createQuery("FROM product WHERE supId=:id");
+        query.setParameter("id",id);
+        List<ProductEntity> list = query.list();
+
+        ObservableList<ProductEntity> productEntities = FXCollections.observableArrayList();
+
+        list.forEach(productEntity -> {
+            productEntities.add(productEntity);
+        });
+        return productEntities;
+
+    }
 
     public boolean updateQtyOfProduct(String id, int qty) {
         Session session = HibernateUtil.getSession();

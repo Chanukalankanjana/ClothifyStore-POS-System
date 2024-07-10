@@ -258,6 +258,9 @@ public class PlaceOrderController implements Initializable {
 
     public void updateActionBtn(ActionEvent actionEvent) {
     }
+
+    public void logoutOnAction(MouseEvent mouseEvent) {
+    }
 }
 
 
