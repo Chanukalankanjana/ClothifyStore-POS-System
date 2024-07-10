@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -20,26 +21,18 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {
-
-    public TableColumn IdColumn;
-    public TableColumn NameColumn;
-    public TableColumn EmailColumn;
-    public TableColumn AddressColumn;
     public AnchorPane adminAnchor;
-    public TextField empNameField;
-    public TextField empEmailField;
     public TextField empAddressField;
-    public Button deleteBtn;
-    public Button addEmployeeBtn;
-    public Button updateBtn;
     public TableView employeeTable;
-    public TextField empIdField;
-    public Button logoutBtn;
-    public Button viewSuppliersBtn;
-    public Button viewCustomersBtn;
-    public Button viewProductsBtn;
-    public Button viewOrderBtn;
-    public Button manageEmpBtn;
+    public TextField employeeIdField;
+    public TextField employeeNameField;
+    public TextField empEmailAddressField;
+    public TableColumn empIdColumn;
+    public TableColumn empNameColumn;
+    public TableColumn empEmailColumn;
+    public TableColumn empAddressColumn;
+    public Button addEmpBtn;
+    public ImageView imageView;
 
     UserBoImpl userBoImpl = new UserBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
@@ -47,32 +40,59 @@ public class AdminDashController implements Initializable {
     boolean isAction = true,isEmailValid,isMouseClick;
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        IdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        NameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        EmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-        AddressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        empIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        empNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        empEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        empAddressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
-        empIdField.setText(userBoImpl.generateEmployeeId());
+        employeeIdField.setText(userBoImpl.generateEmployeeId());
         employeeTable.setItems(userBoImpl.getAllUsers());
 
     }
 
-    public void AddActionBtn(ActionEvent actionEvent) {
+
+    public void ViewActionBtn(ActionEvent actionEvent) {
+        User user = userBoImpl.getUserById(employeeIdField.getText());
+        if (user != null) {
+            employeeNameField.setText(user.getName());
+            empEmailAddressField.setText(user.getEmail());
+            empAddressField.setText(user.getAddress());
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Employee not found.").show();
+        }
+    }
+
+    public void clearFields() {
+        employeeNameField.clear();
+        empEmailAddressField.clear();
+        empAddressField.clear();
+    }
+
+    public void releaseEmailkey(KeyEvent keyEvent) {
+        boolean isValidEmail = userBoImpl.isValidEmail(empEmailAddressField.getText());
+        if (!isValidEmail) {
+            addEmpBtn.setDisable(true);
+        } else {
+            addEmpBtn.setDisable(false);
+        }
+    }
+
+    public void addActionBtn(ActionEvent actionEvent) {
         Random random = new Random();
         int pass = random.nextInt(90000000) + 10000000; // Generates 8 digit number
         String encrypt = Integer.toString(pass);
         String password = userBoImpl.passwordEncrypt(encrypt);
 
         User user = new User(
-                empIdField.getText(),
-                empNameField.getText(),
-                empEmailField.getText(),
+                employeeIdField.getText(),
+                employeeNameField.getText(),
+                empEmailAddressField.getText(),
                 password,
                 "Employee",
                 empAddressField.getText()
         );
 
-        if (!empNameField.getText().isEmpty() && userBoImpl.isValidEmail(empEmailField.getText()) && !empAddressField.getText().isEmpty()) {
+        if (!employeeNameField.getText().isEmpty() && userBoImpl.isValidEmail(empEmailAddressField.getText()) && !empAddressField.getText().isEmpty()) {
             boolean isInsert = userBoImpl.insertUser(user);
 
             if (isInsert) {
@@ -82,7 +102,7 @@ public class AdminDashController implements Initializable {
                 alert.setContentText("Employee added successfully!");
                 alert.showAndWait();
                 clearFields();
-                empIdField.setText(userBoImpl.generateEmployeeId());
+                employeeIdField.setText(userBoImpl.generateEmployeeId());
             } else {
                 new Alert(Alert.AlertType.ERROR, "Failed to add employee. Please try again.").show();
             }
@@ -91,23 +111,12 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void ViewActionBtn(ActionEvent actionEvent) {
-        User user = userBoImpl.getUserById(empIdField.getText());
-        if (user != null) {
-            empNameField.setText(user.getName());
-            empEmailField.setText(user.getEmail());
-            empAddressField.setText(user.getAddress());
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Employee not found.").show();
-        }
-    }
-
-    public void UpdateActionBtn(ActionEvent actionEvent) {
-        if (!empNameField.getText().isEmpty() && !empEmailField.getText().isEmpty() && !empAddressField.getText().isEmpty()) {
+    public void updateActionBtn(ActionEvent actionEvent) {
+        if (!employeeNameField.getText().isEmpty() && !empEmailAddressField.getText().isEmpty() && !empAddressField.getText().isEmpty()) {
             User user = new User(
-                    empIdField.getText(),
-                    empNameField.getText(),
-                    empEmailField.getText(),
+                    employeeIdField.getText(),
+                    employeeNameField.getText(),
+                    empEmailAddressField.getText(),
                     null,
                     null,
                     empAddressField.getText()
@@ -120,9 +129,10 @@ public class AdminDashController implements Initializable {
                 alert.setTitle("Employee Update");
                 alert.setContentText("Employee updated successfully.");
                 alert.showAndWait();
+                employeeIdField.setText(userBoImpl.generateEmployeeId());
                 clearFields();
                 employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
-                empIdField.setText(userBoImpl.generateEmployeeId());
+
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Update Failed");
@@ -137,20 +147,21 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void DeleteActionBtn(ActionEvent actionEvent) {
-        if (!empIdField.getText().isEmpty()) {
+    public void deleteActionBtn(ActionEvent actionEvent) {
+        if (!employeeIdField.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Deleting");
             alert.setContentText("Are you sure you want to delete this Employee?");
             Optional<ButtonType> result = alert.showAndWait();
 
             if (result.isPresent() && result.get() == ButtonType.OK) {
-                boolean isDeleted = userBoImpl.deleteUserById(empIdField.getText());
+                boolean isDeleted = userBoImpl.deleteUserById(employeeIdField.getText());
                 if (isDeleted) {
                     Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
                     alert2.setTitle("Employee Deleted");
                     alert2.setContentText("Employee deleted successfully.");
                     alert2.showAndWait();
+                    employeeIdField.setText(userBoImpl.generateEmployeeId());
                     clearFields();
                     employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
                 } else {
@@ -168,68 +179,15 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void clearFields() {
-        empIdField.clear();
-        empNameField.clear();
-        empEmailField.clear();
-        empAddressField.clear();
-    }
+    public void closeBtnOnAction(MouseEvent mouseEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure want to exit..?");
+        Optional<ButtonType> result = alert.showAndWait();
 
-    public void releaseEmailkey(KeyEvent keyEvent) {
-        boolean isValidEmail = userBoImpl.isValidEmail(empEmailField.getText());
-        if (!isValidEmail) {
-            addEmployeeBtn.setDisable(true);
-        } else {
-            addEmployeeBtn.setDisable(false);
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
         }
-    }
-
-
-
-    public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(adminAnchor,"viewSuppliers.fxml");
-    }
-
-    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(adminAnchor,"viewCustomer.fxml");
-    }
-
-    public void viewProductsAction(ActionEvent actionEvent) {
-    }
-
-    public void viewOrderAction(ActionEvent actionEvent) {
-    }
-
-    public void manageEmpAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(adminAnchor,"adminDash.fxml");
-    }
-
-    public void tableMouseClickedAction(MouseEvent mouseEvent) {
-            int index = employeeTable.getSelectionModel().getSelectedIndex();
-
-
-            if(index < 0){
-                return;
-            }
-            String id = IdColumn.getCellData(index).toString();
-
-        if (isAction){
-            isEmailValid = true;
-            User user = userBoImpl.getUserById(id);
-            empIdField.setText(user.getId());
-            empNameField.setText(user.getName());
-            empEmailField.setText(user.getEmail());
-            empAddressField.setText(user.getAddress());
-            byte[] data;
-
-            if (!user.getId().equals("")){
-                    isMouseClick = true;
-            }
-        }
-    }
-
-    public void closeAction(MouseEvent mouseEvent) {
-        System.exit(0);
     }
 
     public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
@@ -243,15 +201,47 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void closeBtnAction(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure want to exit..?");
-        Optional<ButtonType> result = alert.showAndWait();
+    public void tableMouseClickedAction(MouseEvent mouseEvent) {
+        int index = employeeTable.getSelectionModel().getSelectedIndex();
 
-        if (result.get() == ButtonType.OK) {
-            System.exit(0);
+
+        if(index < 0){
+            return;
         }
+        String id = empIdColumn.getCellData(index).toString();
+
+        if (isAction){
+            isEmailValid = true;
+            User user = userBoImpl.getUserById(id);
+            employeeIdField.setText(user.getId());
+            employeeNameField.setText(user.getName());
+            empEmailAddressField.setText(user.getEmail());
+            empAddressField.setText(user.getAddress());
+            byte[] data;
+
+            if (!user.getId().equals("")){
+                isMouseClick = true;
+            }
+        }
+    }
+
+    public void manageEmployeeAction(ActionEvent actionEvent) {
+    }
+
+    public void viewCustomersAction(ActionEvent actionEvent) {
+    }
+
+    public void viewSuppliersAction(ActionEvent actionEvent) {
+    }
+
+    public void viewProductsAction(ActionEvent actionEvent) {
+    }
+
+    public void viewOrders(ActionEvent actionEvent) {
+    }
+
+    public void imageClickAction(MouseEvent mouseEvent) {
+       clearFields();
     }
 }
 

@@ -42,33 +42,33 @@ public class ResetPasswordController implements Initializable {
     }
 
 
-    public void resetPassword(ActionEvent actionEvent) {
-        try {
-            if (newPasswordField.getText().equals(reEnterNewPasswordField.getText())){
-                if (otp==Integer.parseInt(OTPField.getText())){
-                    boolean isUpdatePassword = userBoImpl.isUpdatePassword(emailField.getText(),newPasswordField.getText());
-                    if (isUpdatePassword){
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Reset Password");
-                        alert.setContentText("Password reset Successfully");
-                        alert.showAndWait();
-                        newPasswordField.setText("");
-                        reEnterNewPasswordField.setText("");
-                        OTPField.setText("");
-                        sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
-                    }
-                }else {
-                    new Alert(Alert.AlertType.ERROR,"Incorrect OTP, Please Check your OTP").show();
-                }
-
-            }else {
-                new Alert(Alert.AlertType.ERROR,"Password & Confirmation Password does not match..!!").show();
-            }
-        }catch (Exception e){
-            System.out.println(e);
-            new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
-        }
-    }
+//    public void resetPassword(ActionEvent actionEvent) {
+//        try {
+//            if (newPasswordField.getText().equals(reEnterNewPasswordField.getText())){
+//                if (otp==Integer.parseInt(OTPField.getText())){
+//                    boolean isUpdatePassword = userBoImpl.isUpdatePassword(emailField.getText(),newPasswordField.getText());
+//                    if (isUpdatePassword){
+//                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//                        alert.setTitle("Reset Password");
+//                        alert.setContentText("Password reset Successfully");
+//                        alert.showAndWait();
+//                        newPasswordField.setText("");
+//                        reEnterNewPasswordField.setText("");
+//                        OTPField.setText("");
+//                        sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
+//                    }
+//                }else {
+//                    new Alert(Alert.AlertType.ERROR,"Incorrect OTP, Please Check your OTP").show();
+//                }
+//
+//            }else {
+//                new Alert(Alert.AlertType.ERROR,"Password & Confirmation Password does not match..!!").show();
+//            }
+//        }catch (Exception e){
+//            System.out.println(e);
+//            new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
+//        }
+//    }
 
     public void closeOnAction(ActionEvent actionEvent) {
         System.exit(0);

@@ -92,7 +92,7 @@
                   <Label layoutX="317.0" layoutY="596.0" prefHeight="18.0" prefWidth="77.0" text="Size            : " />
                   <TextField fx:id="sizeField" layoutX="397.0" layoutY="592.0" prefHeight="26.0" prefWidth="77.0" promptText="Size" />
                   <TextField fx:id="qtyField" alignment="CENTER" layoutX="548.0" layoutY="409.0" prefHeight="26.0" prefWidth="88.0" promptText="QTY" />
-                  <TableView fx:id="orderTable" layoutX="656.0" layoutY="186.0" prefHeight="383.0" prefWidth="529.0">
+                  <TableView fx:id="orderTable" layoutX="656.0" layoutY="186.0" onMouseClicked="#tableMouseOnClicked" opacity="0.9" prefHeight="383.0" prefWidth="529.0">
                     <columns>
                       <TableColumn fx:id="itemCodeColumn" prefWidth="75.0" text="Item Code" />
                       <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
@@ -106,7 +106,7 @@
                   </TableView>
                   <Label layoutX="662.0" layoutY="601.0" prefHeight="18.0" prefWidth="77.0" text="Net Value  :" />
                   <TextField fx:id="netValueField" alignment="CENTER_RIGHT" layoutX="739.0" layoutY="597.0" promptText="0.00" />
-            <Button defaultButton="true" layoutX="548.0" layoutY="567.0" mnemonicParsing="false" onAction="#clearActionBtn" prefHeight="31.0" prefWidth="88.0" text="Clear" />
+            <Button fx:id="clearBtn" defaultButton="true" layoutX="548.0" layoutY="567.0" mnemonicParsing="false" onAction="#clearActionBtn" prefHeight="31.0" prefWidth="88.0" text="Clear" />
             <Rectangle fx:id="employeeAnchor" arcHeight="10.0" arcWidth="10.0" fill="#eecccc" height="677.0" layoutX="4.0" layoutY="7.0" opacity="0.23" stroke="#38a3b8" strokeType="INSIDE" width="281.0" />
              <ImageView fitHeight="77.0" fitWidth="93.0" layoutX="101.0" layoutY="561.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
                  <image>

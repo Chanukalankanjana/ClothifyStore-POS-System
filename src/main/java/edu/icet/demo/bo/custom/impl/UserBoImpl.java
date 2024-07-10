@@ -116,7 +116,7 @@ public class UserBoImpl implements UserBo {
         try {
             Transport.send(message);
         } catch (MessagingException e) {
-            e.printStackTrace();  // Print the stack trace for debugging
+            e.printStackTrace();
             Logger.getLogger(UserBoImpl.class.getName()).log(Level.SEVERE, null, e);
             throw e;
         }

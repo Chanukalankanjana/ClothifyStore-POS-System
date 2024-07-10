@@ -261,6 +261,13 @@ public class PlaceOrderController implements Initializable {
 
     public void logoutOnAction(MouseEvent mouseEvent) {
     }
+
+
+    public void tableMouseOnClicked(MouseEvent mouseEvent) {
+
+    }
 }
+
+
 
 

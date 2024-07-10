@@ -239,4 +239,8 @@ public class EmployeeDashController implements Initializable {
 
     public void logoutOnAction(MouseEvent mouseEvent) {
     }
+
+    public void imageViewAction(MouseEvent mouseEvent) {
+        clearFields();
+    }
 }

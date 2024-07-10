@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="customerAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.EmployeeDashController">
     <children>
-      <ImageView fitHeight="695.0" fitWidth="1247.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="695.0" fitWidth="1247.0" layoutY="-1.0" onMouseClicked="#imageViewAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/Bg%20Image.jpg" />
          </image>
@@ -68,15 +68,15 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <Button fx:id="addCusBtn" defaultButton="true" layoutX="544.0" layoutY="243.0" mnemonicParsing="false" onAction="#addActionBtn" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#eb0072">
+      <Button fx:id="addCusBtn" defaultButton="true" layoutX="544.0" layoutY="243.0" mnemonicParsing="false" onAction="#addActionBtn" opacity="0.9" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#34a400">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font></Button>
-      <Button fx:id="updateCusBtn" defaultButton="true" layoutX="544.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateActionBtn" prefHeight="31.0" prefWidth="88.0" text="Update" textFill="#008602">
+      <Button fx:id="updateCusBtn" defaultButton="true" layoutX="544.0" layoutY="329.0" mnemonicParsing="false" onAction="#updateActionBtn" opacity="0.95" prefHeight="31.0" prefWidth="88.0" text="Update" textFill="#3a00ff">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font></Button>
-      <Button fx:id="deleteCusBtn" defaultButton="true" layoutX="544.0" layoutY="422.0" mnemonicParsing="false" onAction="#deleteActionBtn" prefHeight="31.0" prefWidth="88.0" text="Delete">
+      <Button fx:id="deleteCusBtn" defaultButton="true" layoutX="544.0" layoutY="422.0" mnemonicParsing="false" onAction="#deleteActionBtn" opacity="0.95" prefHeight="31.0" prefWidth="88.0" text="Delete" textFill="RED">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font></Button>
