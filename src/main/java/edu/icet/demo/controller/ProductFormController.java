@@ -73,9 +73,6 @@ public class ProductFormController implements Initializable {
         itemNameField.setText("");
         qtyField.setText("");
         itemPriceField.setText("");
-        sizeCombo.getSelectionModel().clearSelection();
-        categoryCombo.getSelectionModel().clearSelection();
-        supIdCombo.getSelectionModel().clearSelection();
     }
 
     private void initializeComboBoxes() {
@@ -183,9 +180,7 @@ public class ProductFormController implements Initializable {
                 alert.setContentText("Product Added successfully");
                 alert.showAndWait();
                 itemIdField.setText(productBoImpl.generateProductId());
-                itemNameField.setText("");
-                qtyField.setText("");
-                itemPriceField.setText("");
+                clearFields();
                 itemTable.setItems(productBoImpl.getAllProducts());
                 isSupplierSelect = false;
             }
@@ -210,12 +205,12 @@ public class ProductFormController implements Initializable {
             if (isUpdate){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Product Updated");
-                alert.setContentText("Product Updated Successfully..!!!");
+                alert.setContentText("Product Updated successfully");
                 alert.showAndWait();
-                itemIdField.setText("");
-                itemNameField.setText("");
-                qtyField.setText("");
+                itemIdField.setText(productBoImpl.generateProductId());
+                clearFields();;
                 itemTable.setItems(productBoImpl.getAllProducts());
+                isSupplierSelect = false;
             }
         }else {
             new Alert(Alert.AlertType.ERROR,"Something Missing").show();
@@ -238,11 +233,10 @@ public class ProductFormController implements Initializable {
                     alert1.setTitle("Product Deleted");
                     alert1.setContentText("Product Deleted Successfully");
                     alert1.showAndWait();
-
-                    clearFields();
-                    refreshProductTable();
-                    resetComboBoxes();
                     itemIdField.setText(productBoImpl.generateProductId());
+                    clearFields();
+                    itemTable.setItems(productBoImpl.getAllProducts());
+                    isSupplierSelect = false;
 
                 } else {
                     Alert alert1 = new Alert(Alert.AlertType.ERROR);

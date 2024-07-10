@@ -107,6 +107,7 @@ public class EmployeeDashController implements Initializable {
                 alert.setTitle("Employee Update");
                 alert.setContentText("Employee updated successfully.");
                 alert.showAndWait();
+                customerIdField.setText(customerBoImpl.generateCustomerId());
                 clearFields();
                 customerTable.setItems(FXCollections.observableArrayList(customerBoImpl.getAllCustomers()));
             } else {
@@ -155,7 +156,6 @@ public class EmployeeDashController implements Initializable {
     }
 
     private void clearFields() {
-        customerIdField.clear();
         customerNameField.clear();
         cusEmailAddressField.clear();
         cusAddressField.clear();
