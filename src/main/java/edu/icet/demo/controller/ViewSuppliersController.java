@@ -6,11 +6,9 @@ import edu.icet.demo.bo.custom.impl.SupplierBoImpl;
 import edu.icet.demo.utill.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -42,21 +40,24 @@ public class ViewSuppliersController implements Initializable {
         sceneSwitch.switchScene(viewSupAnchor,"adminDash.fxml");
     }
 
-    public void viewOrdersAction(ActionEvent actionEvent) {
+    public void viewOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewSupAnchor,"viewOrders.fxml");
     }
 
-    public void viewProductsAction(ActionEvent actionEvent) {
-    }
-
-    public void viewCustomerAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(viewSupAnchor,"viewCustomer.fxml");
+    public void viewProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewSupAnchor,"viewProducts.fxml");
     }
 
     public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
         sceneSwitch.switchScene(viewSupAnchor,"viewSuppliers.fxml");
     }
 
-    public void logoutAction(ActionEvent actionEvent) throws IOException {
+
+    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewSupAnchor,"viewCustomer.fxml");
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setContentText("Are you sure want to logout..?");
@@ -67,4 +68,14 @@ public class ViewSuppliersController implements Initializable {
         }
     }
 
+    public void closeAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setContentText("Are you sure want to exit..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            System.exit(0);
+        }
+    }
 }

@@ -1,39 +1,45 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(›¿ùğùÿÿÿÿ8Ş˜“Ó„2J$848622e8-3995-4669-a4f2-48879cfc741c
+java:S3740"/Provide the parametrized type for this generic.(›¿ùğùÿÿÿÿ8Ş˜“Ó„2J$53b269a3-9fc7-4f54-b332-35d4557aefd4
 r
-java:S3740"/Provide the parametrized type for this generic.(â¨–ê8ß˜“Ó„2J$50fa0bc3-87e5-40e2-ac67-a2dfdd3a0f85
+java:S3740"/Provide the parametrized type for this generic.(â¨–ê8ß˜“Ó„2J$99695800-be39-4cfb-b9c5-bc91acb30b53
 r
-java:S3740"/Provide the parametrized type for this generic.(îóö8ß˜“Ó„2J$f69917bb-391e-49f9-afc3-7d9ee343f74a
+java:S3740"/Provide the parametrized type for this generic.(îóö8ß˜“Ó„2J$cd396ce2-e3ec-47e8-9cde-20d4322f9ca7
 w
-java:S3740"/Provide the parametrized type for this generic.(Ôè•ïşÿÿÿÿ8ß˜“Ó„2J$e28ef3cb-2d0c-4b4a-a087-0a154554ac85
+java:S3740"/Provide the parametrized type for this generic.(Ôè•ïşÿÿÿÿ8ß˜“Ó„2J$5aba4f8e-1043-4c1f-9df3-8a4bc2f629b5
 r
-java:S3740"/Provide the parametrized type for this generic.(½¨ºü8ß˜“Ó„2J$34f2c7f4-509c-4128-8d44-91c87c5d3b41
+java:S3740"/Provide the parametrized type for this generic.(½¨ºü8ß˜“Ó„2J$2ecba0ed-6732-43c0-bebc-375c91df11de
 ¡
-java:S1104"YMake viewSupAnchor a static final constant or non-public and provide accessors if needed.(ò¶Äıÿÿÿÿ8à˜“Ó„2J$40b4d610-9e66-4bf1-bf8f-85335bccd466
+java:S1104"YMake viewSupAnchor a static final constant or non-public and provide accessors if needed.(ò¶Äıÿÿÿÿ8à˜“Ó„2J$292cfbae-0ca3-40c9-bafd-494acc44663f
 ¡
-java:S1104"YMake supplierTable a static final constant or non-public and provide accessors if needed.(›¿ùğùÿÿÿÿ8à˜“Ó„2J$c7c6866b-ecf1-408f-98bd-6d9cf45bdbf5
+java:S1104"YMake supplierTable a static final constant or non-public and provide accessors if needed.(›¿ùğùÿÿÿÿ8à˜“Ó„2J$a980c974-cac2-4d23-9cab-c5aea123164b
 š
-java:S1104"WMake supIdColumn a static final constant or non-public and provide accessors if needed.(â¨–ê8à˜“Ó„2J$85bebefb-5e90-4776-907f-f718c1671118
+java:S1104"WMake supIdColumn a static final constant or non-public and provide accessors if needed.(â¨–ê8à˜“Ó„2J$cac923d8-adb7-4d55-b002-429260a975d0
 œ
-java:S1104"YMake supNameColumn a static final constant or non-public and provide accessors if needed.(îóö8à˜“Ó„2J$fdd81f80-e41d-4f75-b4e4-6991e8cc155d
+java:S1104"YMake supNameColumn a static final constant or non-public and provide accessors if needed.(îóö8à˜“Ó„2J$c3a5ab19-81b2-44a3-9647-c75f089de1ef
 ¢
-java:S1104"ZMake supEmailColumn a static final constant or non-public and provide accessors if needed.(Ôè•ïşÿÿÿÿ8à˜“Ó„2J$15f3896c-aa20-4389-a594-632aca4d932d
+java:S1104"ZMake supEmailColumn a static final constant or non-public and provide accessors if needed.(Ôè•ïşÿÿÿÿ8à˜“Ó„2J$b59b45d2-748e-4257-9dfd-1737894aab05
 Ÿ
-java:S1104"\Make supCompanyColumn a static final constant or non-public and provide accessors if needed.(½¨ºü8à˜“Ó„2J$0d1b6c21-c201-40d5-b61d-a5dbf5b16fb7
+java:S1104"\Make supCompanyColumn a static final constant or non-public and provide accessors if needed.(½¨ºü8à˜“Ó„2J$818e462d-0da3-48c8-b3c9-47265174d0fc
 
-java:S3655A"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8ğ˜“Ó„2J$0ff0827e-fdad-4bc5-a995-0ba2f49d8b68
-É
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨‘¥ëùÿÿÿÿ8ñ˜“Ó„2J$4c06c678-8ca2-48be-956a-d32e7d04a8c9
-Ä
-java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‡Ôñ¾8ñ˜“Ó„2J$109c395a-89b2-4eb5-a04f-857c727e1622
+java:S3655M"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8¬Íä‰2J$b530db99-b07f-44be-b65d-381de382e8fd
+
+java:S3655B"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8¢ßä‰2J$a994122c-9a68-473b-b726-326d1d890e99
 u
-java:S1172)"2Remove this unused method parameter "actionEvent".(Œ»Äø8ô˜“Ó„2J$5fcef287-da59-4cc4-8581-3a50112e5b23
+java:S1172'"2Remove this unused method parameter "actionEvent".(Œ»Äø8ô˜“Ó„2J$81540605-00f6-4f57-bb6f-629cdd03cfaf
+z
+java:S1172+"2Remove this unused method parameter "actionEvent".(‡Æ†ùÿÿÿÿ8õ˜“Ó„2J$956d850c-e8eb-4a35-9e8c-70e15477e66b
+z
+java:S1172/"2Remove this unused method parameter "actionEvent".(ÒÌ§¤úÿÿÿÿ8ŠÎÌä‰2J$09705713-e682-453b-ba44-63056ee66f1d
+u
+java:S11723"2Remove this unused method parameter "actionEvent".(’×¨²8×òÓä‰2J$1752ba38-f39c-4ce2-996d-cc49ce1b640f
+z
+java:S11728"2Remove this unused method parameter "actionEvent".(¤ë‡§ùÿÿÿÿ8˜îÛä‰2J$fc93b95b-37c0-4370-810c-3c91ab0a1681
 t
-java:S11723"2Remove this unused method parameter "actionEvent".(¯ËÉ8õ˜“Ó„2J$5557e27e-4d34-4de8-85dc-dfac6f780adb
-u
-java:S11727"2Remove this unused method parameter "actionEvent".(’×¨²8õ˜“Ó„2J$87a70df1-6b33-4b57-9552-44d9c1fb0c4f
-u
-java:S1172;"2Remove this unused method parameter "actionEvent".(ßí•ñ8õ˜“Ó„2J$cca8c447-8e6c-405e-8d70-2ea332d71672
+java:S1172<"1Remove this unused method parameter "mouseEvent".(Ö‘­8¸Íä‰2J$5e9b0c5b-c56c-4331-949d-f017ea01af6b
+¯
+java:S1130G"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(öÏÃ„8ÊÌàä‰2J$3d65f018-6558-4db3-8af3-01af9e4ef679
+t
+java:S1172G"1Remove this unused method parameter "mouseEvent".(öÏÃ„8®ßä‰2J$4142f7a7-915d-448f-bc7c-645b523f3d57
 ‹
-java:S1128"HRemove this unused import 'edu.icet.demo.bo.custom.impl.CustomerBoImpl'.(¡Ñ»È8‰•ÀÓ„2J$40f221e5-eaaa-477b-8c38-6ce53f031266
+java:S1128"HRemove this unused import 'edu.icet.demo.bo.custom.impl.CustomerBoImpl'.(¡Ñ»È8óåÜä‰2J$1d9187e9-97fc-4d58-aebe-7655fdf408e2

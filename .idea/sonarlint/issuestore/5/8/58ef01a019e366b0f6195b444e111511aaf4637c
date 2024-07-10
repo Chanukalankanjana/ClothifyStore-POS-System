@@ -1,51 +1,53 @@
 
 r
-java:S3740"/Provide the parametrized type for this generic.(Ù›Â–8¯ŒÒã‰2J$af81509d-58cc-4efc-97dc-b8a39e604dd9
+java:S3740"/Provide the parametrized type for this generic.(Ù›Â–8û’£ä‰2J$a8236f78-b688-4abb-a561-17a215945122
 r
-java:S3740"/Provide the parametrized type for this generic.(â¨–ê8°ŒÒã‰2J$72f681ec-b66e-4ae0-815c-879e59d4310f
+java:S3740"/Provide the parametrized type for this generic.(â¨–ê8û’£ä‰2J$a695dc07-4382-4b7c-b190-ba7268f67204
 r
-java:S3740"/Provide the parametrized type for this generic.(Ï‰÷¶8°ŒÒã‰2J$c57a3bda-49eb-4df1-b4f8-7d1d90ed8740
+java:S3740"/Provide the parametrized type for this generic.(Ï‰÷¶8û’£ä‰2J$4bc32efa-df97-4ac8-9f40-e469734e7722
 r
-java:S3740"/Provide the parametrized type for this generic.(ß¾ŸÆ8°ŒÒã‰2J$6ef9d6e9-ba43-4b64-860d-69b3345345af
+java:S3740"/Provide the parametrized type for this generic.(ß¾ŸÆ8û’£ä‰2J$949c7838-d867-4ea1-a137-189d56d6c11f
 w
-java:S3740"/Provide the parametrized type for this generic.( ¯Ğùÿÿÿÿ8°ŒÒã‰2J$f1bfd77f-c8f8-451b-8dc1-b3dd901da146
+java:S3740"/Provide the parametrized type for this generic.( ¯Ğùÿÿÿÿ8û’£ä‰2J$3432ad24-22c6-4367-921c-0d4486efdc59
 r
-java:S3740"/Provide the parametrized type for this generic.(†½¿È8°ŒÒã‰2J$01d5f438-15f3-4093-a427-6b77a3505fc8
+java:S3740"/Provide the parametrized type for this generic.(†½¿È8û’£ä‰2J$5b5f707c-813a-43e1-8687-008ea0b3c48e
 p
-java:S3740"/Provide the parametrized type for this generic.(à¬8°ŒÒã‰2J$344aa8e4-a0b1-46db-af5d-da9c18e78690
+java:S3740"/Provide the parametrized type for this generic.(à¬8û’£ä‰2J$3c4423a3-2780-4e6b-8e7c-435914ff7cd0
 r
-java:S3740"/Provide the parametrized type for this generic.(ßé‹ë8ÉÚÙã‰2J$a43766cb-b451-428a-86ab-36329a4f56fe
+java:S3740"/Provide the parametrized type for this generic.(ßé‹ë8û’£ä‰2J$ca9e5d8b-c99e-4bc7-91ae-fa5d5bceb4f7
 ›
-java:S1104"XMake itemIdColumn a static final constant or non-public and provide accessors if needed.(Ù›Â–8±ŒÒã‰2J$9caa89e1-fd28-4db5-83fc-749d51f605c3
+java:S1104"XMake itemIdColumn a static final constant or non-public and provide accessors if needed.(Ù›Â–8ü’£ä‰2J$f557c763-8577-415b-9ce7-09e8b715e299
 š
-java:S1104"WMake supIdColumn a static final constant or non-public and provide accessors if needed.(â¨–ê8±ŒÒã‰2J$b097b69d-9555-4f54-91ff-bbb211f7439a
+java:S1104"WMake supIdColumn a static final constant or non-public and provide accessors if needed.(â¨–ê8ü’£ä‰2J$3b07c9f8-ed63-4bef-9d15-454e29d59b9f
 
-java:S1104"ZMake itemNameColumn a static final constant or non-public and provide accessors if needed.(Ï‰÷¶8±ŒÒã‰2J$47a4c483-6660-40ed-bbbe-968b010d0496
+java:S1104"ZMake itemNameColumn a static final constant or non-public and provide accessors if needed.(Ï‰÷¶8ü’£ä‰2J$02e6dfa9-ef1c-4e3e-b230-52439d762c99
 œ
-java:S1104"YMake itemQtyColumn a static final constant or non-public and provide accessors if needed.(ß¾ŸÆ8±ŒÒã‰2J$8c97541a-9c83-40ff-ace4-3f515ccd2892
+java:S1104"YMake itemQtyColumn a static final constant or non-public and provide accessors if needed.(ß¾ŸÆ8ü’£ä‰2J$921c879f-a88f-42c6-84fc-b87a5c4f783a
 ¢
-java:S1104"ZMake itemSizeColumn a static final constant or non-public and provide accessors if needed.( ¯Ğùÿÿÿÿ8±ŒÒã‰2J$4911a3e0-3b21-4fcb-9da0-823117e86d55
+java:S1104"ZMake itemSizeColumn a static final constant or non-public and provide accessors if needed.( ¯Ğùÿÿÿÿ8ü’£ä‰2J$6cc1d05b-1cfa-4f45-b9fc-621bc990d9e4
 
-java:S1104"[Make itemCategColumn a static final constant or non-public and provide accessors if needed.(†½¿È8±ŒÒã‰2J$692d04c5-5103-4bfa-b813-5708961cc58d
+java:S1104"[Make itemCategColumn a static final constant or non-public and provide accessors if needed.(†½¿È8ü’£ä‰2J$d80aba00-8ed3-4d64-8bc7-2d2014709cce
 œ
-java:S1104"[Make itemPriceColumn a static final constant or non-public and provide accessors if needed.(à¬8±ŒÒã‰2J$6b7827b3-4609-42c0-910b-749efefe0a72
+java:S1104"[Make itemPriceColumn a static final constant or non-public and provide accessors if needed.(à¬8ü’£ä‰2J$1e46ed8d-edee-4331-8172-ae88b2ae3a41
 ˜
-java:S1104"UMake itemTable a static final constant or non-public and provide accessors if needed.(ßé‹ë8ËÚÙã‰2J$0700cf46-9e51-41f0-a18a-ce1e613b8943
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªÚ†ÿÿÿÿÿ8¹ŒÒã‰2J$6a0a29e9-cff0-487a-b19c-6687b6968604
-É
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨‘¥ëùÿÿÿÿ8¹ŒÒã‰2J$dbac426a-9d9b-46a7-878c-008293ce355d
-Ä
-java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‡Ôñ¾8¹ŒÒã‰2J$2f4ba21a-fa38-4850-ac3d-339ec142e99e
-É
-java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á­„ôûÿÿÿÿ8¹ŒÒã‰2J$0199d7b1-fab8-4c07-b9c4-db3a6934c2a4
-Ä
-java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÂşÃ8¹ŒÒã‰2J$183a85b2-ab43-4717-85f7-71a68a92db33
-Ä
-java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ìÒà8¹ŒÒã‰2J$5fefb308-411b-430f-b8fe-87a73e176722
-É
-java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(®Å°ôıÿÿÿÿ8¹ŒÒã‰2J$f878943a-f32a-40af-8d2c-8446beb67fa8
-T
-java:S1128"7Remove this unused import 'edu.icet.demo.bo.BoFactory'.(ï¢ü8€üã‰2
-Y
-java:S1128"7Remove this unused import 'edu.icet.demo.utill.BoType'.(·€ï•ÿÿÿÿÿ8€üã‰2
+java:S1104"UMake itemTable a static final constant or non-public and provide accessors if needed.(ßé‹ë8ü’£ä‰2J$6801108d-ed9e-4038-ae55-6072b79617ee
+¡
+java:S1104"^Make viewProductsAnchor a static final constant or non-public and provide accessors if needed.(ñ¦­²8ı’£ä‰2J$9619172e-28e0-4f1e-b336-96a2c4ce9058
+
+java:S3655T"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8“£ä‰2J$5b29ca97-7f40-4cd0-bc75-effdae9a1439
+
+java:S3655I"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8Õ…¤ä‰2J$71afe886-919c-4b94-adae-a0daf0150240
+u
+java:S1172/"2Remove this unused method parameter "actionEvent".(Œ»Äø8’“£ä‰2J$69608e15-1049-4dcd-ba53-bae9c8ad76b5
+z
+java:S11723"2Remove this unused method parameter "actionEvent".(‡Æ†ùÿÿÿÿ8““£ä‰2J$ceaa8a0f-1d59-49f7-a64f-51456dfeebcb
+z
+java:S11727"2Remove this unused method parameter "actionEvent".(ÒÌ§¤úÿÿÿÿ8““£ä‰2J$191e8a64-cee0-44fe-af91-0a622e063680
+z
+java:S1172;"2Remove this unused method parameter "actionEvent".(¤ë‡§ùÿÿÿÿ8”“£ä‰2J$0f183ad9-3f7e-4a03-9f03-682760c9cf7d
+u
+java:S1172?"2Remove this unused method parameter "actionEvent".(’×¨²8”“£ä‰2J$77ef2fc3-cbdc-4af6-999e-1ee1c3012298
+t
+java:S1172C"1Remove this unused method parameter "mouseEvent".(Ö‘­8”“£ä‰2J$7501c980-cf11-4cfb-8b16-7edfdfc0b0cf
+y
+java:S1172N"1Remove this unused method parameter "mouseEvent".(®Å°ôıÿÿÿÿ8•“£ä‰2J$8254b437-29fd-42a7-977e-caed56b0d08d
