@@ -131,4 +131,10 @@ public class ViewOrdersController implements Initializable {
             unitPriceField.setText("Rs. "+Double.toString(product.getPrice())+"0");
         } catch (Exception e){}
     }
+
+    public void logoutOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void closeAction(MouseEvent mouseEvent) {
+    }
 }
