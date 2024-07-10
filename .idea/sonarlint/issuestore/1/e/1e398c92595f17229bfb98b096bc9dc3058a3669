@@ -1,46 +1,48 @@
 
-	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ş©”£‰2J$0f4cb5c3-64e5-429e-b52e-f938bbac456d
+	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ş©”£‰2J$a7be7c78-a9a8-4bb1-ae70-087e9e691a45
 ¡
-java:S1104"YMake UserNameField a static final constant or non-public and provide accessors if needed.(ÜÌåÛıÿÿÿÿ8à©”£‰2J$20e316f4-2741-4fb6-b6de-d51899bd507a
+java:S1104"YMake UserNameField a static final constant or non-public and provide accessors if needed.(ÜÌåÛıÿÿÿÿ8à©”£‰2J$5312e6dc-79b5-4d7e-9f42-21cd1f9a7653
 š
-java:S1104"XMake WelcomAnchor a static final constant or non-public and provide accessors if needed.(–÷8à©”£‰2J$86f06808-6d21-4746-8728-c132e20e40b0
+java:S1104"XMake WelcomAnchor a static final constant or non-public and provide accessors if needed.(–÷8à©”£‰2J$482a9814-c959-49c0-818b-1a2ab6d8247d
 ›
-java:S1104"SMake imgeBtn a static final constant or non-public and provide accessors if needed.(ÈÔüúÿÿÿÿ8à©”£‰2J$adc544c9-2550-4a83-9a73-3089f16fed4a
+java:S1104"SMake imgeBtn a static final constant or non-public and provide accessors if needed.(ÈÔüúÿÿÿÿ8à©”£‰2J$7d17b5b5-c7f9-4f75-850e-22618d6866c8
  
-java:S1104"]Make togglePasswordBtn a static final constant or non-public and provide accessors if needed.(äÎ¡Ö8à©”£‰2J$7f667e43-0324-4d7d-baf0-044ee68d6974
+java:S1104"]Make togglePasswordBtn a static final constant or non-public and provide accessors if needed.(äÎ¡Ö8à©”£‰2J$f5765e91-2b15-4612-8865-2c0ea16e885b
 ¡
-java:S1104 "YMake passwordField a static final constant or non-public and provide accessors if needed.(Â«Ş¦ûÿÿÿÿ8à©”£‰2J$9211a3b9-ea6a-4822-90be-3a4350627019
+java:S1104 "YMake passwordField a static final constant or non-public and provide accessors if needed.(Â«Ş¦ûÿÿÿÿ8à©”£‰2J$6dc8f9c4-0244-4f4b-9037-fd8ca56ae01e
 —
-java:S1104!"TMake showIcon a static final constant or non-public and provide accessors if needed.(Şˆ˜É8à©”£‰2J$33d5bac8-a1c1-4cc6-9fa5-55ff909ea0db
+java:S1104!"TMake showIcon a static final constant or non-public and provide accessors if needed.(Şˆ˜É8à©”£‰2J$11179dab-6812-41c3-beb1-795ebf7d81af
 —
-java:S1104""TMake hideIcon a static final constant or non-public and provide accessors if needed.(¬«ÏÍ8à©”£‰2J$2986887a-6769-4a20-a127-c0d05892b8e3
+java:S1104""TMake hideIcon a static final constant or non-public and provide accessors if needed.(¬«ÏÍ8à©”£‰2J$76a316c1-c7e6-4e77-ae8c-aba3ba1d12cb
  
-java:S1104#"]Make passwordTextField a static final constant or non-public and provide accessors if needed.(óúã×8ıåß£‰2J$58dd5ea9-0f80-47ba-bfff-6cd5b18aebc9
-Ÿ	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÌåÛıÿÿÿÿ8÷©”£‰2J$43c5cd79-8e50-45b7-9c87-caccfcfb2230
-˜	java:S116"WRename this field "WelcomAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–÷8÷©”£‰2J$58c6c240-6f20-4647-bba8-7931bd25ab1f
-•	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÒ‡ìùÿÿÿÿ8û©”£‰2J$3857e1ab-1888-49ae-8c5b-0e09bc2d88d0
+java:S1104#"]Make passwordTextField a static final constant or non-public and provide accessors if needed.(óúã×8ıåß£‰2J$df13e4e3-a273-4d55-b7c1-1e4fc908058e
+ 
+java:S1104$"XMake needHelpArea a static final constant or non-public and provide accessors if needed.(´Ù³Áıÿÿÿÿ8õïºó‰2J$81e136d6-ffb6-4315-9199-2da67f4e7ea9
+Ÿ	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÌåÛıÿÿÿÿ8÷©”£‰2J$957543f1-969d-4b05-bad9-0d8580dc2af6
+˜	java:S116"WRename this field "WelcomAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–÷8÷©”£‰2J$418caf0a-03fd-4b35-a213-958f151db733
+•	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÒ‡ìùÿÿÿÿ8û©”£‰2J$7ef972de-53ee-408b-a262-3614cae79982
 z
-java:S11721"2Remove this unused method parameter "actionEvent".(ĞÒ‡ìùÿÿÿÿ8ı©”£‰2J$8d3e5aa2-66f5-4175-8d51-a8799f0c9866
-l	java:S106="+Replace this use of System.out by a logger.(Ü™áp8€ª”£‰2J$47068305-15a1-40e6-b035-1d7973c8aa74
-m	java:S106J"+Replace this use of System.out by a logger.(Ğâ¥ù8ª”£‰2J$f6e4e11a-35bf-4847-8bef-ad96154fb8db
-•	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ãò¤ıÿÿÿÿ8‚ª”£‰2J$94e68570-4d99-4cc7-8581-d2caed53471a
+java:S11722"2Remove this unused method parameter "actionEvent".(ĞÒ‡ìùÿÿÿÿ8ı©”£‰2J$5fe0d565-8a9e-4028-b7b7-d50dcab965b1
+l	java:S106>"+Replace this use of System.out by a logger.(Ü™áp8€ª”£‰2J$009713a5-270f-4481-a575-7f836ac464c1
+m	java:S106K"+Replace this use of System.out by a logger.(Ğâ¥ù8ª”£‰2J$5273151f-34aa-4929-99a2-1d95547844db
+•	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ãò¤ıÿÿÿÿ8‚ª”£‰2J$e995c763-2fca-4264-8ea4-796b848e54fd
 z
-java:S1172P"2Remove this unused method parameter "actionEvent".(”Ãò¤ıÿÿÿÿ8‚ª”£‰2J$d5819ba0-4f11-4579-865d-fbccb8551c58
+java:S1172Q"2Remove this unused method parameter "actionEvent".(”Ãò¤ıÿÿÿÿ8‚ª”£‰2J$9fa44f1b-0e6e-4e62-ac08-996837a294e0
 p
-java:S1172T"/Remove this unused method parameter "keyEvent".( ë;8‚ª”£‰2J$49f133f6-238f-418e-8fdf-2fab0e7ab5b8
+java:S1172U"/Remove this unused method parameter "keyEvent".( ë;8‚ª”£‰2J$50fca86f-d6aa-4044-918e-79e18313e512
 z
-java:S1172["2Remove this unused method parameter "actionEvent".(´šë¶üÿÿÿÿ8ƒª”£‰2J$a9a0b954-6119-4a75-8b23-5ac8e0a817f2
+java:S1172\"2Remove this unused method parameter "actionEvent".(´šë¶üÿÿÿÿ8ª”£‰2J$0f4615d8-4dbb-4288-ad85-084f09080e97
 ‡
-java:S1117_"?Rename "mediaPlayer" which hides the field declared at line 36.(ÔÇ–‹øÿÿÿÿ8†ª”£‰2J$423b19c8-6c8d-4682-884c-387283dd9b7e
+java:S1117`"?Rename "mediaPlayer" which hides the field declared at line 37.(ÔÇ–‹øÿÿÿÿ8”Êİó‰2J$43c22d1e-578f-4bda-8609-823ff0b3c376
 z
-java:S1172r"2Remove this unused method parameter "actionEvent".(áÀÏòûÿÿÿÿ8ª”£‰2J$1ebceba1-1c50-4d5a-ad48-5af840feca25
+java:S1172r"2Remove this unused method parameter "actionEvent".(áÀÏòûÿÿÿÿ8‘ª”£‰2J$2f6a3e28-eddb-4675-b466-0bc2f6a1e56d
 z
-java:S1172v"2Remove this unused method parameter "actionEvent".(µí«Éùÿÿÿÿ8‘ª”£‰2J$8ef19b7b-0a42-4ed6-a342-8616a9fc625f
+java:S1172v"2Remove this unused method parameter "actionEvent".(µí«Éùÿÿÿÿ8œÊİó‰2J$8beb2ae6-09f3-4b22-868d-a80e500a4a80
 x
-java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8—Ñ ¤‰2J$fa9584a0-024c-4097-8101-03fa05f6e931
+java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8ã·¾ó‰2J$41c0325d-4192-4290-960d-b78a2cfe3848
 ‚
-java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8—Ñ ¤‰2J$f2a34f84-dc26-43ce-973f-3c55fd7d7e3c
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8ä·¾ó‰2J$cb22880c-91ff-4124-aedc-4552dec83dbc
 ˆ
-java:S1128"ERemove this unused import 'javax.print.attribute.standard.MediaName'.(‚·ğÿ8—Ñ ¤‰2J$ceb6cba8-71f1-4d55-a65c-37eaf427b9c6
+java:S1128"ERemove this unused import 'javax.print.attribute.standard.MediaName'.(‚·ğÿ8ä·¾ó‰2J$8e28c6cb-52d7-43be-ba79-efdd59dc88dc
 r
-java:S1068$"/Remove this unused "mediaPlayer" private field.(§Ûì8”ª”£‰2J$22e1df2b-f4ce-4ef9-b1a1-53ac0eb25369
+java:S1068%"/Remove this unused "mediaPlayer" private field.(§Ûì8”ª”£‰2J$688b9b02-d530-4d44-be79-05b7640d4567

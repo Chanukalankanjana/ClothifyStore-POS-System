@@ -45,9 +45,8 @@
              </Button>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="557.0" layoutX="293.0" layoutY="99.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" width="927.0" />
                   <PointLight color="CHARTREUSE" lightOn="true" />
-                  <Button fx:id="addOrderBtn" defaultButton="true" layoutX="548.0" layoutY="465.0" mnemonicParsing="false" onAction="#addActionBtn" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#eb0072" />
+                  <Button fx:id="addOrderBtn" defaultButton="true" layoutX="548.0" layoutY="502.0" mnemonicParsing="false" onAction="#addActionBtn" prefHeight="31.0" prefWidth="88.0" text="Add" textFill="#eb0072" />
                   <Button fx:id="placeOrderBtn" defaultButton="true" layoutX="1038.0" layoutY="594.0" mnemonicParsing="false" onAction="#placeOrderAction" prefHeight="31.0" prefWidth="150.0" text="Place Order" textFill="#1100f8" />
-                  <Button defaultButton="true" layoutX="548.0" layoutY="518.0" mnemonicParsing="false" onAction="#updateActionBtn" prefHeight="31.0" prefWidth="88.0" text="Update" />
                   <ComboBox fx:id="cusIdCombo" layoutX="308.0" layoutY="133.0" prefHeight="32.0" prefWidth="228.0" promptText="Customer Id" />
                   <ComboBox fx:id="itemIdCombo" layoutX="308.0" layoutY="374.0" prefHeight="32.0" prefWidth="228.0" promptText="Item Id" />
                   <Label layoutX="583.0" layoutY="138.0" prefHeight="24.0" prefWidth="41.0" text="Time :" />
@@ -91,8 +90,8 @@
                   <TextField fx:id="priceField" alignment="CENTER_RIGHT" layoutX="397.0" layoutY="544.0" prefHeight="26.0" prefWidth="77.0" promptText="0.00" />
                   <Label layoutX="317.0" layoutY="596.0" prefHeight="18.0" prefWidth="77.0" text="Size            : " />
                   <TextField fx:id="sizeField" layoutX="397.0" layoutY="592.0" prefHeight="26.0" prefWidth="77.0" promptText="Size" />
-                  <TextField fx:id="qtyField" alignment="CENTER" layoutX="548.0" layoutY="409.0" prefHeight="26.0" prefWidth="88.0" promptText="QTY" />
-                  <TableView fx:id="orderTable" layoutX="656.0" layoutY="186.0" onMouseClicked="#tableMouseOnClicked" opacity="0.9" prefHeight="383.0" prefWidth="529.0">
+                  <TextField fx:id="qtyField" alignment="CENTER" layoutX="548.0" layoutY="438.0" prefHeight="26.0" prefWidth="88.0" promptText="QTY" />
+                  <TableView fx:id="orderTable" layoutX="656.0" layoutY="186.0" onMouseClicked="#tableMouseOnClicked" opacity="0.85" prefHeight="383.0" prefWidth="529.0">
                     <columns>
                       <TableColumn fx:id="itemCodeColumn" prefWidth="75.0" text="Item Code" />
                       <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
@@ -106,15 +105,14 @@
                   </TableView>
                   <Label layoutX="662.0" layoutY="601.0" prefHeight="18.0" prefWidth="77.0" text="Net Value  :" />
                   <TextField fx:id="netValueField" alignment="CENTER_RIGHT" layoutX="739.0" layoutY="597.0" promptText="0.00" />
-            <Button fx:id="clearBtn" defaultButton="true" layoutX="548.0" layoutY="567.0" mnemonicParsing="false" onAction="#clearActionBtn" prefHeight="31.0" prefWidth="88.0" text="Clear" />
             <Rectangle fx:id="employeeAnchor" arcHeight="10.0" arcWidth="10.0" fill="#eecccc" height="677.0" layoutX="4.0" layoutY="7.0" opacity="0.23" stroke="#38a3b8" strokeType="INSIDE" width="281.0" />
              <ImageView fitHeight="77.0" fitWidth="93.0" layoutX="101.0" layoutY="561.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
                  <image>
                      <Image url="@../assets/logout.png" />
                  </image>
              </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="295.0" layoutY="8.0" opacity="0.25" stroke="#38a3b8" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="927.0" />
-            <Label layoutX="727.0" layoutY="17.0" text="Place Order" textFill="#d0b400" wrapText="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="291.0" layoutY="8.0" opacity="0.25" stroke="#38a3b8" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="936.0" />
+            <Label layoutX="757.0" layoutY="17.0" text="Place Order" textFill="#d0b400" wrapText="true">
                <font>
                   <Font name="Rockwell Condensed" size="38.0" />
                </font>
@@ -124,6 +122,7 @@
                   <Font name="Rockwell Condensed" size="48.0" />
                </font>
             </Label>
+             <Button fx:id="closeBtn" defaultButton="true" layoutX="1181.0" layoutY="24.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000" />
          </children>
       </AnchorPane>
    </children>

@@ -13,8 +13,8 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDash.fxml"))));
-//        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/supplierManageForm.fxml"))));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 }

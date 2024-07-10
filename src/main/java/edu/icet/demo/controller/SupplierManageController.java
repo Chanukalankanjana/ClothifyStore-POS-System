@@ -21,20 +21,18 @@ import java.util.ResourceBundle;
 
 public class SupplierManageController implements Initializable {
     public AnchorPane supplierAnchor;
-    public TextField supplierIdField;
     public TextField supplierNameField;
     public TextField supplierEmailAddressField;
-    public TextField supplierAddressField;
     public TableView supplierTable;
     public TableColumn supIdColumn;
     public TableColumn supNameColumn;
     public TableColumn supEmailColumn;
     public Button addSupBtn;
-    public Button searchSupBtn;
     public Button updateSupBtn;
     public Button deleteSupBtn;
     public TextField companyField;
     public TableColumn supCompanyColumn;
+    public TextField supplierIdField;
 
     SupplierBoImpl supplierBoImpl = new SupplierBoImpl();
 
@@ -113,7 +111,6 @@ public class SupplierManageController implements Initializable {
         }
     }
 
-
     public void addActionBtn(ActionEvent actionEvent) {
         Supplier supplier = new Supplier(
                 supplierIdField.getText(),
@@ -148,17 +145,6 @@ public class SupplierManageController implements Initializable {
         supplierNameField.clear();
         supplierEmailAddressField.clear();
         companyField.clear();
-    }
-
-    public void searchActionBtn(ActionEvent actionEvent) {
-        Supplier supplier = supplierBoImpl.getSupplierById(supplierIdField.getText());
-        if (supplier != null) {
-            supplierNameField.setText(supplier.getName());
-            supplierAddressField.setText(supplier.getEmail());
-            companyField.setText(supplier.getCompany());
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Supplier not found.").show();
-        }
     }
 
     public void updateActionBtn(ActionEvent actionEvent) {
@@ -208,6 +194,7 @@ public class SupplierManageController implements Initializable {
                     alert2.setTitle("Suppplier Deleted");
                     alert2.setContentText("Supplier deleted successfully.");
                     alert2.showAndWait();
+                    clearFields();
                     supplierIdField.setText(supplierBoImpl.generateSupplierId());
                     supplierTable.setItems(FXCollections.observableArrayList(supplierBoImpl.getAllSuppliers()));
                 } else {
@@ -224,5 +211,16 @@ public class SupplierManageController implements Initializable {
             alert.showAndWait();
         }
 
+    }
+
+    public void imageViewAction(MouseEvent mouseEvent) {
+        clearFields();
+        supplierIdField.setText(supplierBoImpl.generateSupplierId());
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void closeAction(MouseEvent mouseEvent) {
     }
 }

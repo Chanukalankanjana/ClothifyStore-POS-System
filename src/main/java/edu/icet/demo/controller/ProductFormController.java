@@ -70,6 +70,7 @@ public class ProductFormController implements Initializable {
     }
 
     private void clearFields() {
+        itemIdField.setText("");
         itemNameField.setText("");
         qtyField.setText("");
         itemPriceField.setText("");
@@ -179,8 +180,8 @@ public class ProductFormController implements Initializable {
                 alert.setTitle("Product Added");
                 alert.setContentText("Product Added successfully");
                 alert.showAndWait();
-                itemIdField.setText(productBoImpl.generateProductId());
                 clearFields();
+                itemIdField.setText(productBoImpl.generateProductId());
                 itemTable.setItems(productBoImpl.getAllProducts());
                 isSupplierSelect = false;
             }
@@ -207,8 +208,8 @@ public class ProductFormController implements Initializable {
                 alert.setTitle("Product Updated");
                 alert.setContentText("Product Updated successfully");
                 alert.showAndWait();
+                clearFields();
                 itemIdField.setText(productBoImpl.generateProductId());
-                clearFields();;
                 itemTable.setItems(productBoImpl.getAllProducts());
                 isSupplierSelect = false;
             }
@@ -233,8 +234,8 @@ public class ProductFormController implements Initializable {
                     alert1.setTitle("Product Deleted");
                     alert1.setContentText("Product Deleted Successfully");
                     alert1.showAndWait();
-                    itemIdField.setText(productBoImpl.generateProductId());
                     clearFields();
+                    itemIdField.setText(productBoImpl.generateProductId());
                     itemTable.setItems(productBoImpl.getAllProducts());
                     isSupplierSelect = false;
 
@@ -283,5 +284,29 @@ public class ProductFormController implements Initializable {
                 isMouseClick = true;
             }
         }
+    }
+
+    public void manageEmployeeAction(ActionEvent actionEvent) {
+    }
+
+    public void viewOrdersAction(ActionEvent actionEvent) {
+    }
+
+    public void viewProductsAction(ActionEvent actionEvent) {
+    }
+
+    public void viewCustomersAction(ActionEvent actionEvent) {
+    }
+
+    public void viewSuppliersAction(ActionEvent actionEvent) {
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) {
+    }
+
+    public void closeAction(MouseEvent mouseEvent) {
+    }
+
+    public void imageViewClicked(MouseEvent mouseEvent) {
     }
 }

@@ -22,18 +22,13 @@ public class ViewCustomerController implements Initializable {
     public TableColumn cusNameColumn;
     public TableColumn cusEmailColumn;
     public AnchorPane viewCustomerAnchor;
-    public TextField customerIdField;
-    public TextField customerNameField;
-    public TextField cusEmailAddressField;
-    public TextField cusAddressField;
     public TableView customerTable;
     public TableColumn cusAddressColumn;
+    public Button closeBtn;
 
 
     CustomerBoImpl customerBoImpl= BoFactory.getInstance().getBo(BoType.CUSTOMER);
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
-
-    boolean isAction = true,isMouseClick;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -62,33 +57,9 @@ public class ViewCustomerController implements Initializable {
         sceneSwitch.switchScene(viewCustomerAnchor,"viewCustomer.fxml");
     }
 
-
     public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
         sceneSwitch.switchScene(viewCustomerAnchor,"viewSuppliers.fxml");
     }
-//
-//    public void tableMouseClickedAction(MouseEvent mouseEvent) {
-//        int index = customerTable.getSelectionModel().getSelectedIndex();
-//
-//
-//        if(index < 0){
-//            return;
-//        }
-//        String id = cusIdColumn.getCellData(index).toString();
-//
-//        if (isAction){
-//            Customer customer = customerBoImpl.getCustomerById(id);
-//            customerIdField.setText(customer.getId());
-//            customerNameField.setText(customer.getName());
-//            cusEmailAddressField.setText(customer.getEmail());
-//            cusAddressField.setText(customer.getAddress());
-//            byte[] data;
-//
-//            if (!customer.getId().equals("")){
-//                isMouseClick = true;
-//            }
-//        }
-//    }
 
     public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -100,9 +71,6 @@ public class ViewCustomerController implements Initializable {
                 sceneSwitch.switchScene(viewCustomerAnchor,"loginForm.fxml");
             }
     }
-//
-//    public void releaseEmailkey(KeyEvent keyEvent) {
-//    }
 
     public void closeAction(MouseEvent mouseEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

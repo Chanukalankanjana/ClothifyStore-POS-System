@@ -51,7 +51,7 @@
                 <Font name="Rockwell Condensed" size="20.0" />
             </font></Button>
         <PointLight color="CHARTREUSE" lightOn="true" />
-        <Button fx:id="closeBtn" defaultButton="true" layoutX="1181.0" layoutY="20.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000" />
+        <Button fx:id="closeBtn" defaultButton="true" layoutX="1181.0" layoutY="24.0" minWidth="33.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000" />
         <ImageView fitHeight="77.0" fitWidth="93.0" layoutX="101.0" layoutY="561.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/logout.png" />

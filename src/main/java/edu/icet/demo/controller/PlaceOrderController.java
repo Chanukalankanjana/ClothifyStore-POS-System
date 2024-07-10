@@ -28,13 +28,8 @@ import java.util.*;
 
 public class PlaceOrderController implements Initializable {
     public AnchorPane orderAnchor;
-    public Button mangeOrderBtn;
-    public Button manageProductsBtn;
-    public Button manageCusBtn;
-    public Button manageSupBtn;
     public Button addOrderBtn;
     public Button placeOrderBtn;
-    public Button clearOrderBtn;
     public ComboBox cusIdCombo;
     public ComboBox itemIdCombo;
     public TextField timeField;
@@ -166,7 +161,6 @@ public class PlaceOrderController implements Initializable {
 
     public void reportGenAction(ActionEvent actionEvent) {}
 
-    public void logoutAction(ActionEvent actionEvent) {}
 
     public void addActionBtn(ActionEvent actionEvent) {
         String itemCode = (String) itemIdCombo.getValue();
@@ -243,8 +237,6 @@ public class PlaceOrderController implements Initializable {
         orderTable.setItems(null);
     }
 
-    public void clearActionBtn(ActionEvent actionEvent) {}
-
     public void closeAction(MouseEvent mouseEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Exit");
@@ -256,8 +248,6 @@ public class PlaceOrderController implements Initializable {
         }
     }
 
-    public void updateActionBtn(ActionEvent actionEvent) {
-    }
 
     public void logoutOnAction(MouseEvent mouseEvent) {
     }

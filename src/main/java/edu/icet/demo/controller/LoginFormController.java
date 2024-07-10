@@ -33,6 +33,7 @@ public class LoginFormController implements Initializable {
     public ImageView showIcon;
     public ImageView hideIcon;
     public TextField passwordTextField;
+    public TextArea needHelpArea;
     private MediaPlayer mediaPlayer;
 
     private boolean isShow;
@@ -108,7 +109,6 @@ public class LoginFormController implements Initializable {
                 mediaPlayer.stop();
             }
         });
-
     }
 
     public void closeBtnOnAction(ActionEvent actionEvent) {

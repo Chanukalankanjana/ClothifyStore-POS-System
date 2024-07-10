@@ -15,7 +15,7 @@
 
 <AnchorPane fx:id="WelcomAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.LoginFormController">
     <children>
-        <ImageView fitHeight="700.0" fitWidth="1246.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="695.0" fitWidth="1247.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/Bg%20Image.jpg" />
             </image>
@@ -23,7 +23,7 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="453.0" layoutX="642.0" layoutY="151.0" opacity="0.67" stroke="#3600d7" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="423.0" />
         <PasswordField fx:id="passwordField" layoutX="708.0" layoutY="296.0" prefHeight="31.0" prefWidth="291.0" promptText="Password">
             <font>
-                <Font size="18.0" />
+                <Font name="Rockwell Condensed" size="18.0" />
             </font>
         </PasswordField>
         <Button defaultButton="true" layoutX="794.0" layoutY="407.0" mnemonicParsing="false" onAction="#SignInBtn" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-border-radius: 5; -fx-background-radius: 5;" text="Sign In" textFill="WHITE">
@@ -32,16 +32,16 @@
             </font>
         </Button>
         <Hyperlink layoutX="709.0" layoutY="523.0" onAction="#ForgetPassBtn" text="Forget Password" textFill="#1500ff" wrapText="true" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="378.0" layoutY="36.0" opacity="0.16" stroke="#2200ff" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="5.0" width="478.0" />
-        <Label layoutX="393.0" layoutY="49.0" text="Welcome to Clothify Store" textFill="#d0b400">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.0" layoutX="403.0" layoutY="20.0" opacity="0.3" stroke="#2200ff" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="478.0" />
+        <Label layoutX="490.0" layoutY="33.0" text="Welcome to Clothify Store" textFill="#d0b400">
             <font>
-                <Font name="Rockwell" size="37.0" />
+                <Font name="Rockwell Condensed" size="38.0" />
             </font>
         </Label>
         <Hyperlink fx:id="needHelpHyperlink" layoutX="911.0" layoutY="523.0" onAction="#handleNeedHelpBtn" text="Need Help?" textFill="#1500ff" wrapText="true" />
         <TextField fx:id="UserNameField" layoutX="708.0" layoutY="205.0" onKeyReleased="#emailKeyReleasedAction" prefHeight="31.0" prefWidth="291.0" promptText="Username">
             <font>
-                <Font size="18.0" />
+                <Font name="Rockwell Condensed" size="18.0" />
             </font>
         </TextField>
       <Circle layoutX="302.0" layoutY="377.0" opacity="0.56" radius="187.0" stroke="BLACK" strokeType="INSIDE" />
@@ -49,22 +49,25 @@
          <image>
             <Image url="@../assets/clothify.png" />
          </image></ImageView>
-      <Button layoutX="1175.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeBtnOnAction" prefHeight="29.0" prefWidth="35.0" text="x" textFill="RED">
+      <Button defaultButton="true" layoutX="1175.0" layoutY="24.0" minWidth="33.0" mnemonicParsing="false" onAction="#closeBtnOnAction" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#f80000">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-        <ToggleButton fx:id="togglePasswordBtn" layoutX="1008.0" layoutY="302.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" prefHeight="31.0" prefWidth="35.0" />
-      <ImageView fx:id="hideIcon" fitHeight="29.0" fitWidth="32.0" layoutX="1009.0" layoutY="303.0" opacity="0.8" visible="false">
+        <ToggleButton fx:id="togglePasswordBtn" layoutX="1003.0" layoutY="293.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" opacity="0.0" prefHeight="45.0" prefWidth="47.0" />
+      <ImageView fx:id="hideIcon" fitHeight="29.0" fitWidth="32.0" layoutX="1009.0" layoutY="298.0" visible="false">
          <image>
             <Image url="@../assets/hide_password.png" />
          </image>
       </ImageView>
-          <ImageView fx:id="showIcon" fitHeight="29.0" fitWidth="32.0" layoutX="1009.0" layoutY="303.0" opacity="0.8">
+          <ImageView fx:id="showIcon" fitHeight="29.0" fitWidth="32.0" layoutX="1009.0" layoutY="298.0">
               <image>
                   <Image url="@../assets/visibility.png" />
               </image>
           </ImageView>
-      <TextField fx:id="passwordTextField" layoutX="708.0" layoutY="297.0" prefHeight="37.0" prefWidth="291.0" visible="false" />
+      <TextField fx:id="passwordTextField" layoutX="708.0" layoutY="296.0" prefHeight="31.0" prefWidth="291.0" promptText="Password" visible="false">
+         <font>
+            <Font name="Rockwell Condensed" size="18.0" />
+         </font></TextField>
     </children>
 </AnchorPane>
