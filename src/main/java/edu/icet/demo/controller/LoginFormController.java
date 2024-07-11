@@ -42,6 +42,7 @@ public class LoginFormController implements Initializable {
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     UserBoImpl userBoImpl=new UserBoImpl();
     ExitOrClose exitOrClose = new ExitOrClose();
+    EmployeeData employeeData = EmployeeData.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -59,6 +60,7 @@ public class LoginFormController implements Initializable {
         }
 
         String password = userBoImpl.passwordDecrypt(userEntity.getPassword());
+        employeeData.setId(userEntity.getId());
 
             if (userEntity.getRole().equals("Admin") && password.equals(passwordField.getText())){
                 System.out.println("Logged");

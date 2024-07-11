@@ -78,7 +78,7 @@ public class PlaceOrderController implements Initializable {
         cusNameField.setText(customer.getName());
         cusEmailField.setText(customer.getEmail());
         cusAddressField.setText(customer.getAddress());
-        empId = customer.getId();
+        empId = EmployeeData.getInstance().getId();
     }
 
     private void loadItemCodes() {
@@ -228,6 +228,7 @@ public class PlaceOrderController implements Initializable {
             clearFields();
             orderIdField.setText(orderDetailsBoImpl.generateOrderId());
             productList = orderDetailsBoImpl.getAllProducts();
+            orderList.clear();
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Somthing Wrong..!!!").show();

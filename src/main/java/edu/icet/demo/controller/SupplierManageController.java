@@ -112,7 +112,21 @@ public class SupplierManageController implements Initializable {
         );
 
         if (!supplierIdField.getText().isEmpty() && supplierBoImpl.isValidEmail(supplierEmailAddressField.getText()) && !companyField.getText().isEmpty()) {
-            boolean isInsert = supplierBoImpl.insertSupplier(supplier);
+            boolean isInsert = false;
+            try {
+                isInsert = supplierBoImpl.insertSupplier(supplier);
+            }catch (Exception e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Invalid Supplier Id");
+                alert.setContentText("jhjdjfcdc");
+                alert.showAndWait();
+                supplierIdField.setText(supplierBoImpl.generateSupplierId());
+                supplierNameField.clear();
+                supplierEmailAddressField.clear();
+                companyField.clear();
+                return;
+            }
+
 
             if (isInsert) {
                 supplierTable.setItems(FXCollections.observableArrayList(supplierBoImpl.getAllSuppliers()));
