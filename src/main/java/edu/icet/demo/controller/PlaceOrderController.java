@@ -66,6 +66,7 @@ public class PlaceOrderController implements Initializable {
 
         Product product = productBoImpl.getProductById(ItemCode);
         itemNameField.setText(product.getName());
+        categoryField.setText(product.getCategory());
         priceField.setText(String.valueOf(product.getPrice()));
         sizeField.setText(product.getSize());
 
@@ -181,10 +182,10 @@ public class PlaceOrderController implements Initializable {
         Double total = qtyFroCus * unitPrice;
         CartTable cartTable = new CartTable(itemCode, desc, qtyFroCus, unitPrice, total);
         System.out.println(cartTable);
-
         orderList.add(cartTable);
         orderTable.setItems(orderList);
         calcNetTotal();
+        itemClear();
     }
 
     double total = 0;
@@ -224,10 +225,9 @@ public class PlaceOrderController implements Initializable {
             alert.setTitle("Order Placed");
             alert.setContentText("Order Placed Successfully..!");
             alert.showAndWait();
-
-            productList = orderDetailsBoImpl.getAllProducts();
             clearFields();
             orderIdField.setText(orderDetailsBoImpl.generateOrderId());
+            productList = orderDetailsBoImpl.getAllProducts();
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Somthing Wrong..!!!").show();
@@ -246,6 +246,13 @@ public class PlaceOrderController implements Initializable {
         netValueField.setText("");
         orderIdField.setText("");
         orderTable.setItems(null);
+    }
+
+    private void itemClear(){
+        itemNameField.clear();
+        categoryField.clear();
+        priceField.clear();
+        sizeField.clear();
     }
 
     public void closeAction(MouseEvent mouseEvent) {
@@ -267,6 +274,11 @@ public class PlaceOrderController implements Initializable {
 
     public void tableMouseOnClicked(MouseEvent mouseEvent) {
 
+    }
+
+    public void clearActionBtn(ActionEvent actionEvent) {
+        clearFields();
+        orderIdField.setText(orderDetailsBoImpl.generateOrderId());
     }
 }
 

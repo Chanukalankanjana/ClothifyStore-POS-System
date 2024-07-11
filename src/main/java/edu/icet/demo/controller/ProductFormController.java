@@ -137,16 +137,20 @@ public class ProductFormController implements Initializable {
         itemTable.setItems(productBoImpl.getAllProducts());
     }
 
-    public void manageOrdersAction(ActionEvent actionEvent) {
+    public void manageOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(productsAnchor,"placeOrderForm.fxml");
     }
 
-    public void manageProductsAction(ActionEvent actionEvent) {
+    public void manageProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(productsAnchor,"productForm.fxml");
     }
 
-    public void manageCustomersAction(ActionEvent actionEvent) {
+    public void manageCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(productsAnchor,"employeeDash.fxml");
     }
 
-    public void manageSuppliersAction(ActionEvent actionEvent) {
+    public void manageSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(productsAnchor,"supplierManageForm.fxml");
     }
 
     public void reportGenAction(ActionEvent actionEvent) {
@@ -272,18 +276,6 @@ public class ProductFormController implements Initializable {
                 isMouseClick = true;
             }
         }
-    }
-
-    public void manageEmployeeAction(ActionEvent actionEvent) {
-    }
-
-    public void viewProductsAction(ActionEvent actionEvent) {
-    }
-
-    public void viewCustomersAction(ActionEvent actionEvent) {
-    }
-
-    public void viewSuppliersAction(ActionEvent actionEvent) {
     }
 
     public void logoutOnAction(MouseEvent mouseEvent) throws IOException {

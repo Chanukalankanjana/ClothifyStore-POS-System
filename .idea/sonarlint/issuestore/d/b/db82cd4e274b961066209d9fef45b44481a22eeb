@@ -1,7 +1,7 @@
 
 q
-java:S1121".Extract the assignment out of this expression.(îˆ§î8ìÂ¾ûƒ2J$fb9a2411-32a2-4bb6-aa1a-c6586161b0c5
+java:S1121".Extract the assignment out of this expression.(îˆ§î8ìÂ¾ûƒ2J$755efd02-8c2a-42e0-bbf0-4ee282835393
 á
-java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ú³ÿÿÿÿÿ8ıÂ¾ûƒ2J$111bf737-2331-4639-afe1-fc44a7eb6584
-K
-java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8’›îşƒ2
+java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ú³ÿÿÿÿÿ8ıÂ¾ûƒ2J$6d1d54ed-3096-4280-af8d-fcbcb9d6de48
+q
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8’›îşƒ2J$5148eba3-3734-4ebb-b96a-2048cb972342

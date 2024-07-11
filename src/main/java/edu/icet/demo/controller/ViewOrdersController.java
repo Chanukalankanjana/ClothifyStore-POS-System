@@ -72,22 +72,24 @@ public class ViewOrdersController implements Initializable {
         isRowSelect = false;
     }
 
-    public void manageEmployeeAction(ActionEvent actionEvent) {
+    public void manageEmployeeAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewOrderAnchor,"adminDash.fxml");
     }
 
-    public void viewOrdersAction(ActionEvent actionEvent) {
+    public void viewOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewOrderAnchor,"viewOrders.fxml");
     }
 
-    public void viewProductsAction(ActionEvent actionEvent) {
+    public void viewProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewOrderAnchor,"viewProducts.fxml");
     }
 
-    public void viewCustomersAction(ActionEvent actionEvent) {
+    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewOrderAnchor,"/view/viewCustomer.fxml");
     }
 
-    public void viewSuppliersAction(ActionEvent actionEvent) {
-    }
-
-    public void logoutAction(ActionEvent actionEvent) {
+    public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(viewOrderAnchor,"viewSuppliers.fxml");
     }
 
     public void onCloseAction(MouseEvent mouseEvent) {

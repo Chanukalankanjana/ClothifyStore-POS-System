@@ -49,10 +49,12 @@ public class SupplierManageController implements Initializable {
         supplierIdField.setText(supplierBoImpl.generateSupplierId());
         supplierTable.setItems(supplierBoImpl.getAllSuppliers());
     }
-    public void manageOrdersAction(ActionEvent actionEvent) {
+    public void manageOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(supplierAnchor,"placeOrderForm.fxml");
     }
 
-    public void manageProductsAction(ActionEvent actionEvent) {
+    public void manageProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(supplierAnchor,"productForm.fxml");
     }
 
     public void manageCustomersAction(ActionEvent actionEvent) throws IOException {

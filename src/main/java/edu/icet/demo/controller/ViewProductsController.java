@@ -62,7 +62,7 @@ public class ViewProductsController implements Initializable {
     }
 
     public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
-        sceneSwitch.switchScene(viewProductsAnchor,"supplierManageForm.fxml");
+        sceneSwitch.switchScene(viewProductsAnchor,"viewSuppliers.fxml");
     }
 
     public void logoutOnAction(MouseEvent mouseEvent) throws IOException {

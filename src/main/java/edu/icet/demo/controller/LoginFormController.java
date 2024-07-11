@@ -92,7 +92,7 @@ public class LoginFormController implements Initializable {
     }
 
     public void handleNeedHelpBtn(ActionEvent actionEvent) {
-        URL resource = getClass().getResource("/assets/need_help.mp4");
+        URL resource = getClass().getResource("/assets/clothify_need_help_video.mp4");
         String videoPath = resource.toExternalForm();
         Media media = new Media(videoPath);
         MediaPlayer mediaPlayer = new MediaPlayer(media);
