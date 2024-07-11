@@ -41,6 +41,7 @@ public class ProductFormController implements Initializable {
     public TableView itemTable;
 
     ProductBoImpl productBoImpl = new ProductBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
 
@@ -149,17 +150,7 @@ public class ProductFormController implements Initializable {
     }
 
     public void reportGenAction(ActionEvent actionEvent) {
-    }
-
-    public void logoutAction(ActionEvent actionEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Sign Out");
-        alert.setContentText("Are you sure want to Sign Out..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            SceneSwitchController.getInstance().switchScene(productsAnchor, "loginForm.fxml");
-        }
+        exitOrClose.report();
     }
 
     public void addAction(ActionEvent actionEvent) throws Exception {
@@ -186,9 +177,6 @@ public class ProductFormController implements Initializable {
                 isSupplierSelect = false;
             }
         }
-    }
-
-    public void searchAction(ActionEvent actionEvent) {
     }
 
     public void updateAction(ActionEvent actionEvent) {
@@ -289,9 +277,6 @@ public class ProductFormController implements Initializable {
     public void manageEmployeeAction(ActionEvent actionEvent) {
     }
 
-    public void viewOrdersAction(ActionEvent actionEvent) {
-    }
-
     public void viewProductsAction(ActionEvent actionEvent) {
     }
 
@@ -301,12 +286,23 @@ public class ProductFormController implements Initializable {
     public void viewSuppliersAction(ActionEvent actionEvent) {
     }
 
-    public void logoutOnAction(MouseEvent mouseEvent) {
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(productsAnchor, "loginForm.fxml");
+        }
     }
 
     public void closeAction(MouseEvent mouseEvent) {
+        exitOrClose.exit();
     }
 
     public void imageViewClicked(MouseEvent mouseEvent) {
+        clearFields();
+        itemIdField.setText(productBoImpl.generateProductId());
     }
 }

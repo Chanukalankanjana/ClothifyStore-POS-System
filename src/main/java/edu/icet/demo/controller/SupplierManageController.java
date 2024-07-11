@@ -35,7 +35,7 @@ public class SupplierManageController implements Initializable {
     public TextField supplierIdField;
 
     SupplierBoImpl supplierBoImpl = new SupplierBoImpl();
-
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     boolean isAction = true,isEmailValid,isMouseClick;
 
@@ -64,17 +64,7 @@ public class SupplierManageController implements Initializable {
     }
 
     public void reportGenAction(ActionEvent actionEvent) {
-    }
-
-    public void logoutAction(ActionEvent actionEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setContentText("Are you sure want to logout..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            sceneSwitch.switchScene(supplierAnchor,"loginForm.fxml");
-        }
+        exitOrClose.report();
     }
 
     public void releaseEmailkey(KeyEvent keyEvent) {
@@ -218,9 +208,18 @@ public class SupplierManageController implements Initializable {
         supplierIdField.setText(supplierBoImpl.generateSupplierId());
     }
 
-    public void logoutOnAction(MouseEvent mouseEvent) {
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(supplierAnchor, "loginForm.fxml");
+        }
     }
 
     public void closeAction(MouseEvent mouseEvent) {
+        exitOrClose.exit();
     }
 }

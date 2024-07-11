@@ -28,6 +28,7 @@ public class ViewCustomerController implements Initializable {
 
 
     CustomerBoImpl customerBoImpl= BoFactory.getInstance().getBo(BoType.CUSTOMER);
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     @Override
@@ -73,13 +74,6 @@ public class ViewCustomerController implements Initializable {
     }
 
     public void closeAction(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure you want exit...?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK){
-            System.exit(0);
-        }
+        exitOrClose.exit();
     }
 }

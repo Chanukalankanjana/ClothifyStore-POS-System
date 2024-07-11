@@ -35,6 +35,7 @@ public class AdminDashController implements Initializable {
     public ImageView imageView;
 
     UserBoImpl userBoImpl = new UserBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     boolean isAction = true,isEmailValid,isMouseClick;
@@ -50,19 +51,8 @@ public class AdminDashController implements Initializable {
 
     }
 
-
-    public void ViewActionBtn(ActionEvent actionEvent) {
-        User user = userBoImpl.getUserById(employeeIdField.getText());
-        if (user != null) {
-            employeeNameField.setText(user.getName());
-            empEmailAddressField.setText(user.getEmail());
-            empAddressField.setText(user.getAddress());
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Employee not found.").show();
-        }
-    }
-
     public void clearFields() {
+        employeeIdField.clear();
         employeeNameField.clear();
         empEmailAddressField.clear();
         empAddressField.clear();
@@ -129,8 +119,8 @@ public class AdminDashController implements Initializable {
                 alert.setTitle("Employee Update");
                 alert.setContentText("Employee updated successfully.");
                 alert.showAndWait();
-                employeeIdField.setText(userBoImpl.generateEmployeeId());
                 clearFields();
+                employeeIdField.setText(userBoImpl.generateEmployeeId());
                 employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
 
             } else {
@@ -161,8 +151,8 @@ public class AdminDashController implements Initializable {
                     alert2.setTitle("Employee Deleted");
                     alert2.setContentText("Employee deleted successfully.");
                     alert2.showAndWait();
-                    employeeIdField.setText(userBoImpl.generateEmployeeId());
                     clearFields();
+                    employeeIdField.setText(userBoImpl.generateEmployeeId());
                     employeeTable.setItems(FXCollections.observableArrayList(userBoImpl.getAllUsers()));
                 } else {
                     Alert alert2 = new Alert(Alert.AlertType.ERROR);
@@ -180,14 +170,7 @@ public class AdminDashController implements Initializable {
     }
 
     public void closeBtnOnAction(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure want to exit..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            System.exit(0);
-        }
+        exitOrClose.exit();
     }
 
     public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
@@ -225,23 +208,29 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    public void manageEmployeeAction(ActionEvent actionEvent) {
+    public void manageEmployeeAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"adminDash.fxml");
     }
 
-    public void viewCustomersAction(ActionEvent actionEvent) {
+    public void viewCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewCustomer.fxml");
     }
 
-    public void viewSuppliersAction(ActionEvent actionEvent) {
+    public void viewSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewSuppliers.fxml");
     }
 
-    public void viewProductsAction(ActionEvent actionEvent) {
+    public void viewProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewProducts.fxml");
     }
 
-    public void viewOrders(ActionEvent actionEvent) {
+    public void viewOrders(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(adminAnchor,"viewOrders.fxml");
     }
 
     public void imageClickAction(MouseEvent mouseEvent) {
-       clearFields();
+        clearFields();
+        employeeIdField.setText(userBoImpl.generateEmployeeId());
     }
 }
 

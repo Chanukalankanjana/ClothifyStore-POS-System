@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -44,6 +45,7 @@ public class ViewOrdersController implements Initializable {
     OrderBoImpl orderBoImpl = BoFactory.getInstance().getBo(BoType.ORDER);
     CustomerBoImpl customerBoImpl = BoFactory.getInstance().getBo(BoType.CUSTOMER);
     SupplierBoImpl supplierBoImpl = BoFactory.getInstance().getBo(BoType.SUPPLIER);
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     private boolean isRowSelect;
@@ -132,9 +134,18 @@ public class ViewOrdersController implements Initializable {
         } catch (Exception e){}
     }
 
-    public void logoutOnAction(MouseEvent mouseEvent) {
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(viewOrderAnchor, "loginForm.fxml");
+        }
     }
 
     public void closeAction(MouseEvent mouseEvent) {
+        exitOrClose.exit();
     }
 }

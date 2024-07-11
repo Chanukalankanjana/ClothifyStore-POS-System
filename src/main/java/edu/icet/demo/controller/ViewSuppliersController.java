@@ -25,6 +25,7 @@ public class ViewSuppliersController implements Initializable {
     public TableColumn supCompanyColumn;
 
     SupplierBoImpl supplierBo = BoFactory.getInstance().getBo(BoType.SUPPLIER);
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -69,13 +70,6 @@ public class ViewSuppliersController implements Initializable {
     }
 
     public void closeAction(MouseEvent mouseEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure want to exit..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            System.exit(0);
-        }
+        exitOrClose.exit();
     }
 }

@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import javax.print.attribute.standard.MediaName;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class LoginFormController implements Initializable {
@@ -40,6 +41,7 @@ public class LoginFormController implements Initializable {
 
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     UserBoImpl userBoImpl=new UserBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -112,7 +114,7 @@ public class LoginFormController implements Initializable {
     }
 
     public void closeBtnOnAction(ActionEvent actionEvent) {
-        System.exit(0);
+       exitOrClose.exit();
     }
 
     public void togglePasswordVisibility(ActionEvent actionEvent) {

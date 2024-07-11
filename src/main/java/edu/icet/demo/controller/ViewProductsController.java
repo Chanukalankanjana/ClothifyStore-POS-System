@@ -28,6 +28,7 @@ public class ViewProductsController implements Initializable {
     public AnchorPane viewProductsAnchor;
 
     ProductBoImpl productBoImpl = new ProductBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     @Override
@@ -76,13 +77,6 @@ public class ViewProductsController implements Initializable {
     }
 
     public void closeAction(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure want to exit..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK){
-            System.exit(0);
-        }
+        exitOrClose.exit();
     }
 }

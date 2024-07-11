@@ -38,7 +38,7 @@ public class EmployeeDashController implements Initializable {
     public Rectangle employeeAnchor;
 
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
-
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
     boolean isAction = true,isEmailValid,isMouseClick;
     @Override
@@ -77,17 +77,6 @@ public class EmployeeDashController implements Initializable {
             }
         } else {
             new Alert(Alert.AlertType.ERROR, "Please fill in all fields with valid data.").show();
-        }
-    }
-
-    public void searchActionBtn(ActionEvent actionEvent) {
-        Customer customer = customerBoImpl.getCustomerById(customerIdField.getText());
-        if (customer != null) {
-            customerNameField.setText(customer.getName());
-            cusEmailAddressField.setText(customer.getEmail());
-            cusAddressField.setText(customer.getAddress());
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Customer not found.").show();
         }
     }
 
@@ -165,7 +154,8 @@ public class EmployeeDashController implements Initializable {
         sceneSwitch.switchScene(customerAnchor,"placeOrderForm.fxml");
     }
 
-    public void manageProductsAction(ActionEvent actionEvent) {
+    public void manageProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(customerAnchor,"productForm.fxml");
     }
 
     public void manageCustomersAction(ActionEvent actionEvent) throws IOException {
@@ -176,18 +166,8 @@ public class EmployeeDashController implements Initializable {
         sceneSwitch.switchScene(customerAnchor,"supplierManageForm.fxml");
     }
 
-    public void reportGenAction(ActionEvent actionEvent) {
-    }
-
-    public void logoutAction(ActionEvent actionEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setContentText("Are you sure want to logout..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
-            sceneSwitch.switchScene(customerAnchor, "loginForm.fxml");
-        }
+    public void reportGenAction(ActionEvent actionEvent) throws IOException {
+        exitOrClose.report();
     }
 
     public void releaseEmailkey(KeyEvent keyEvent) {
@@ -224,20 +204,18 @@ public class EmployeeDashController implements Initializable {
     }
 
     public void closeAction(MouseEvent mouseEvent) {
+        exitOrClose.exit();
+    }
+
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure you want exit...?");
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
         Optional<ButtonType> result = alert.showAndWait();
 
-        if (result.get() == ButtonType.OK){
-            System.exit(0);
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(customerAnchor, "loginForm.fxml");
         }
-    }
-
-    public void manageEmployeeAction(ActionEvent actionEvent) {
-    }
-
-    public void logoutOnAction(MouseEvent mouseEvent) {
     }
 
     public void imageViewAction(MouseEvent mouseEvent) {

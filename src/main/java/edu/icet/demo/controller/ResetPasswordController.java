@@ -4,11 +4,13 @@ import edu.icet.demo.bo.custom.impl.UserBoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import javax.mail.MessagingException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -21,6 +23,7 @@ public class ResetPasswordController implements Initializable {
     private int otp;
 
     UserBoImpl userBoImpl = new UserBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     @Override
@@ -41,36 +44,35 @@ public class ResetPasswordController implements Initializable {
         }
     }
 
+    public void resetPassword(ActionEvent actionEvent) {
+        try {
+            if (newPasswordField.getText().equals(reEnterNewPasswordField.getText())){
+                if (otp==Integer.parseInt(OTPField.getText())){
+                    boolean isUpdatePassword = userBoImpl.isUpdatePassword(emailField.getText(),newPasswordField.getText());
+                    if (isUpdatePassword){
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Reset Password");
+                        alert.setContentText("Password reset Successfully");
+                        alert.showAndWait();
+                        newPasswordField.setText("");
+                        reEnterNewPasswordField.setText("");
+                        OTPField.setText("");
+                        sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
+                    }
+                }else {
+                    new Alert(Alert.AlertType.ERROR,"Incorrect OTP, Please Check your OTP").show();
+                }
 
-//    public void resetPassword(ActionEvent actionEvent) {
-//        try {
-//            if (newPasswordField.getText().equals(reEnterNewPasswordField.getText())){
-//                if (otp==Integer.parseInt(OTPField.getText())){
-//                    boolean isUpdatePassword = userBoImpl.isUpdatePassword(emailField.getText(),newPasswordField.getText());
-//                    if (isUpdatePassword){
-//                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//                        alert.setTitle("Reset Password");
-//                        alert.setContentText("Password reset Successfully");
-//                        alert.showAndWait();
-//                        newPasswordField.setText("");
-//                        reEnterNewPasswordField.setText("");
-//                        OTPField.setText("");
-//                        sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
-//                    }
-//                }else {
-//                    new Alert(Alert.AlertType.ERROR,"Incorrect OTP, Please Check your OTP").show();
-//                }
-//
-//            }else {
-//                new Alert(Alert.AlertType.ERROR,"Password & Confirmation Password does not match..!!").show();
-//            }
-//        }catch (Exception e){
-//            System.out.println(e);
-//            new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
-//        }
-//    }
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Password & Confirmation Password does not match..!!").show();
+            }
+        }catch (Exception e){
+            System.out.println(e);
+            new Alert(Alert.AlertType.ERROR,"Invalid OTP").show();
+        }
+    }
 
     public void closeOnAction(ActionEvent actionEvent) {
-        System.exit(0);
+        exitOrClose.exit();
     }
 }

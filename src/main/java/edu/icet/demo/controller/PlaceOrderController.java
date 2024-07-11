@@ -58,6 +58,7 @@ public class PlaceOrderController implements Initializable {
     OrderDetailsBoImpl orderDetailsBoImpl = new OrderDetailsBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
+    ExitOrClose exitOrClose = new ExitOrClose();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     ObservableList<Product> productList = FXCollections.observableArrayList();
@@ -151,15 +152,25 @@ public class PlaceOrderController implements Initializable {
 
     }
 
-    public void manageOrdersAction(ActionEvent actionEvent) {}
+    public void manageOrdersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(orderAnchor,"placeOrderForm.fxml");
+    }
 
-    public void manageProductsAction(ActionEvent actionEvent) {}
+    public void manageProductsAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(orderAnchor,"productForm.fxml");
+    }
 
-    public void manageCustomersAction(ActionEvent actionEvent) {}
+    public void manageCustomersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(orderAnchor,"employeeDash.fxml");
+    }
 
-    public void manageSuppliersAction(ActionEvent actionEvent) {}
+    public void manageSuppliersAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(orderAnchor,"supplierManageForm.fxml");
+    }
 
-    public void reportGenAction(ActionEvent actionEvent) {}
+    public void reportGenAction(ActionEvent actionEvent) {
+        exitOrClose.report();
+    }
 
 
     public void addActionBtn(ActionEvent actionEvent) {
@@ -238,18 +249,19 @@ public class PlaceOrderController implements Initializable {
     }
 
     public void closeAction(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Exit");
-        alert.setContentText("Are you sure want to exit..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            System.exit(0);
-        }
+        exitOrClose.exit();
     }
 
 
-    public void logoutOnAction(MouseEvent mouseEvent) {
+    public void logoutOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(orderAnchor, "loginForm.fxml");
+        }
     }
 
 

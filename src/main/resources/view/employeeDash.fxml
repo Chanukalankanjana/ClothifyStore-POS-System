@@ -57,7 +57,7 @@
         <TextField fx:id="customerNameField" layoutX="296.0" layoutY="279.0" prefHeight="38.0" prefWidth="230.0" promptText="Customer Name" />
         <TextField fx:id="cusEmailAddressField" layoutX="296.0" layoutY="371.0" onKeyReleased="#releaseEmailkey" prefHeight="38.0" prefWidth="230.0" promptText="Email Address" />
         <TextField fx:id="cusAddressField" layoutX="296.0" layoutY="459.0" prefHeight="38.0" prefWidth="230.0" promptText="Address" />
-        <TableView fx:id="customerTable" layoutX="668.0" layoutY="143.0" onMouseClicked="#tableMouseClickedAction" opacity="0.8" prefHeight="479.0" prefWidth="544.0">
+        <TableView fx:id="customerTable" layoutX="668.0" layoutY="151.0" onMouseClicked="#tableMouseClickedAction" opacity="0.8" prefHeight="479.0" prefWidth="544.0">
             <columns>
                 <TableColumn fx:id="cusIdColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="cusNameColumn" prefWidth="75.0" text="Name" />
