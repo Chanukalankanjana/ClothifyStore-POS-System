@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="viewSupAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.ViewSuppliersController">
+<AnchorPane fx:id="viewSupAnchor" prefHeight="632.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.demo.controller.ViewSuppliersController">
     <children>
         <ImageView fitHeight="695.0" fitWidth="1247.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -20,7 +20,7 @@
         </ImageView>
         <Rectangle fx:id="employeeAnchor" arcHeight="10.0" arcWidth="10.0" fill="#eecccc" height="677.0" layoutX="4.0" layoutY="7.0" opacity="0.23" stroke="#38a3b8" strokeType="INSIDE" width="281.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d8dd" height="63.0" layoutX="291.0" layoutY="8.0" opacity="0.25" stroke="#38a3b8" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="936.0" />
-        <Label layoutX="669.0" layoutY="17.0" text="View Suppliers" textFill="#d0b400" wrapText="true">
+        <Label layoutX="668.0" layoutY="17.0" text="View Suppliers" textFill="#d0b400" wrapText="true">
             <font>
                 <Font name="Rockwell Condensed" size="38.0" />
             </font>
