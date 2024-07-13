@@ -1,29 +1,29 @@
 
 ¤
-java:S1104"\Make newPasswordField a static final constant or non-public and provide accessors if needed.(áÎ“Ôøÿÿÿÿ8••ûƒ2J$eefb3f11-641c-4a8a-b8eb-23e41bfcb22a
+java:S1104"\Make newPasswordField a static final constant or non-public and provide accessors if needed.(áÎ“Ôøÿÿÿÿ8Ôô³ÜŠ2J$51906bc1-fcd2-4b9e-bc88-f548b33d4a9c
 ¦
-java:S1104"cMake reEnterNewPasswordField a static final constant or non-public and provide accessors if needed.(Å†ØÆ8••ûƒ2J$67ae6705-5929-4968-bc50-bbd6b523e1d4
+java:S1104"cMake reEnterNewPasswordField a static final constant or non-public and provide accessors if needed.(Å†ØÆ8Õô³ÜŠ2J$83844c92-87ab-464e-8649-c6c5816d6979
 —
-java:S1104"TMake OTPField a static final constant or non-public and provide accessors if needed.(”Ï„ê8••ûƒ2J$3599d20a-d235-4fbb-99ff-3506bfbe19a0
+java:S1104"TMake OTPField a static final constant or non-public and provide accessors if needed.(”Ï„ê8Õô³ÜŠ2J$755a6963-6829-4c5d-886c-b7673f8e1cb3
 š
-java:S1104"WMake ResetAnchor a static final constant or non-public and provide accessors if needed.(´şü8••ûƒ2J$59858adc-f575-4f34-8d12-ff3951bd51e4
+java:S1104"WMake ResetAnchor a static final constant or non-public and provide accessors if needed.(´şü8Õô³ÜŠ2J$3c915286-4816-4857-9ef0-05707eeff30d
 
-java:S1104"VMake emailField a static final constant or non-public and provide accessors if needed.(şãÓâúÿÿÿÿ8Ğ¨·üƒ2J$2549d015-8452-41f1-bbc4-ca9b3e2a3772
-•	java:S116"SRename this field "OTPField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ï„ê8¯•ûƒ2J$53f4990d-d3ba-49f0-b86b-bbdf01590429
-˜	java:S116"VRename this field "ResetAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şü8¯•ûƒ2J$136f921d-58af-4417-ba13-b7ab3f223a57
+java:S1104"VMake emailField a static final constant or non-public and provide accessors if needed.(şãÓâúÿÿÿÿ8Õô³ÜŠ2J$03ef7286-5c25-4761-aaa7-1b8328505512
+
+java:S3655W"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ8ŠÍµÜŠ2J$64dec495-1d11-4dfe-a2b3-8333c73add1d
+•	java:S116"SRename this field "OTPField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ï„ê8õ³ÜŠ2J$8ed5467f-68b8-4abe-a76c-43369c85afc3
+˜	java:S116"VRename this field "ResetAnchor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´şü8‘õ³ÜŠ2J$5e6ed3e1-81fd-4d6b-8228-91dfc78d13a8
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8°•ûƒ2J$36ca19f4-c62b-49df-81e2-c740c998d4d3
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8‘õ³ÜŠ2J$43537175-c53b-4b0f-8ead-c8bcd3bcb86f
 u
-java:S1172""2Remove this unused method parameter "actionEvent".(Îà8‘šîşƒ2J$ab699753-6f26-4369-a889-6a90197c2502
+java:S1172$"2Remove this unused method parameter "actionEvent".(Îà8õ³ÜŠ2J$8c97af10-9063-463d-a373-d8c2c8c88d78
 `
-java:S2119#"Save and re-use this "Random".(¼İÅf8¶•ûƒ2J$43851781-6232-4b19-a7d5-faed502a3ddc
-l	java:S106%"+Replace this use of System.out by a logger.(›ÑQ8»•ûƒ2J$32b8a16b-c1b0-48ca-b6f9-16b8a11b829a
+java:S2119%"Save and re-use this "Random".(¼İÅf8 õ³ÜŠ2J$2d3454e5-fb5d-4b35-828b-5bc8a65b45d6
+l	java:S106'"+Replace this use of System.out by a logger.(›ÑQ8£õ³ÜŠ2J$b64e12bc-b0e6-4200-a439-2fc5487ebd08
 u
-java:S1172/"2Remove this unused method parameter "actionEvent".(Œâ†¿8“‹¯•‰2J$98f68f07-e2a3-4d26-afb4-f9b7a54bbd3b
-r	java:S106F"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8øò„Š2J$4d3ff710-364a-4700-9dfa-1b0ec35c4d38
+java:S11721"2Remove this unused method parameter "actionEvent".(Œâ†¿8©õ³ÜŠ2J$a03d5690-a721-484c-8394-0c396ed1f35f
+r	java:S106H"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8±õ³ÜŠ2J$d7e1a5a6-775d-4c5f-92c8-3c06b245b215
 z
-java:S1172K"2Remove this unused method parameter "actionEvent".(û„·Êûÿÿÿÿ8ùò„Š2J$94246a3f-92a4-4aa2-9f09-c3090cb6990f
-
-java:S1128"<Remove this unused import 'javafx.scene.control.ButtonType'.(úêÿ»8Ô®Ó†Š2J$197c21c0-af1b-4cfc-bf44-c20f2b8fb575
-w
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8Ô®Ó†Š2J$fa75598e-f833-4b2b-9960-bac0b987953c
+java:S1172M"2Remove this unused method parameter "actionEvent".(û„·Êûÿÿÿÿ8´õ³ÜŠ2J$6756c21a-45d5-418e-8298-1d1dd24c78ad
+y
+java:S1172Q"1Remove this unused method parameter "mouseEvent".(ìù½•ûÿÿÿÿ8¶õ³ÜŠ2J$61040785-d000-44ff-a730-f576c5f34e66

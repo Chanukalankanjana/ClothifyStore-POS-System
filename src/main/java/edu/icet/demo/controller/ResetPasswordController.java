@@ -6,9 +6,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javax.mail.MessagingException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.Random;
@@ -74,5 +76,17 @@ public class ResetPasswordController implements Initializable {
 
     public void closeOnAction(ActionEvent actionEvent) {
         exitOrClose.exit();
+    }
+
+    public void goBackArrowOnAction(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Go Back");
+        alert.setContentText("Are you sure you don't want to reset the password...?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(ResetAnchor, "loginForm.fxml");
+
+        }
     }
 }
